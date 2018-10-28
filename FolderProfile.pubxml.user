@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+このファイルは、Web プロジェクトの発行 / パッケージ処理で使用されます。この MSBuild ファイルを編集すると、
+この処理の動作をカスタマイズできます。詳細については、https://go.microsoft.com/fwlink/?LinkID=208121 を参照してください。 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\qqvy4\Desktop</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include=".gitignore">
+      <publishTime>10/28/2018 23:01:03</publishTime>
+    </File>
+    <File Include="DjangoWebtutorial/local_settings.py">
+      <publishTime>10/28/2018 23:04:56</publishTime>
+    </File>
+    <File Include="DjangoWebtutorial/settings.py">
+      <publishTime>10/28/2018 23:04:56</publishTime>
+    </File>
+    <File Include="DjangoWebtutorial/urls.py">
+      <publishTime>10/28/2018 23:06:24</publishTime>
+    </File>
+    <File Include="DjangoWebtutorial/wsgi.py">
+      <publishTime>07/06/2018 21:05:36</publishTime>
+    </File>
+    <File Include="DjangoWebtutorial/__init__.py">
+      <publishTime>10/22/2018 09:54:45</publishTime>
+    </File>
+    <File Include="manage.py">
+      <publishTime>07/06/2018 21:05:36</publishTime>
+    </File>
+    <File Include="polls/admin.py">
+      <publishTime>10/28/2018 22:16:11</publishTime>
+    </File>
+    <File Include="polls/apps.py">
+      <publishTime>10/22/2018 09:45:18</publishTime>
+    </File>
+    <File Include="polls/migrations/__init__.py">
+      <publishTime>10/22/2018 09:45:18</publishTime>
+    </File>
+    <File Include="polls/models.py">
+      <publishTime>10/28/2018 22:16:11</publishTime>
+    </File>
+    <File Include="polls/static/polls/style.css">
+      <publishTime>10/28/2018 22:02:06</publishTime>
+    </File>
+    <File Include="polls/templates/index.html">
+      <publishTime>10/22/2018 15:43:05</publishTime>
+    </File>
+    <File Include="polls/templates/polls/detail.html">
+      <publishTime>10/22/2018 15:50:49</publishTime>
+    </File>
+    <File Include="polls/templates/polls/index.html">
+      <publishTime>10/28/2018 21:57:39</publishTime>
+    </File>
+    <File Include="polls/templates/polls/results.html">
+      <publishTime>10/22/2018 15:56:22</publishTime>
+    </File>
+    <File Include="polls/tests.py">
+      <publishTime>10/22/2018 09:45:18</publishTime>
+    </File>
+    <File Include="polls/urls.py">
+      <publishTime>10/22/2018 15:56:22</publishTime>
+    </File>
+    <File Include="polls/views.py">
+      <publishTime>10/28/2018 21:55:44</publishTime>
+    </File>
+    <File Include="polls/__init__.py">
+      <publishTime>10/22/2018 09:45:18</publishTime>
+    </File>
+    <File Include="Procfile">
+      <publishTime>10/28/2018 23:04:56</publishTime>
+    </File>
+    <File Include="requirements.txt">
+      <publishTime>10/28/2018 22:58:36</publishTime>
+    </File>
+    <File Include="static/admin/css/autocomplete.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/base.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/changelists.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/dashboard.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/fonts.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/forms.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/login.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/responsive.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/responsive_rtl.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/rtl.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/vendor/select2/LICENSE-SELECT2.md">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/vendor/select2/select2.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/vendor/select2/select2.min.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/css/widgets.css">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/fonts/LICENSE.txt">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/fonts/README.txt">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/fonts/Roboto-Bold-webfont.woff">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/fonts/Roboto-Light-webfont.woff">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/fonts/Roboto-Regular-webfont.woff">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/calendar-icons.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/gis/move_vertex_off.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/gis/move_vertex_on.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-addlink.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-alert.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-calendar.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-changelink.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-clock.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-deletelink.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-no.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-unknown-alt.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-unknown.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-viewlink.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/icon-yes.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/inline-delete.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/LICENSE">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/README.txt">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/search.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/selector-icons.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/sorting-icons.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/tooltag-add.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/img/tooltag-arrowright.svg">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/actions.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/actions.min.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/admin/DateTimeShortcuts.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/admin/RelatedObjectLookups.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/autocomplete.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/calendar.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/cancel.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/change_form.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/collapse.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/collapse.min.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/core.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/inlines.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/inlines.min.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/jquery.init.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/popup_response.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/prepopulate.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/prepopulate.min.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/prepopulate_init.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/SelectBox.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/SelectFilter2.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/timeparse.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/urlify.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/jquery/jquery.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/jquery/jquery.min.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/jquery/LICENSE.txt">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/ar.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/az.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/bg.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/ca.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/cs.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/da.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/de.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/el.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/en.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/es.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/et.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/eu.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/fa.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/fi.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/fr.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/gl.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/he.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/hi.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/hr.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/hu.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/id.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/is.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/it.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/ja.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/km.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/ko.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/lt.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/lv.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/mk.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/ms.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/nb.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/nl.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/pl.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/pt-BR.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/pt.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/ro.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/ru.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/sk.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/sr-Cyrl.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/sr.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/sv.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/th.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/tr.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/uk.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/vi.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/zh-CN.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/i18n/zh-TW.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/LICENSE.md">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/select2.full.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/select2/select2.full.min.js">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/xregexp/LICENSE.txt">
+      <publishTime>10/22/2018 10:09:03</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/xregexp/xregexp.js">
+      <publishTime>10/22/2018 10:09:04</publishTime>
+    </File>
+    <File Include="static/admin/js/vendor/xregexp/xregexp.min.js">
+      <publishTime>10/22/2018 10:09:04</publishTime>
+    </File>
+    <File Include="static/polls/images/background.gif">
+      <publishTime>10/28/2018 23:08:54</publishTime>
+    </File>
+    <File Include="static/polls/style.css">
+      <publishTime>10/28/2018 23:08:54</publishTime>
+    </File>
+    <File Include="templates/admin/base_site.html">
+      <publishTime>10/28/2018 22:23:49</publishTime>
+    </File>
+    <File Include="templates/admin/index.html">
+      <publishTime>10/22/2018 09:48:03</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
