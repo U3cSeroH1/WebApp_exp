@@ -50,6 +50,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <None Include="FolderProfile.pubxml" />
+    <Content Include="polls\static\polls\images\background.gif" />
     <Content Include="polls\templates\index.html" />
     <Content Include="polls\templates\polls\detail.html" />
     <Content Include="polls\templates\polls\index.html" />
