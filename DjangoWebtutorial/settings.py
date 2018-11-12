@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'DjangoWebtutorial.urls'
@@ -133,7 +134,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 # カスタムユーザーを使う
-#AUTH_USER_MODEL = 'register.User'
+AUTH_USER_MODEL = 'register.User'
 
 # ログインページと、直接ログインページへ行った後のリダイレクトページ
 LOGIN_URL = 'register:login'
@@ -164,11 +165,6 @@ if not DEBUG:
 
 
 
-if django.VERSION < (1, 7):
-    INSTALLED_APPS += (
-        'south',
-    )
 
-EASY_MAPS_GOOGLE_MAPS_API_KEY = 'AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVoA'
 
-EASY_MAPS_CENTER = (-41.3, 32)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
