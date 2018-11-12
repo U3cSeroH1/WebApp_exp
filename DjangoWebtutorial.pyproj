@@ -30,7 +30,23 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="agrimap\admin.py" />
+    <Compile Include="agrimap\apps.py" />
+    <Compile Include="agrimap\migrations\__init__.py" />
+    <Compile Include="agrimap\models.py" />
+    <Compile Include="agrimap\tests.py" />
+    <Compile Include="agrimap\urls.py" />
+    <Compile Include="agrimap\views.py" />
+    <Compile Include="agrimap\__init__.py" />
     <Compile Include="DjangoWebtutorial\local_settings.py" />
+    <Compile Include="register\admin.py" />
+    <Compile Include="register\apps.py" />
+    <Compile Include="register\forms.py" />
+    <Compile Include="register\models.py" />
+    <Compile Include="register\tests.py" />
+    <Compile Include="register\urls.py" />
+    <Compile Include="register\views.py" />
+    <Compile Include="register\__init__.py" />
     <Compile Include="polls\admin.py" />
     <Compile Include="polls\apps.py" />
     <Compile Include="polls\migrations\__init__.py" />
@@ -50,6 +66,27 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <None Include="FolderProfile.pubxml" />
+    <Content Include="agrimap\static\agrimap\ass.css" />
+    <Content Include="agrimap\templates\agrimap\ass.html" />
+    <Content Include="agrimap\static\agrimap\hoge.js" />
+    <Content Include="register\templates\register\base.html" />
+    <Content Include="register\templates\register\login.html" />
+    <Content Include="register\templates\register\mail_template\create\message.txt" />
+    <Content Include="register\templates\register\mail_template\create\subject.txt" />
+    <Content Include="register\templates\register\mail_template\password_reset\message.txt" />
+    <Content Include="register\templates\register\mail_template\password_reset\subject.txt" />
+    <Content Include="register\templates\register\password_change.html" />
+    <Content Include="register\templates\register\password_change_done.html" />
+    <Content Include="register\templates\register\password_reset_complete.html" />
+    <Content Include="register\templates\register\password_reset_confirm.html" />
+    <Content Include="register\templates\register\password_reset_done.html" />
+    <Content Include="register\templates\register\password_reset_form.html" />
+    <Content Include="register\templates\register\top.html" />
+    <Content Include="register\templates\register\user_create.html" />
+    <Content Include="register\templates\register\user_create_complete.html" />
+    <Content Include="register\templates\register\user_create_done.html" />
+    <Content Include="register\templates\register\user_detail.html" />
+    <Content Include="register\templates\register\user_form.html" />
     <Content Include="polls\static\polls\images\background.gif" />
     <Content Include="polls\templates\index.html" />
     <Content Include="polls\templates\polls\detail.html" />
@@ -62,7 +99,20 @@
     <Content Include="templates\admin\index.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="agrimap\" />
+    <Folder Include="agrimap\migrations\" />
+    <Folder Include="agrimap\static\agrimap\" />
+    <Folder Include="agrimap\templates\" />
+    <Folder Include="agrimap\templates\agrimap\" />
+    <Folder Include="agrimap\static\" />
     <Folder Include="DjangoWebtutorial\" />
+    <Folder Include="register\" />
+    <Folder Include="register\migrations\" />
+    <Folder Include="register\templates\" />
+    <Folder Include="register\templates\register\" />
+    <Folder Include="register\templates\register\mail_template\" />
+    <Folder Include="register\templates\register\mail_template\create\" />
+    <Folder Include="register\templates\register\mail_template\password_reset\" />
     <Folder Include="templates\" />
     <Folder Include="polls\" />
     <Folder Include="polls\migrations\" />

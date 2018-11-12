@@ -1,0 +1,19 @@
+{% extends "register/base.html" %}
+{% block content %}
+<p>
+
+
+    {% if user.is_authenticated %}
+    om,anklopa
+    <a href="{% url 'polls:index' %}">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </a>   
+    tintintaisya
+    <a href="{% url 'agrimap:index' %}">pppppppppppppppppppppppppppppppppppppppppp
+    </a> 
+
+    {% endif %}
+
+    {{ form.map }}
+{{ form.media.js }}
+</p>
+{% endblock %}

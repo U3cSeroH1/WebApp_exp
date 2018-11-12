@@ -10,7 +10,9 @@ from django.urls import include, path
 # admin.autodiscover()
 
 urlpatterns = [
-    path('', include('polls.urls')),
+    path('polls/', include('polls.urls')),
+    path('map/', include('agrimap.urls')),
     path('admin/', admin.site.urls),
+    path('', include('register.urls')),
 
 ]

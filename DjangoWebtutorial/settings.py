@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import posixpath
+import django
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -33,6 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # Add your apps here to enable them
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls.apps.pollsConfig',
-
+    'register.apps.RegisterConfig',
+    'agrimap.apps.agrimapConfig',
 ]
 
 MIDDLEWARE = [
@@ -118,12 +121,32 @@ USE_L10N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
+# https://docs.djangoproject.com/en/2.0/howto/static-files/
+
 
 STATIC_URL = '/static/'
 
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+
+# カスタムユーザーを使う
+AUTH_USER_MODEL = 'register.User'
+
+# ログインページと、直接ログインページへ行った後のリダイレクトページ
+LOGIN_URL = 'register:login'
+LOGIN_REDIRECT_URL = 'register:top'
+
+# メールをコンソールに表示する
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'aries15edge'
+EMAIL_HOST_PASSWORD = 'Unkio0602'#'ybjipacquehlnown'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = 'aries15edge@gmail.com'
 
 DEBUG = False
 
@@ -135,3 +158,15 @@ except ImportError:
 if not DEBUG:
     import django_heroku
     django_heroku.settings(locals())
+
+
+
+
+if django.VERSION < (1, 7):
+    INSTALLED_APPS += (
+        'south',
+    )
+
+EASY_MAPS_GOOGLE_MAPS_API_KEY = 'AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVoA'
+
+EASY_MAPS_CENTER = (-41.3, 32)

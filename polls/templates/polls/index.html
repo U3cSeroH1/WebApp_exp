@@ -1,4 +1,9 @@
-﻿{% load static %}
+﻿{% extends "register/base.html" %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 
@@ -12,3 +17,7 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+
+
+{% endif %}
+{% endblock %}
