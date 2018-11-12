@@ -107,7 +107,6 @@
     <Folder Include="agrimap\static\" />
     <Folder Include="DjangoWebtutorial\" />
     <Folder Include="register\" />
-    <Folder Include="register\migrations\" />
     <Folder Include="register\templates\" />
     <Folder Include="register\templates\register\" />
     <Folder Include="register\templates\register\mail_template\" />
