@@ -133,7 +133,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 # カスタムユーザーを使う
-AUTH_USER_MODEL = 'register.User'
+#AUTH_USER_MODEL = 'register.User'
 
 # ログインページと、直接ログインページへ行った後のリダイレクトページ
 LOGIN_URL = 'register:login'
