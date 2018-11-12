@@ -154,7 +154,7 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = 'aries15edge@gmail.com'
 
-DEBUG = False
+DEBUG = True
 
 try:
     from .local_settings import *
