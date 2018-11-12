@@ -134,7 +134,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # カスタムユーザーを使う
-#AUTH_USER_MODEL = 'register.User'
+AUTH_USER_MODEL = 'register.User'
 
 # ログインページと、直接ログインページへ行った後のリダイレクトページ
 LOGIN_URL = 'register:login'
@@ -151,7 +151,8 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = 'aries15edge@gmail.com'
 
-DEBUG = True
+DEBUG = False
+
 
 try:
     from .local_settings import *
