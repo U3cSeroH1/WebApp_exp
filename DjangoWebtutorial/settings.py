@@ -35,8 +35,6 @@ ALLOWED_HOSTS = ['djangotorial.herokuapp.com']
 INSTALLED_APPS = [
     # Add your apps here to enable them
 
-    'register.apps.RegisterConfig',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls.apps.pollsConfig',
-    
+    'register.apps.RegisterConfig',
     'agrimap.apps.agrimapConfig',
 ]
 
@@ -52,7 +50,6 @@ MIDDLEWARE = [
 
 
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -164,10 +161,3 @@ except ImportError:
 if not DEBUG:
     import django_heroku
     django_heroku.settings(locals())
-
-
-
-
-
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
