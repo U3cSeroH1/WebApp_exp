@@ -131,7 +131,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 # カスタムユーザーを使う
 AUTH_USER_MODEL = 'register.User'
@@ -151,7 +152,7 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = 'aries15edge@gmail.com'
 
-DEBUG = False
+DEBUG = True
 
 
 try:
