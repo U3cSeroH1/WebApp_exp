@@ -42,7 +42,7 @@ if settings.AUTH_USER_MODEL == 'register.User':
             return self._create_user(email, password, **extra_fields)
 
 
-    class User(AbstractBaseUser, PermissionsMixin):
+    class user(AbstractBaseUser, PermissionsMixin):
         """カスタムユーザーモデル
 
         usernameを使わず、emailアドレスをユーザー名として使うようにしています。
