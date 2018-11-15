@@ -69,6 +69,7 @@
     <Content Include="agrimap\static\agrimap\ass.css" />
     <Content Include="agrimap\templates\agrimap\ass.html" />
     <Content Include="agrimap\static\agrimap\hoge.js" />
+    <Content Include="register\static\register\favicon.ico" />
     <Content Include="register\templates\register\base.html" />
     <Content Include="register\templates\register\login.html" />
     <Content Include="register\templates\register\mail_template\create\message.txt" />
@@ -107,6 +108,8 @@
     <Folder Include="agrimap\static\" />
     <Folder Include="DjangoWebtutorial\" />
     <Folder Include="register\" />
+    <Folder Include="register\static\" />
+    <Folder Include="register\static\register\" />
     <Folder Include="register\templates\" />
     <Folder Include="register\templates\register\" />
     <Folder Include="register\templates\register\mail_template\" />
