@@ -146,7 +146,7 @@ STATICFILES_DIRS = (
 )
 
 # カスタムユーザーを使う
-AUTH_USER_MODEL = 'register.user'
+AUTH_USER_MODEL = 'register.User'
 
 # ログインページと、直接ログインページへ行った後のリダイレクトページ
 LOGIN_URL = 'register:login'

@@ -6,17 +6,17 @@ from django.utils.translation import ugettext_lazy as _
 
 # registerのUserモデルを使う場合だけ、登録する
 if settings.AUTH_USER_MODEL == 'register.User':
-    from .models import user
+    from .models import User
 
     class MyUserChangeForm(UserChangeForm):
         class Meta:
-            model = user
+            model = User
             fields = '__all__'
 
 
     class MyUserCreationForm(UserCreationForm):
         class Meta:
-            model = user
+            model = User
             fields = ('email',)
 
 
@@ -41,4 +41,4 @@ if settings.AUTH_USER_MODEL == 'register.User':
         search_fields = ('email', 'first_name', 'last_name')
         ordering = ('email',)
 
-    admin.site.register(user, MyUserAdmin)
+    admin.site.register(User, MyUserAdmin)
