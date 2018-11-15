@@ -46,13 +46,14 @@ INSTALLED_APPS = [
     'polls.apps.pollsConfig',
     'register.apps.RegisterConfig',
     'agrimap.apps.agrimapConfig',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 MIDDLEWARE = [
 
 
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
