@@ -42,7 +42,6 @@
     <Compile Include="register\admin.py" />
     <Compile Include="register\apps.py" />
     <Compile Include="register\forms.py" />
-    <Compile Include="register\migrations\__init__.py" />
     <Compile Include="register\models.py" />
     <Compile Include="register\tests.py" />
     <Compile Include="register\urls.py" />
@@ -108,7 +107,6 @@
     <Folder Include="agrimap\static\" />
     <Folder Include="DjangoWebtutorial\" />
     <Folder Include="register\" />
-    <Folder Include="register\migrations\" />
     <Folder Include="register\templates\" />
     <Folder Include="register\templates\register\" />
     <Folder Include="register\templates\register\mail_template\" />
