@@ -66,9 +66,8 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <None Include="FolderProfile.pubxml" />
-    <Content Include="agrimap\static\agrimap\ass.css" />
     <Content Include="agrimap\templates\agrimap\ass.html" />
-    <Content Include="agrimap\static\agrimap\hoge.js" />
+    <Content Include="register\static\register\favicon.ico" />
     <Content Include="register\templates\register\base.html" />
     <Content Include="register\templates\register\login.html" />
     <Content Include="register\templates\register\mail_template\create\message.txt" />
@@ -101,10 +100,10 @@
   <ItemGroup>
     <Folder Include="agrimap\" />
     <Folder Include="agrimap\migrations\" />
-    <Folder Include="agrimap\static\agrimap\" />
+    <Folder Include="register\static\register\" />
     <Folder Include="agrimap\templates\" />
     <Folder Include="agrimap\templates\agrimap\" />
-    <Folder Include="agrimap\static\" />
+    <Folder Include="register\static\" />
     <Folder Include="DjangoWebtutorial\" />
     <Folder Include="register\" />
     <Folder Include="register\templates\" />
