@@ -1,5 +1,7 @@
 ﻿{% extends "register/base.html" %}
 {% block content %}
+
+<div class="row">
     {% if user.is_authenticated %}
     <p>
     <a href="{% url 'polls:index' %}">投票アプリ：データベーステスト</a>   
@@ -8,6 +10,7 @@
     <a href="{% url 'agrimap:index' %}">農地マップ：α版</a> 
     </p>
     {% endif %}
+</div>
 
     {{ form.map }}
 {{ form.media.js }}
