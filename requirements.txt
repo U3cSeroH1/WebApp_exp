@@ -19,7 +19,7 @@ psycopg2==2.7.6.1
 psycopg2-binary==2.7.6.1
 pytz==2018.7
 requests==2.20.1
-setuptools==40.5.0
+setuptools==40.6.2
 static3==0.7.0
 urllib3==1.24.1
-whitenoise==4.1
+whitenoise==4.1.1
