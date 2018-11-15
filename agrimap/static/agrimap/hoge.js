@@ -143,6 +143,15 @@ function getClickLatLng(latlng, map){
      infoWindow.close(); // 吹き出しの表示
     });
 
+
+    marker.addListener('click', function () { // マーカーをクリックしたとき
+
+
+        infoWindow.open(map, marker);
+
+        // 吹き出しの表示
+    });
+
       // 座標の中心をずらす
       // http://syncer.jp/google-maps-javascript-api-matome/map/method/panTo/
       
