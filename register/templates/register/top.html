@@ -1,15 +1,15 @@
 ﻿{% extends "register/base.html" %}
 {% block content %}
 <p>
-    ようこそ　　{{ user.username }}
+    
 
     {% if user.is_authenticated %}
-    om,anklopa
-    <a href="{% url 'polls:index' %}">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    </a>   
-    tintintaisya
-    <a href="{% url 'agrimap:index' %}">pppppppppppppppppppppppppppppppppppppppppp
-    </a> 
+    ようこそ！　”{{ user.username }}”さん！
+
+    
+    <a href="{% url 'polls:index' %}">投票アプリ：データベーステスト</a>   
+    
+    <a href="{% url 'agrimap:index' %}">農地マップ：α版</a> 
 
     {% endif %}
 

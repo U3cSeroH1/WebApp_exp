@@ -7,20 +7,21 @@
 
 
 <article>
+
     <body>
         <h1>範囲選択</h1>
         <div id="floating-panel">
             <p1>▲登録したい座標を入力してください</p1>
             <br>
             <input id="latlng" type="text" value="33.232647,131.651055">
-            <input id="submit1" type="button" value="Reverse Geocode">
+            <input id="submit1" type="button" value="座標で検索">
         </div>
 
         <div id="floating-panel">
             <p2>▲登録したい場所の名前を入力してください</p2>
             <br>
-            <input id="address" type="text" value="33.232647,131.651055">
-            <input id="submit2" type="button" value="Geocode">
+            <input id="address" type="text" value="大分高専">
+            <input id="submit2" type="button" value="地名や場所で検索">
         </div>
 
         <ul>
@@ -30,14 +31,18 @@
         <div id="map"></div>
 
         <form name="ahe_form" action="ass.html">
-            <input type="text" name="textbox">
-            <input type="button" value="sex" onclick="ahe()">
+        <input type="text" name="textbox">
+        <input type="button" value="コメント投稿テスト版" onclick="ahe()">
+        </form>
 
-            <script type="text/javascript" src="{% static 'agrimap/hoge.js' %}"></script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVoA&callback=initMap" async defer></script>
+
+        <script type="text/javascript" src="{% static 'agrimap/hoge.js' %}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVoA&callback=initMap" async defer></script>
     </body>
 
 </article>
+
+
 
 
 AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVo
