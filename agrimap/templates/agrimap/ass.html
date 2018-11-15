@@ -1,4 +1,4 @@
-﻿{% extends "register/base.html" %}
+{% extends "register/base.html" %}
 {% block content %}
 {% load static %}
 
@@ -41,6 +41,13 @@
 
         <p>
         <div id="map"></div>
+        </p>
+
+                <p>
+        <ul>
+            <li>lat: <span id="lat"></span></li>
+            <li>lng: <span id="lng"></span></li>
+        </ul>
         </p>
 
         <script type="text/javascript" src="{% static "agrimap/hoge.js" %}"></script>
