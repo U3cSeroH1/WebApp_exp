@@ -3,12 +3,46 @@
 {% load static %}
 
 
-        <div id='map'></div>
+<article>
 
+    <body>
+        <h1>範囲選択</h1>
+
+        <p>
+        <div id="floating-panel">
+            <input id="latlng" type="text" value="33.232647,131.651055">
+            <input id="submit1" type="button" value="座標で検索">
+        </div>
+        </p>
+
+        <p>
+        <div id="floating-panel">
+            <input id="address" type="text" value="大分高専">
+            <input id="submit2" type="button" value="地名や場所で検索">
+        </div>
+        </p>
+
+
+        <p>
+        <form name="ahe_form" action="ass.html">
+        <input type="text" name="textbox">
+        <input type="button" value="コメント投稿テスト版" onclick="ahe()">
+        </form>
+        </p>
+
+        <p>
+        <div id='map'></div>
+        </p>
 
         <script type="text/javascript" src="{% static "agrimap/hoge.js" %}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVoA&callback=initMap" async defer></script>
 
 
+</article>
+
+
+
+
+AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVo
 
 {% endblock %}
