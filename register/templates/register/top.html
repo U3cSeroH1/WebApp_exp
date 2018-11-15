@@ -1,22 +1,14 @@
 ﻿{% extends "register/base.html" %}
 {% block content %}
-<p>
-    
-
     {% if user.is_authenticated %}
-
-
     <p>
     <a href="{% url 'polls:index' %}">投票アプリ：データベーステスト</a>   
     </p>
-
     <p>
     <a href="{% url 'agrimap:index' %}">農地マップ：α版</a> 
     </p>
-
     {% endif %}
 
     {{ form.map }}
 {{ form.media.js }}
-</p>
 {% endblock %}
