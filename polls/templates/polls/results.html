@@ -1,4 +1,7 @@
-﻿{% if user.is_authenticated %}
+{% extends "register/base.html" %}
+{% block content %}
+
+{% if user.is_authenticated %}
 
 <h1>{{ question.question_text }}</h1>
 
@@ -11,3 +14,5 @@
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
 
 {% endif %}
+
+{% endblock %}

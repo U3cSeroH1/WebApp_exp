@@ -1,4 +1,7 @@
-﻿{% if user.is_authenticated %}
+{% extends "register/base.html" %}
+{% block content %}
+
+{% if user.is_authenticated %}
 
 <h1>{{ question.question_text }}</h1>
 
@@ -14,3 +17,5 @@
 </form>
 
 {% endif %}
+
+{% endblock %}
