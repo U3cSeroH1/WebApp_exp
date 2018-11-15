@@ -31,7 +31,7 @@ SECRET_KEY = 'bee6d6c6-2451-461c-8d57-92044b87cf27'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djangotorial.herokuapp.com']
+ALLOWED_HOSTS = ['agriwelltest.herokuapp.com']
 
 
 # Application definition
