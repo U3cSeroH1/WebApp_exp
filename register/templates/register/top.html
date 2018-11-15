@@ -1,4 +1,11 @@
 ﻿{% extends "register/base.html" %}
 {% block content %}
-<p>ここに、好きな内容を入れる。</p>
+    {% if user.is_authenticated %}
+    <p>
+    <a class="navbar-brand" href="{% url 'polls:index' %}">投票アプリ：データベーステスト</a>   
+    </p>
+    <p>
+    <a class="navbar-brand" href="{% url 'agrimap:index' %}">農地マップ：α版</a> 
+    </p>
+    {% endif %}
 {% endblock %}
