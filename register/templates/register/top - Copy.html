@@ -1,3 +1,16 @@
+{% extends "register/base.html" %}
+{% block content %}
+    {% if user.is_authenticated %}
+    <p>
+    <a class="navbar-brand" href="{% url 'polls:index' %}">投票アプリ：データベーステスト</a>   
+    </p>
+    <p>
+    <a class="navbar-brand" href="{% url 'agrimap:index' %}">農地マップ：α版</a> 
+    </p>
+    {% endif %}
+{% endblock %}
+
+
 <!DOCTYPE html><!-- This site was created in Webflow. http://www.webflow.com --><!-- Last Published: Sun Nov 18 2018 09:30:32 GMT+0000 (UTC) -->
 <html data-wf-domain="kanas-stupendous-project.webflow.io" data-wf-page="5bcd6b2f39ce8885c0a1a132" data-wf-site="5bcd6b2f39ce887e5ba1a12d" data-wf-status="1">
 <head>
@@ -103,3 +116,8 @@
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
     </body>
 </html>
+
+
+
+
+{% endblock %}
