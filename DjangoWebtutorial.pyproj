@@ -97,7 +97,6 @@
     <Content Include="polls\templates\polls\results.html" />
     <Content Include="polls\static\polls\style.css" />
     <Content Include="Procfile" />
-    <Content Include="register\templates\WebPage1.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
