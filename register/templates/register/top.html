@@ -61,7 +61,17 @@
 
 <article>
 
-ようこそ　{{ user.username }}！
+<p>ようこそ　{{ user.username }}！</p>
+
+<p>仮のトップページです　　ここに天気とかマップとか表示させるはず？？？</p>
+
+    <p class="w-container bg-success">登録ありがとうございます</p>
+
+    <p class="w-container bg-success">ログインすると，副産物の投票アプリや，登録した自分の情報が見れます</p>
+
+    <p class="w-container bg-success">テストを兼ねてるので，皆さんどうぞ登録お願いします</p>
+
+    <p class="w-container bg-success">登録した情報は11/20までに消去します</p>
 
 </article>
 
@@ -98,6 +108,14 @@
         </div><!-- 左側、ログインエリアおわり -->
     </div>  
     </p>
+
+    <p class="w-container bg-success">今回はテストなのでログインしてなくても<a href="{% url 'agrimap:index' %}" class="bg-success">マップ</a>は操作することができます</p>
+
+    <p class="w-container bg-success">ログインすると，副産物の投票アプリや，登録した自分の情報が見れます</p>
+
+    <p class="w-container bg-success">テストを兼ねてるので，皆さんどうぞ登録お願いします</p>
+
+    <p class="w-container bg-success">登録した情報は11/20までに消去します</p>
 
 </article>
 
