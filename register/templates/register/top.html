@@ -58,7 +58,7 @@
 {% block content %}
 
 
-
+<article class="bg-light">
     <div class="w-container row">
         <p class="paragraph-2">
         <br/>アカウントをお持ちでない方はこちら
@@ -72,7 +72,7 @@
     <div class="row">
         <!-- 左側、ログインエリア -->
         <div>
-            <div class="w-input">
+            <div>
                 <form action="{% url 'register:login' %}" method="POST" >
                     {{ form.non_field_errors }}
                     {% for field in form %}
@@ -89,6 +89,7 @@
     </div>  
     </p>
 
+</article>
 
 {% endblock %}
 
