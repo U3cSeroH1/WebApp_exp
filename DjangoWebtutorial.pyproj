@@ -96,8 +96,6 @@
     <Content Include="polls\static\polls\style.css" />
     <Content Include="Procfile" />
     <Content Include="requirements.txt" />
-    <Content Include="templates\admin\base_site.html" />
-    <Content Include="templates\admin\index.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="agrimap\" />
@@ -124,7 +122,6 @@
     <Folder Include="polls\static\polls\images\" />
     <Folder Include="polls\templates\" />
     <Folder Include="polls\templates\polls\" />
-    <Folder Include="templates\admin\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
