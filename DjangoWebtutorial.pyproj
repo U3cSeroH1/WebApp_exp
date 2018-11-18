@@ -82,6 +82,7 @@
     <Content Include="register\templates\register\password_reset_confirm.html" />
     <Content Include="register\templates\register\password_reset_done.html" />
     <Content Include="register\templates\register\password_reset_form.html" />
+    <Content Include="register\templates\register\top - Copy.html" />
     <Content Include="register\templates\register\top.html" />
     <Content Include="register\templates\register\user_create.html" />
     <Content Include="register\templates\register\user_create_complete.html" />
