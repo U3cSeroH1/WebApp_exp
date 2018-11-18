@@ -24,7 +24,8 @@ from .forms import (
 User = get_user_model()
 
 
-class Top(generic.TemplateView):
+class Top(generic.TemplateView, LoginView):
+        form_class = LoginForm
     template_name = 'register/top.html'
 
 
@@ -32,7 +33,6 @@ class Login(LoginView):
     """ログインページ"""
     form_class = LoginForm
     template_name = 'register/login.html'
-    template_name = 'register/top.html'
 
 
 class Logout(LoginRequiredMixin, LogoutView):
