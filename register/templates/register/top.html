@@ -1,5 +1,11 @@
-﻿<!DOCTYPE html><!-- This site was created in Webflow. http://www.webflow.com --><!-- Last Published: Sun Nov 18 2018 09:30:32 GMT+0000 (UTC) -->
+﻿{% extends "register/base.html" %}
+{% block content %}
+
+<!DOCTYPE html><!-- This site was created in Webflow. http://www.webflow.com --><!-- Last Published: Sun Nov 18 2018 09:30:32 GMT+0000 (UTC) -->
 <html data-wf-domain="kanas-stupendous-project.webflow.io" data-wf-page="5bcd6b2f39ce8885c0a1a132" data-wf-site="5bcd6b2f39ce887e5ba1a12d" data-wf-status="1">
+
+
+
 <head>
     <meta charset="utf-8"/>
     <title>Business template - Webflow HTML website template</title>
@@ -24,13 +30,14 @@
         }
     </style>
 
-        <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
 
 </head>
+
+
+
 <body class="body">
+<!--
     <div class="w-container">
     <div>
         <div data-collapse="medium" data-animation="default" data-duration="400" class="w-nav">
@@ -80,6 +87,8 @@
             </div>
         </div>
         </div>
+    -->
+
     <div class="w-container">
     <p class="paragraph-2">
         <br/>アカウントをお持ちでない方はこちら
@@ -147,3 +156,6 @@
 
 </body>
 </html>
+
+
+{% endblock %}

@@ -70,6 +70,7 @@
     <Content Include="agrimap\templates\agrimap\ass.html" />
     <Content Include="agrimap\static\agrimap\hoge.js" />
     <Content Include="register\static\register\favicon.ico" />
+    <Content Include="register\templates\register\base - Copy.html" />
     <Content Include="register\templates\register\base.html" />
     <Content Include="register\templates\register\login.html" />
     <Content Include="register\templates\register\mail_template\create\message.txt" />
