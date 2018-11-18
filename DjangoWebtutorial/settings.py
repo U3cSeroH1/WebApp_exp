@@ -28,7 +28,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bee6d6c6-2451-461c-8d57-92044b87cf27'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = true
+DEBUG = True
 
 ALLOWED_HOSTS = ['agriwelltest.herokuapp.com']
 
@@ -161,6 +161,7 @@ EMAIL_HOST_PASSWORD = 'Unkio0602'#'ybjipacquehlnown'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = 'aries15edge@gmail.com'
+
 
 
 django_heroku.settings(locals())
