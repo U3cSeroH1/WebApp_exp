@@ -66,10 +66,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <None Include="FolderProfile.pubxml" />
-    <Content Include="agrimap\static\agrimap\ass.css" />
     <Content Include="agrimap\templates\agrimap\ass.html" />
-    <Content Include="agrimap\static\agrimap\hoge.js" />
-    <Content Include="register\static\register\favicon.ico" />
     <Content Include="register\templates\register\base.html" />
     <Content Include="register\templates\register\login.html" />
     <Content Include="register\templates\register\mail_template\create\message.txt" />
@@ -88,27 +85,21 @@
     <Content Include="register\templates\register\user_create_done.html" />
     <Content Include="register\templates\register\user_detail.html" />
     <Content Include="register\templates\register\user_form.html" />
-    <Content Include="polls\static\polls\images\background.gif" />
     <Content Include="polls\templates\index.html" />
     <Content Include="polls\templates\polls\detail.html" />
     <Content Include="polls\templates\polls\index.html" />
     <Content Include="polls\templates\polls\results.html" />
-    <Content Include="polls\static\polls\style.css" />
     <Content Include="Procfile" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="agrimap\" />
     <Folder Include="agrimap\migrations\" />
-    <Folder Include="agrimap\static\agrimap\" />
     <Folder Include="agrimap\templates\" />
     <Folder Include="agrimap\templates\agrimap\" />
-    <Folder Include="agrimap\static\" />
     <Folder Include="DjangoWebtutorial\" />
     <Folder Include="staticfiles\" />
     <Folder Include="register\" />
-    <Folder Include="register\static\" />
-    <Folder Include="register\static\register\" />
     <Folder Include="register\templates\" />
     <Folder Include="register\templates\register\" />
     <Folder Include="register\templates\register\mail_template\" />
@@ -117,9 +108,6 @@
     <Folder Include="templates\" />
     <Folder Include="polls\" />
     <Folder Include="polls\migrations\" />
-    <Folder Include="polls\static\" />
-    <Folder Include="polls\static\polls\" />
-    <Folder Include="polls\static\polls\images\" />
     <Folder Include="polls\templates\" />
     <Folder Include="polls\templates\polls\" />
   </ItemGroup>
