@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="utf-8">
-	<title>Business template - Webflow HTML website template</title>
+	<title>agriwell:テスト</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<meta content="Webflow" name="generator">
 	<link href="https://uploads-ssl.webflow.com/5bcaf1ee76071d72dd1178bd/css/sakujo.webflow.ea335f083.css" rel="stylesheet" type="text/css">
@@ -49,8 +49,8 @@
 				        <img src="https://uploads-ssl.webflow.com/5bcaf1ee76071d72dd1178bd/5bcb216e0508ef2dbd7b14f8_mypage.PNG" alt=""></a>
                     </div>
                     <div class="column-2 w-col w-col-3 w-col-small-3 w-col-tiny-3">
-                        <a href="#" class="link-block-2 w-inline-block">
-                        <img src="https://uploads-ssl.webflow.com/5bcaf1ee76071d72dd1178bd/5bcb236576071d518611da3d_record.PNG" alt=""></a>
+                        <a href="{% url 'polls:index' %}" class="link-block-2 w-inline-block">
+                        <!--<img src="https://uploads-ssl.webflow.com/5bcaf1ee76071d72dd1178bd/5bcb236576071d518611da3d_record.PNG" alt="">-->仮投票アプリ</a>
                         </div>
                     <div class="column-3 w-col w-col-3 w-col-small-3 w-col-tiny-3">
                         <a href="{% url 'agrimap:index' %}" class="link-block-3 w-inline-block">
@@ -71,13 +71,13 @@
 
 
                     <a class="nav-item nav-link" href="{% url 'register:login' %}">
-                    ようこそ、ゲスト！ログインはこちら
+                    ようこそ、ゲスト！
                     </a>
 			    
                 </nav>
 
 
-                <a href="/service" class="button-2 w-button">ログイン</a>
+                <a href="{% url 'register:login' %}" class="button-2 w-button">ログイン</a>
 
                 {% endif %}
 
