@@ -25,7 +25,7 @@ User = get_user_model()
 
 
 class Top(generic.TemplateView, LoginView):
-        form_class = LoginForm
+    form_class = LoginForm
     template_name = 'register/top.html'
 
 
