@@ -61,9 +61,9 @@
                     </div>
                     </div>
                 </nav>
-                <a href="/service" class="button-2 w-button">ログイン</a>
+                <a href="{% url 'register:user_detail' user.pk %}" class="button-2 w-button">{{ user.username }}</a>
 
-                {% endif %}
+
   
                 {% else %}
                 <li class="nav-item">
@@ -71,6 +71,9 @@
                 ようこそ、ゲスト！ログインはこちら
                 </a>
                 </li>
+
+                                <a href="/service" class="button-2 w-button">ログイン</a>
+
                 {% endif %}
 
             </div>
