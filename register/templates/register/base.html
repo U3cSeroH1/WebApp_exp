@@ -66,13 +66,18 @@
 
   
                 {% else %}
-                <li class="nav-item">
-                <a class="nav-item nav-link" href="{% url 'register:login' %}">
-                ようこそ、ゲスト！ログインはこちら
-                </a>
-                </li>
 
-                                <a href="/service" class="button-2 w-button">ログイン</a>
+                <nav role="navigation" class="nav-menu-2 w-nav-menu">
+
+
+                    <a class="nav-item nav-link" href="{% url 'register:login' %}">
+                    ようこそ、ゲスト！ログインはこちら
+                    </a>
+			    
+                </nav>
+
+
+                <a href="/service" class="button-2 w-button">ログイン</a>
 
                 {% endif %}
 

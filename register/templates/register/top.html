@@ -57,6 +57,16 @@
     -->
 {% block content %}
 
+{% if user.is_authenticated %}
+
+<article>
+
+ようこそ　{{ user.username }}！
+
+</article>
+
+
+{% else %}
 
 <article class="bg-light">
     <div class="w-container row">
@@ -90,6 +100,8 @@
     </p>
 
 </article>
+
+{% endif %}
 
 {% endblock %}
 
