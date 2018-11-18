@@ -59,18 +59,19 @@
 
 
 
-    <div class="w-container">
+    <div class="w-container row">
         <p class="paragraph-2">
         <br/>アカウントをお持ちでない方はこちら
         </p>
         <div class="section">
-            <a href="{% url 'register:user_create' %}" class="button-3 w-button">新規登録</a>
+            <a href="{% url 'register:user_create' %}" class="button-3 w-button bg-success">新規登録</a>
         </div>
-        </div>
+    </div>
+
     <p>
     <div class="row">
         <!-- 左側、ログインエリア -->
-        <div class="w-form">
+        <div>
             <div class="w-input">
                 <form action="{% url 'register:login' %}" method="POST" >
                     {{ form.non_field_errors }}
