@@ -16,6 +16,13 @@ from django.views import generic
 
 from django.utils import timezone
 
+from register.views import OnlyYouMixin
 
 def index(request):
     return render(request, 'agrimap/ass.html')
+
+
+class UserDetail(OnlyYouMixin, generic.DetailView):
+    """ユーザーの詳細ページ"""
+    #model = User
+    template_name = 'agrimap/user_map.html'  # デフォルトユーザーを使う場合に備え、きちんとtemplate名を書く
