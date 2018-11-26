@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from register.models import User
+#from register.models import User
 from polls.models import Question
 
 from django.shortcuts import render
