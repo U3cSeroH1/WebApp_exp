@@ -67,6 +67,7 @@
     <Content Include=".gitignore" />
     <None Include="FolderProfile.pubxml" />
     <Content Include="agrimap\static\agrimap\ass.css" />
+    <Content Include="agrimap\templates\agrimap\detail - Copy.html" />
     <Content Include="agrimap\templates\agrimap\detail.html" />
     <Content Include="agrimap\static\agrimap\hoge.js" />
     <Content Include="register\static\register\favicon.ico" />
