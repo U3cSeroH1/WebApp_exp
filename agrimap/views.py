@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from register.models import User
+#from register.models import User
 from polls.models import Question
 
 from django.shortcuts import render
@@ -25,7 +25,7 @@ from register.views import OnlyYouMixin
 
 
 
-class DetailView(OnlyYouMixin, generic.TemplateView):
+class DetailView(generic.TemplateView):
     """ユーザーの詳細ページ"""
     #model = User
     template_name = 'agrimap/detail.html'  # デフォルトユーザーを使う場合に備え、きちんとtemplate名を書く
