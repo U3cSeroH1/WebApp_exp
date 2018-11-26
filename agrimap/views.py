@@ -18,8 +18,7 @@ from django.utils import timezone
 
 from register.views import OnlyYouMixin
 
-def index(request):
-    return render(request, 'agrimap/ass.html')
+
 
 
 class DetailView(OnlyYouMixin, generic.DetailView):
