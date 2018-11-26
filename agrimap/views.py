@@ -22,7 +22,7 @@ def index(request):
     return render(request, 'agrimap/ass.html')
 
 
-class UserMap(OnlyYouMixin):
+class DetailView(OnlyYouMixin, generic.DetailView):
     """ユーザーの詳細ページ"""
     #model = User
-    template_name = 'agrimap/user_map.html'  # デフォルトユーザーを使う場合に備え、きちんとtemplate名を書く
+    template_name = 'agrimap/detail.html'  # デフォルトユーザーを使う場合に備え、きちんとtemplate名を書く
