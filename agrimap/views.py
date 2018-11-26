@@ -21,7 +21,7 @@ from register.views import OnlyYouMixin
 
 
 
-class DetailView(OnlyYouMixin, generic.DetailView):
+class DetailView(generic.DetailView):
     """ユーザーの詳細ページ"""
     #model = User
     template_name = 'agrimap/detail.html'  # デフォルトユーザーを使う場合に備え、きちんとtemplate名を書く
