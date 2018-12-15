@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from agrimap.forms import latlngForm
+
 
 
 import comment
@@ -43,14 +43,16 @@ from django.template.loader import get_template
 from django.urls import reverse_lazy
 from django.views import generic
 
-from .models import *
+from .models import latlng
+
+from .forms import latlngForm
 
 User = get_user_model()
 
 
 class DetailView(OnlyYouMixin, generic.DetailView):
     """ユーザーの詳細ページ"""
-    model = User
+    model = User, latlng
 
     form_class = latlngForm
 
