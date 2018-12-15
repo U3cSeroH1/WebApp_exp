@@ -22,7 +22,6 @@ from django.utils import timezone
 
 from register.views import OnlyYouMixin
 
-from comment.models import Post, Comment, Reply
 
 
 
@@ -32,4 +31,7 @@ from comment.models import Post, Comment, Reply
 class DetailView(OnlyYouMixin, generic.TemplateView):
     """ユーザーの詳細ページ"""
     #model = User
+
+    fields = ('name', 'text')
+
     template_name = 'agrimap/detail.html'  # デフォルトユーザーを使う場合に備え、きちんとtemplate名を書く
