@@ -8,7 +8,7 @@
 <hr>
  
 <h2>コメント一覧</h2>
-<a href="{% url 'app:comment' post.pk %}">コメントする</a>
+<a href="{% url 'comment:comment' post.pk %}">コメントする</a>
 <hr>
 {% for comment in post.comment_set.all %}
     {% if comment.is_public %}
