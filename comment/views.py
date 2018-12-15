@@ -1,4 +1,3 @@
-from django.shortcuts import render
 
 from django.shortcuts import redirect, get_object_or_404
 from django.views import generic
@@ -19,7 +18,7 @@ class CommentView(generic.CreateView):
     """/comment/post_pk コメント投稿."""
     model = Comment
     fields = ('name', 'text')
-    template_name = 'app/comment_form.html'
+    template_name = 'comment/comment_form.html'
  
     def form_valid(self, form):
         post_pk = self.kwargs['pk']
@@ -38,7 +37,7 @@ class ReplyView(generic.CreateView):
     """/reply/comment_pk 返信コメント投稿."""
     model = Reply
     fields = ('name', 'text')
-    template_name = 'app/comment_form.html'
+    template_name = 'comment/comment_form.html'
  
     def form_valid(self, form):
         comment_pk = self.kwargs['pk']

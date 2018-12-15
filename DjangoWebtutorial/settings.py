@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'polls.apps.pollsConfig',
     'register.apps.RegisterConfig',
     'agrimap.apps.agrimapConfig',
+    'comment.apps.commentConfig',
     
 ]
 
