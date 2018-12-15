@@ -122,6 +122,7 @@
     <Folder Include="agrimap\static\" />
     <Folder Include="comment\" />
     <Folder Include="comment\migrations\" />
+    <Folder Include="comment\static\" />
     <Folder Include="comment\templates\comment\" />
     <Folder Include="comment\templates\" />
     <Folder Include="DjangoWebtutorial\" />
