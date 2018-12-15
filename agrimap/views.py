@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from agrimap.forms import latlngForm
 
 
 import comment
@@ -51,7 +52,7 @@ class DetailView(OnlyYouMixin, generic.DetailView):
     """ユーザーの詳細ページ"""
     model = User
 
-    form_class = latlng
+    form_class = latlngForm
 
 
     template_name = 'agrimap/detail.html'  # デフォルトユーザーを使う場合に備え、きちんとtemplate名を書く

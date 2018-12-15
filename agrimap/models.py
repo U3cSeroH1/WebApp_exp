@@ -10,5 +10,5 @@ class latlng(models.Model):
 
 
 
-    #def __str__(self):
-    #    return self.lat, self.lng
+    def __str__(self):
+        return self.lat, self.lng
