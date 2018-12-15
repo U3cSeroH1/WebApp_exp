@@ -37,12 +37,12 @@
 
         <hr>
 
-        <form method="POST">
-                
+        <form method="POST"  class="post-form">
+                 {% csrf_token %}
 
                 {{ field }}
-
-                {% csrf_token %}
+            <button type="submit" class="save btn btn-default">Save</button>
+               
         </form>      
 
         <p>
