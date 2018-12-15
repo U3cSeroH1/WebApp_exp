@@ -9,6 +9,6 @@ class latlngForm(forms.ModelForm):
 
         model = latlng
 
-        fields = ('lat',)
+        fields = ('lat', 'lng')
 
    

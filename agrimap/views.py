@@ -52,7 +52,7 @@ User = get_user_model()
 
 class DetailView(OnlyYouMixin, generic.DetailView):
     """ユーザーの詳細ページ"""
-    model = User, latlng
+    model = User
 
     form_class = latlngForm
 
