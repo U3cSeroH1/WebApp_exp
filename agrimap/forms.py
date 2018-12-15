@@ -1,10 +1,15 @@
 from django import forms
 
-class latlngForm(forms.Form):
+from .models import Post
+
+class latlngForm(forms.ModelForm):
     """ログインフォーム"""
 
-    lat = forms.IntegerField()
-    lng = forms.IntegerField()
+    class Meta:
+
+        model = form
+
+        fields = ('lat', 'lng')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

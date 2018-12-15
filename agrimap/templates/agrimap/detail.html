@@ -35,7 +35,15 @@
             <li>lng: <span id="lng"></span></li>
         </ul>
 
-        
+        <hr>
+
+        <form method="POST">
+                
+
+                {{ form }}
+
+                {% csrf_token %}
+        </form>      
 
         <p>
         <div id='map' style="width:100%;height:400px;	margin-left: auto;
@@ -46,13 +54,7 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVoA&callback=initMap" async defer></script>
 
 
-        <form method="POST">
-                
 
-                {{form.as_table}}
-
-                {% csrf_token %}
-            </form>
 
 
 </article>
