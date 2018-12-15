@@ -50,7 +50,7 @@ from .forms import *
 User = get_user_model()
 
 
-class DetailView(OnlyYouMixin, generic.DetailView):
+class DetailView(OnlyYouMixin, generic.CreateView):
     """ユーザーの詳細ページ"""
     model = User
 
