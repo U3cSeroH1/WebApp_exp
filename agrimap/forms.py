@@ -9,7 +9,7 @@ class latlngForm(forms.ModelForm):
 
         model = latlng
 
-        fields = ('lat', )
+        fields = ('lat', 'lng')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
