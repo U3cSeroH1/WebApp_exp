@@ -1,4 +1,6 @@
-
+{% extends "register/base.html" %}
+{% block content %}
+{% load static %}
 
 <!--{% if user.is_authenticated %}
 
@@ -67,6 +69,8 @@
 {% endif %}-->
 
 
+<article>
+
 <form method="post">
     {% csrf_token %}
 
@@ -74,4 +78,7 @@
     <button type="submit">save</button>
     </form>
 
+</article>
+
+{% endblock %}
 
