@@ -14,5 +14,6 @@ urlpatterns = [
     path('map/', include('agrimap.urls')),
     path('admin/', admin.site.urls),
     path('', include('register.urls')),
+    path('comment/', include('comment.urls')),
 
 ]

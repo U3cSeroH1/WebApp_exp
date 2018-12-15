@@ -38,6 +38,14 @@
     <Compile Include="agrimap\urls.py" />
     <Compile Include="agrimap\views.py" />
     <Compile Include="agrimap\__init__.py" />
+    <Compile Include="comment\admin.py" />
+    <Compile Include="comment\apps.py" />
+    <Compile Include="comment\migrations\__init__.py" />
+    <Compile Include="comment\models.py" />
+    <Compile Include="comment\tests.py" />
+    <Compile Include="comment\urls.py" />
+    <Compile Include="comment\views.py" />
+    <Compile Include="comment\__init__.py" />
     <Compile Include="DjangoWebtutorial\local_settings.py" />
     <Compile Include="register\admin.py" />
     <Compile Include="register\apps.py" />
@@ -70,6 +78,11 @@
     <Content Include="agrimap\templates\agrimap\detail - Copy.html" />
     <Content Include="agrimap\templates\agrimap\detail.html" />
     <Content Include="agrimap\static\agrimap\hoge.js" />
+    <Content Include="comment\templates\comment\base.html" />
+    <Content Include="comment\templates\comment\comment_form.html" />
+    <Content Include="comment\templates\comment\post_detail.html" />
+    <Content Include="comment\templates\comment\post_list.html" />
+    <Content Include="comment\templates\index.html" />
     <Content Include="register\static\register\favicon.ico" />
     <Content Include="register\templates\register\base - Copy.html" />
     <Content Include="register\templates\register\base.html" />
@@ -107,6 +120,10 @@
     <Folder Include="agrimap\templates\" />
     <Folder Include="agrimap\templates\agrimap\" />
     <Folder Include="agrimap\static\" />
+    <Folder Include="comment\" />
+    <Folder Include="comment\migrations\" />
+    <Folder Include="comment\templates\comment\" />
+    <Folder Include="comment\templates\" />
     <Folder Include="DjangoWebtutorial\" />
     <Folder Include="staticfiles\" />
     <Folder Include="register\" />
