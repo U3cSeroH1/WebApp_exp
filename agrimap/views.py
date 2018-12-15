@@ -1,9 +1,8 @@
 from django.http import HttpResponse
-from register.models import User
+
 
 import comment
-#from register.models import User
-from polls.models import Question
+
 
 from django.shortcuts import render
 
@@ -25,10 +24,26 @@ from register.views import OnlyYouMixin
 
 from comment.views import *
 
+from django.conf import settings
+from django.contrib.auth import get_user_model
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.views import (
+    LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView,
+    PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
+)
+
+from django.core.mail import send_mail
+
+from django.contrib.sites.shortcuts import get_current_site
+from django.core.signing import BadSignature, SignatureExpired, loads, dumps
+from django.http import HttpResponseBadRequest
+from django.shortcuts import redirect, resolve_url
+from django.template.loader import get_template
+from django.urls import reverse_lazy
+from django.views import generic
 
 
-
-
+User = get_user_model()
 
 
 class DetailView(OnlyYouMixin, generic.DetailView):
