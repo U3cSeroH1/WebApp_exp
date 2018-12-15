@@ -5,8 +5,8 @@ from comment.models import Post, Comment, Reply
 class latlng(models.Model):
     # id = AutoField(primary_key=True)
 
-    lat = models.IntegerField(unique=True)
-    lng = models.IntegerField(unique=True)
+    lat = models.CharField(unique=True)
+    lng = models.CharField(unique=True)
 
 
 
