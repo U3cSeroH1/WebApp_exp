@@ -3,8 +3,8 @@ from django import forms
 class latlngForm(forms.Form):
     """ログインフォーム"""
 
-    lat = forms.IntegerFieldField()
-    lng = forms.IntegerFieldField()
+    lat = forms.IntegerField()
+    lng = forms.IntegerField()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
