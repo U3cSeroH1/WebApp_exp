@@ -54,7 +54,7 @@ class DetailView(OnlyYouMixin, generic.DetailView):
     """ユーザーの詳細ページ"""
     model = User
 
-    form_class = latlngForm
+    #form_class = latlngForm
 
 
     template_name = 'agrimap/detail.html'  # デフォルトユーザーを使う場合に備え、きちんとtemplate名を書く
