@@ -69,7 +69,7 @@
 {% endif %}-->
 
 
-<form action="{% url 'index' %}" method="POST">
+<form action="" method="POST">
     {% csrf_token %}
     {{ profile_form }}
     <input type="submit" value="送信">
