@@ -32,6 +32,9 @@
   <ItemGroup>
     <Compile Include="agrimap\admin.py" />
     <Compile Include="agrimap\apps.py" />
+    <Compile Include="agrimap\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="agrimap\migrations\__init__.py" />
     <Compile Include="agrimap\models.py" />
     <Compile Include="agrimap\tests.py" />
