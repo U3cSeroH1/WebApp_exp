@@ -22,6 +22,8 @@ from django.utils import timezone
 
 from register.views import OnlyYouMixin
 
+from comment.views import *
+
 
 
 
