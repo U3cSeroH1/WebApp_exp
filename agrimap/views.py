@@ -41,7 +41,7 @@ class DetailView(OnlyYouMixin, generic.TemplateView):
 
     model = Comment
     fields = ('name', 'text')
-    template_name = 'comment/comment_form.html'
+
  
     def form_valid(self, form):
         post_pk = self.kwargs['pk']
