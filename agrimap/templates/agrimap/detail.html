@@ -69,11 +69,12 @@
 {% endif %}-->
 
 
-<form action="#" method="POST">
+<form method="post">
     {% csrf_token %}
+
     {{ form }}
-    <input type="submit" value="送信">
-</form>
+    <button type="submit">save</button>
+    </form>
 
 {% endblock %}
 
