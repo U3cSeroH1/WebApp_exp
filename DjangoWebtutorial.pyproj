@@ -82,7 +82,6 @@
     <Content Include="comment\templates\comment\comment_form.html" />
     <Content Include="comment\templates\comment\post_detail.html" />
     <Content Include="comment\templates\comment\post_list.html" />
-    <Content Include="comment\templates\index.html" />
     <Content Include="register\static\register\favicon.ico" />
     <Content Include="register\templates\register\base - Copy.html" />
     <Content Include="register\templates\register\base.html" />
