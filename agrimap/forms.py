@@ -7,7 +7,7 @@ class latlngForm(forms.ModelForm):
 
     class Meta:
 
-        model = form
+        model = latlng
 
         fields = ('lat', 'lng')
 
