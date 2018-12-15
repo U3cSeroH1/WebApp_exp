@@ -18,7 +18,7 @@ class CommentView(generic.CreateView):
     """/comment/post_pk コメント投稿."""
     model = Comment
     fields = ('name', 'text')
-    template_name = 'comment/comment_form.html'
+    template_name = 'comment/templates/comment_form.html'
  
     def form_valid(self, form):
         post_pk = self.kwargs['pk']
@@ -37,7 +37,7 @@ class ReplyView(generic.CreateView):
     """/reply/comment_pk 返信コメント投稿."""
     model = Reply
     fields = ('name', 'text')
-    template_name = 'comment/comment_form.html'
+    template_name = 'comment/templates/comment_form.html'
  
     def form_valid(self, form):
         comment_pk = self.kwargs['pk']
