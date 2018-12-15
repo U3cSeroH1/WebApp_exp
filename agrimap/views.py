@@ -45,7 +45,7 @@ from django.views import generic
 
 from .models import latlng
 
-from .forms import latlngForm
+from .forms import *
 
 User = get_user_model()
 
