@@ -14,7 +14,6 @@ Flask==1.0.2
 geographiclib==1.49
 geopy==1.17.0
 geos==0.2.1
-GDAL==2.3.2
 gunicorn==19.9.0
 idna==2.8
 itsdangerous==1.1.0

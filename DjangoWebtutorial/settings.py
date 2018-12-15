@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'register.apps.RegisterConfig',
     'agrimap.apps.agrimapConfig',
     'comment.apps.commentConfig',
-    'mapwidgets',
     
 ]
 
