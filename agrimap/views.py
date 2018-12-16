@@ -53,7 +53,7 @@ User = get_user_model()
 class DetailView(OnlyYouMixin, generic.DetailView):
 
     model = User
-    #form = ProfileForm()
+    form = ProfileForm()
 
     form_class = ProfileForm
 
