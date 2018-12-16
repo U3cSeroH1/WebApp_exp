@@ -56,6 +56,8 @@ class DetailView(OnlyYouMixin, generic.DetailView):
 
     #form_class = latlngForm
 
+    fields = '__all__'
+
     form_class = ProfileForm
 
     template_name = 'agrimap/detail.html'  # デフォルトユーザーを使う場合に備え、きちんとtemplate名を書く
