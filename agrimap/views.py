@@ -50,17 +50,8 @@ from .forms import *
 User = get_user_model()
 
 
-class DetailView(OnlyYouMixin, generic.DetailView):
-    """ユーザーの詳細ページ"""
-    model = User
-
-    #form_class = latlngForm
-
-    fields = '__all__'
-
-    form_class = ProfileForm
-
-    template_name = 'agrimap/detail.html'  # デフォルトユーザーを使う場合に備え、きちんとtemplate名を書く
-
-
-    
+def index_template(request):
+    form = ContactForm()
+    return render(request, 'detail.html', {
+        'form': form,
+    })
