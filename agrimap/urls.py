@@ -5,7 +5,7 @@ from . import views
 app_name = 'agrimap'
 urlpatterns = [
     path('detail/', views.detail, name='detail'),
-    path('detail2/', views.DetailView.as_view, name='detail2'),
+    path('detail2/<int:pk>/', views.DetailView.as_view, name='detail2'),
 
 ]
 
