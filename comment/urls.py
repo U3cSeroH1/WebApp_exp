@@ -10,5 +10,5 @@ urlpatterns = [
     path('comment/<int:pk>/',
         views.CommentView.as_view(), name='comment'),
     path('reply/<int:pk>/',
-        views.ReplyView.as_view(), name='replay'),
+        views.ReplyView.as_view(), name='reply'),
 ]
