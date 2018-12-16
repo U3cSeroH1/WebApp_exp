@@ -50,7 +50,7 @@ from .forms import *
 User = get_user_model()
 
 
-def index_template(request):
+def detail(request):
     form = ContactForm()
     return render(request, 'detail.html', {
         'form': form,
