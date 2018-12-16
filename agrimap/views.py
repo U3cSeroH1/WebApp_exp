@@ -51,7 +51,7 @@ User = get_user_model()
 
 
 def detail(request):
-    form = ContactForm()
+    form = ProfileForm()
     return render(request, 'detail.html', {
         'form': form,
     })
