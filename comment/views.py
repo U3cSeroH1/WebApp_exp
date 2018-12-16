@@ -30,7 +30,7 @@ class CommentView(generic.CreateView):
         comment.save()
  
         # 記事詳細にリダイレクト
-        return redirect('comment:detail', pk=post_pk)
+        return redirect('comment:post_detail', pk=post_pk)
  
  
 class ReplyView(generic.CreateView):
