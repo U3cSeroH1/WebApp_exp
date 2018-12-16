@@ -62,8 +62,8 @@ class DetailView(OnlyYouMixin, generic.DetailView):
     template_name = 'agrimap/detail2.html'
 
 
-def detail(request):
-    form = ProfileForm()
-    return render(request, 'agrimap/detail.html', {
-        'form': form,
-    })
+#def detail(request):
+  #  form = ProfileForm()
+ #   return render(request, 'agrimap/detail.html', {
+ #       'form': form,
+ #   })
