@@ -52,6 +52,6 @@ User = get_user_model()
 
 def detail(request):
     form = ProfileForm()
-    return render(request, 'templates/detail.html', {
+    return render(request, 'agrimap/detail.html', {
         'form': form,
     })
