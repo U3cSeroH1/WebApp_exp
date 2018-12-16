@@ -49,4 +49,4 @@ class ReplyView(generic.CreateView):
         reply.save()
  
         # 記事詳細にリダイレクト
-        return redirect('post_detail', pk=comment.target.pk)
+        return redirect('comment:post_detail', pk=comment.target.pk)
