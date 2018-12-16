@@ -53,13 +53,18 @@ User = get_user_model()
 class DetailView(OnlyYouMixin, generic.DetailView):
 
     model = User
-    form = ProfileForm()
+    form = latlngForm()
 
-    form_class = ProfileForm
+    form_class = latlngForm
 
 
 
     template_name = 'agrimap/detail.html'
+
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        return super().form_valid(form)
 
 
 #def detail(request):
