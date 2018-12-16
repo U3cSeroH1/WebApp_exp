@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<h2>記事一覧</h2>
+<table class="table">
+    {% for post in post_list %}
+        <tr>
+            <td>{{ post.title }}</td>
+            <td>{{ post.category }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<h2>カテゴリ一覧</h2>
+<table class="table">
+    {% for category in category_list %}
+        <tr>
+            <td>{{ category.name }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}
