@@ -3,7 +3,7 @@
 <h1>コメントフォーム</h1>
 <hr>
  
-<form action="" method="POST">
+<form action="{% url 'comment:post_detail' post.pk %}" method="POST">
     {{ form.as_p }}
     {% csrf_token %}
     <button type="submit">送信</button>

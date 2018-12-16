@@ -27,7 +27,7 @@ class Reply(models.Model):
     name = models.CharField(max_length=255, blank=True)
     text = models.TextField()
     target = models.ForeignKey(Comment, on_delete=models.CASCADE)
-    is_public = models.BooleanField(default=False)
+    is_public = models.BooleanField(default=True)
  
     def __str__(self):
         return self.name
