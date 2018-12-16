@@ -50,6 +50,18 @@ from .forms import *
 User = get_user_model()
 
 
+class DetailView(OnlyYouMixin, generic.DetailView):
+
+    model = User
+    form = ProfileForm()
+
+    form_class = ProfileForm
+
+
+
+    template_name = 'agrimap/detail2.html'
+
+
 def detail(request):
     form = ProfileForm()
     return render(request, 'agrimap/detail.html', {
