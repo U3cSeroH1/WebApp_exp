@@ -27,4 +27,4 @@ class ProfileForm(forms.Form):
         super().__init__(*args, **kwargs)
         for field in self.fields.values():
             field.widget.attrs['class'] = 'form-control'
-            field.widget.attrs['value'] = '<span id="lat"></span>'
+            field.widget.attrs['value'] = <span id="lat"></span>
