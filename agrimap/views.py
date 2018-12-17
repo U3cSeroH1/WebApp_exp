@@ -59,7 +59,7 @@ class DetailView(OnlyYouMixin, generic.DetailView):
 
 
 
-    template_name = 'agrimap/detail2.html'
+    template_name = 'agrimap/detail.html'
 
     def form_valid(self, form):
         # This method is called when valid form data has been POSTed.
@@ -69,6 +69,6 @@ class DetailView(OnlyYouMixin, generic.DetailView):
 
 def detail(request):
     form = ProfileForm()
-    return render(request, 'agrimap/detail.html', {
+    return render(request, 'agrimap/detail2.html', {
         'form': form,
     })
