@@ -22,3 +22,9 @@ class ProfileForm(forms.Form):
 
     name = forms.CharField()
     age = forms.IntegerField() 
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.widget.attrs['class'] = 'form-control'
+            field.widget.attrs['value'] = '<span id="lat"></span>'
