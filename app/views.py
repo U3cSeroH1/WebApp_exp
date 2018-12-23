@@ -12,12 +12,12 @@ class ListAndList(generic.ListView):
     model = Post
     template_name = 'app/post_list_and_category_list.html'
 
-    #r = 'これめっちゃ追加したい！！！！！！！！！'
+    r = 'これめっちゃ追加したい！！！！！！！！！'
 
-    #p = Category(name=r)
+    p = Category(name=r)
 
     #d = Post(title ="fuckyou", category = p.name)
-    #p.save()
+    p.save()
     #d.save()
 
     def get_context_data(self, **kwargs):
