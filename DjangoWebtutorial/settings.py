@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'agrimap.apps.agrimapConfig',
     'comment.apps.commentConfig',
     'app.apps.AppConfig',
-    
 ]
 
 MIDDLEWARE = [
@@ -147,7 +146,7 @@ STATICFILES_DIRS = (
 )
 
 # カスタムユーザーを使う
-#AUTH_USER_MODEL = 'register.User'
+AUTH_USER_MODEL = 'register.User'
 
 # ログインページと、直接ログインページへ行った後のリダイレクトページ
 LOGIN_URL = 'register:login'

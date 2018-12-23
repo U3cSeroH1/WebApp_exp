@@ -70,7 +70,6 @@
     <Compile Include="register\__init__.py" />
     <Compile Include="polls\admin.py" />
     <Compile Include="polls\apps.py" />
-    <Compile Include="polls\migrations\__init__.py" />
     <Compile Include="polls\models.py" />
     <Compile Include="polls\urls.py">
       <SubType>Code</SubType>
@@ -159,7 +158,6 @@
     <Folder Include="register\templates\register\mail_template\password_reset\" />
     <Folder Include="templates\" />
     <Folder Include="polls\" />
-    <Folder Include="polls\migrations\" />
     <Folder Include="polls\static\" />
     <Folder Include="polls\static\polls\" />
     <Folder Include="polls\static\polls\images\" />
