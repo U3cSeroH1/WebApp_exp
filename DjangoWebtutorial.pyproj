@@ -60,9 +60,11 @@
     <Compile Include="comment\views.py" />
     <Compile Include="comment\__init__.py" />
     <Compile Include="DjangoWebtutorial\local_settings.py" />
+    <Compile Include="polls\migrations\__init__.py" />
     <Compile Include="register\admin.py" />
     <Compile Include="register\apps.py" />
     <Compile Include="register\forms.py" />
+    <Compile Include="register\migrations\__init__.py" />
     <Compile Include="register\models.py" />
     <Compile Include="register\tests.py" />
     <Compile Include="register\urls.py" />
@@ -147,6 +149,8 @@
     <Folder Include="comment\templates\comment\" />
     <Folder Include="comment\templates\" />
     <Folder Include="DjangoWebtutorial\" />
+    <Folder Include="polls\migrations\" />
+    <Folder Include="register\migrations\" />
     <Folder Include="staticfiles\" />
     <Folder Include="register\" />
     <Folder Include="register\static\" />
