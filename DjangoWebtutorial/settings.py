@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'register.apps.RegisterConfig',
     'agrimap.apps.agrimapConfig',
     'comment.apps.commentConfig',
-    'app.apps.AppConfig',
+
 ]
 
 MIDDLEWARE = [
