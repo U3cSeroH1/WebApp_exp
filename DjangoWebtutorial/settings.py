@@ -37,18 +37,18 @@ ALLOWED_HOSTS = ['agriwelltest.herokuapp.com']
 
 INSTALLED_APPS = [
     # Add your apps here to enable them
-
+    'polls.apps.pollsConfig',
+    'register.apps.RegisterConfig',
+    'agrimap.apps.agrimapConfig',
+    'comment.apps.commentConfig',
+    'app.apps.AppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls.apps.pollsConfig',
-    'register.apps.RegisterConfig',
-    'agrimap.apps.agrimapConfig',
-    'comment.apps.commentConfig',
-    'app.apps.AppConfig',
+
 ]
 
 MIDDLEWARE = [
