@@ -1,8 +1,15 @@
 import warnings
 import xml.etree.ElementTree as ET
 
-from geopy.compat import (HTTPBasicAuthHandler, HTTPPasswordMgrWithDefaultRealm, Request,
-                          build_opener, iteritems, u, urlencode)
+from geopy.compat import (
+    HTTPBasicAuthHandler,
+    HTTPPasswordMgrWithDefaultRealm,
+    Request,
+    build_opener,
+    iteritems,
+    u,
+    urlencode,
+)
 from geopy.exc import ConfigurationError, GeocoderQueryError
 from geopy.geocoders.base import DEFAULT_SENTINEL, Geocoder
 from geopy.location import Location
@@ -290,7 +297,7 @@ class IGNFrance(Geocoder):
                           'argument will become True in geopy 2.0. '
                           'Specify `exactly_one=False` as the argument '
                           'explicitly to get rid of this warning.' % type(self).__name__,
-                          DeprecationWarning)
+                          DeprecationWarning, stacklevel=2)
             exactly_one = False
 
         sub_request = """

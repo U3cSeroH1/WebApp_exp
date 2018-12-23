@@ -9,7 +9,7 @@ with a default of the geodesic distance available as the function
 
 Great-circle distance (:class:`.great_circle`) uses a spherical model of
 the earth, using the mean earth radius as defined by the International
-Union of Geodesy and Geophysics, (2\ *a* + *b*)/3 = 6371.0087714150598
+Union of Geodesy and Geophysics, (2\\ *a* + *b*)/3 = 6371.0087714150598
 kilometers approx 6371.009 km (for WGS-84), resulting in an error of up
 to about 0.5%. The radius value is stored in
 :const:`distance.EARTH_RADIUS`, so it can be customized (it should
@@ -383,7 +383,7 @@ class geodesic(Distance):
         self.set_ellipsoid(kwargs.pop('ellipsoid', 'WGS-84'))
         if 'iterations' in kwargs:
             warnings.warn('Ignoring unused `iterations` kwarg for geodesic '
-                          'distance.', UserWarning)
+                          'distance.', DeprecationWarning, stacklevel=2)
         kwargs.pop('iterations', 0)
         major, minor, f = self.ELLIPSOID
         super(geodesic, self).__init__(*args, **kwargs)
@@ -490,7 +490,7 @@ class vincenty(Distance):
                           'in geopy 2.0. Use `geopy.distance.geodesic` '
                           '(or the default `geopy.distance.distance`) '
                           'instead, which is more accurate and always converges.',
-                          DeprecationWarning)
+                          DeprecationWarning, stacklevel=2)
         self.set_ellipsoid(kwargs.pop('ellipsoid', 'WGS-84'))
         self.iterations = kwargs.pop('iterations', 20)
         major, minor, f = self.ELLIPSOID
