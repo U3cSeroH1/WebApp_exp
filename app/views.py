@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, redirect
+from app import models
 from django.urls import reverse_lazy
 from django.views.generic.edit import ModelFormMixin
 from django.views import generic
@@ -6,9 +7,18 @@ from .forms import CommentCreateForm
 from .models import Post, Category
 
 
+
 class ListAndList(generic.ListView):
     model = Post
     template_name = 'app/post_list_and_category_list.html'
+
+    r = 'これめっちゃ追加したい！！！！！！！！！'
+
+    p = Category(name=r)
+
+    #d = Post(title ="fuckyou", category = p.name)
+    p.save()
+    #d.save()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -55,3 +65,5 @@ class DetailAndCreate(ModelFormMixin, generic.DetailView):
         else:
             self.object = self.get_object()
             return self.form_invalid(form)
+
+

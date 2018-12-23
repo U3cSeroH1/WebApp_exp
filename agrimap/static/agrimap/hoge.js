@@ -55,6 +55,12 @@ function getClickLatLng(latlng, map){
     document.getElementById('lat').textContent = latlng.lat();
     document.getElementById('lng').textContent = latlng.lng();
 
+    var latlng = {
+        lat : latlng.lat(),
+        lng : latlng.lng()
+    }
+
+
 //ここに画像入れたら面白いんじゃね
     //しかし画像をさしたあとズームアウトしたら一緒にでかくなｒｊ
     var icon = new google.maps.MarkerImage('pin.png',
