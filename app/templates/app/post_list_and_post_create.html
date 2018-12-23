@@ -1,0 +1,28 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<h2>記事一覧</h2>
+<table class="table">
+    {% for post in post_list %}
+        <tr>
+            <td>{{ post.title }}</td>
+            <td>{{ post.category }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<h2>記事作成</h2>
+<form action="" method="POST">
+  {{ form.non_field_errors }}
+  {% for field in form %}
+    <div class="form-group">
+        <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+        {{ field }}
+        {{ field.errors }}
+    </div>
+  {% endfor %}
+  {% csrf_token %}
+  <button type="submit" class="btn btn-primary">送信</button>
+</form>
+
+{% endblock %}
