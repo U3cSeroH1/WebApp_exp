@@ -4,9 +4,13 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.utils.translation import ugettext_lazy as _
 
+
+
 # registerのUserモデルを使う場合だけ、登録する
 if settings.AUTH_USER_MODEL == 'register.User':
     from .models import User
+
+
 
     class MyUserChangeForm(UserChangeForm):
         class Meta:

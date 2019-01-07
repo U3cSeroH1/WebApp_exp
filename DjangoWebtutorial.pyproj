@@ -112,6 +112,8 @@
     <Content Include="comment\templates\comment\post_detail.html" />
     <Content Include="comment\templates\comment\post_list.html" />
     <Content Include="register\static\register\favicon.ico" />
+    <Content Include="register\static\register\app1.js" />
+    <Content Include="register\templates\register\base - Copy %282%29.html" />
     <Content Include="register\templates\register\base - Copy.html" />
     <Content Include="register\templates\register\base.html" />
     <Content Include="register\templates\register\login.html" />
@@ -131,6 +133,7 @@
     <Content Include="register\templates\register\user_create_complete.html" />
     <Content Include="register\templates\register\user_create_done.html" />
     <Content Include="register\templates\register\user_detail.html" />
+    <Content Include="register\templates\register\user_form - Copy.html" />
     <Content Include="register\templates\register\user_form.html" />
     <Content Include="polls\static\polls\images\background.gif" />
     <Content Include="polls\templates\index.html" />

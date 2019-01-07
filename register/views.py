@@ -20,6 +20,10 @@ from .forms import (
     MyPasswordResetForm, MySetPasswordForm
 )
 
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.csrf import csrf_protect
+
+from django.http import HttpResponse
 
 User = get_user_model()
 
@@ -178,5 +182,48 @@ class PasswordResetComplete(PasswordResetCompleteView):
 
 
 
+def save_latlng(request):    # AJAXに答える関数
 
 
+    if request.method == 'POST':
+        txt = request.POST['lat'] # POSTデータを取得して
+        txt2=request.POST['lng']
+     #   print('book1の情報：{}'.format(txt['lat']))
+     #  print('book1の情報：{}'.format(txt['lng']))
+     #   surprise_txt = format(txt['lat'])+ "!!!"  # 加工
+        print("こんにちは")
+        print (txt)
+        print (txt2)
+        print(type(txt))
+        surprise_txt = txt + "!!!" 
+  #      moji=txt.rsplit('}')[0]
+   #     moji = txt.split('{')[0]
+        my_dict2 = {
+           'lat':txt,
+           'lng':txt2,
+        }
+     #   print(moji)
+        response = txt # JSON形式に直して・・
+        #response = json.dumps({'your_surprise_txt':surprise_txt,})
+        
+       # f2 = open('/home/ec2-user/environment/english_test/app/static/app/json/hoge.json', 'w')
+       # json.dump(my_dict2, f2)
+       # f = open('/home/ec2-user/environment/english_test/app/static/app/json/hoge.json', 'r')
+   #     json_dict = json.load(f)
+#        txt3=f['lat']
+  #      print (json_dict)
+        U=User.objects.get(pk=1)
+        U.example3=txt+":"+txt2
+        U.save()
+        return HttpResponse(response,content_type='application/javascript')  # 返す。JSONはjavascript扱いなのか・・
+
+    else:
+        print("こんばんわ")
+        raise Http404  # GETリクエストを404扱いにしているが、実際は別にしなくてもいいかも   
+
+
+
+
+@ensure_csrf_cookie
+def view(request):
+    pass
