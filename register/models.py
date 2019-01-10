@@ -7,6 +7,24 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 from django.contrib.auth.base_user import BaseUserManager
 
+
+CHOICES = (
+    ('', '選択肢から選んでください><'),
+    ('バナナ', 'バナナ'),
+    ('1', 'オレンジ'),
+    ('2', 'ぶどう'),
+    ('3', 'はくさい'),
+    ('ちんこ', 'ちんこ'),
+    ('5', 'ぶどうんこ'),
+    ('6', 'おせちんこ'),
+    ('7', 'なす'),
+    ('8', 'こめ'),
+    ('9', 'むぎ'),
+    ('10', 'きゃべつ'),
+    ('11', 'たまねぎ'),
+    ('12', 'その他'),
+)
+
 # registerのUserモデルを使う場合だけ、登録する
 if settings.AUTH_USER_MODEL == 'register.User':
     class UserManager(BaseUserManager):
@@ -53,6 +71,7 @@ if settings.AUTH_USER_MODEL == 'register.User':
         example1=models.CharField(_('example1'),max_length=150,blank=True)
         example2=models.CharField(_('example2'),max_length=150,blank=True)
         example3=models.CharField(_('example3'),max_length=150,blank=True)
+        pulldown = models.CharField(_('pulldown'), choices=CHOICES,max_length=150,blank=True)
 
         is_staff = models.BooleanField(
             _('staff status'),

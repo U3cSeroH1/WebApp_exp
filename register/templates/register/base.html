@@ -81,6 +81,26 @@
           lat:lat_lng.lat(),
           lng:lat_lng.lng(),
       };
+
+ 
+            var marker = new google.maps.Marker({
+                position: lat_lng,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                //icon: icon
+                draggable: true,
+                title: "Drag me!"
+
+            });
+
+
+
+
+
+
+
+
+
       iti=lat_lng.lat()+","+lat_lng.lng();
  //     alert(obj.lat);
         $.ajax({
@@ -94,13 +114,14 @@
             csrfmiddlewaretoken: '{{ csrf_token }}',
             'success':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
                // alert(response.your_surprise_txt);  // レスポンスからデータを取り出してアラート
+               alert(response.aaa['lat']);
+               alert(response.aaa['lng']);
+               //alert("ale");
             },
           'error':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
                 alert("st");  // レスポンスからデータを取り出してアラート
             },
         });
-       
-
 }
 </script>
 
