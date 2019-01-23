@@ -12,13 +12,6 @@ class ListAndList(generic.ListView):
     model = Post
     template_name = 'app/post_list_and_category_list.html'
 
-    r = 'これめっちゃ追加したい！！！！！！！！！'
-
-    p = Category(name=r)
-
-    #d = Post(title ="fuckyou", category = p.name)
-    p.save()
-    #d.save()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
