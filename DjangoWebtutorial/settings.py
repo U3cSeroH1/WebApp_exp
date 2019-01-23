@@ -46,9 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.pollsConfig',
     'register.apps.RegisterConfig',
-    'agrimap.apps.agrimapConfig',
     'comment.apps.commentConfig',
-    'app.apps.AppConfig',
+
 ]
 
 MIDDLEWARE = [

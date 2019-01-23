@@ -30,27 +30,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="agrimap\admin.py" />
-    <Compile Include="agrimap\apps.py" />
-    <Compile Include="agrimap\forms.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="agrimap\migrations\__init__.py" />
-    <Compile Include="agrimap\models.py" />
-    <Compile Include="agrimap\tests.py" />
-    <Compile Include="agrimap\urls.py" />
-    <Compile Include="agrimap\views.py" />
-    <Compile Include="agrimap\__init__.py" />
-    <Compile Include="app\admin.py" />
-    <Compile Include="app\apps.py" />
-    <Compile Include="app\forms.py" />
-    <Compile Include="app\migrations\0001_initial.py" />
-    <Compile Include="app\migrations\__init__.py" />
-    <Compile Include="app\models.py" />
-    <Compile Include="app\tests.py" />
-    <Compile Include="app\urls.py" />
-    <Compile Include="app\views.py" />
-    <Compile Include="app\__init__.py" />
     <Compile Include="comment\admin.py" />
     <Compile Include="comment\apps.py" />
     <Compile Include="comment\migrations\__init__.py" />
@@ -88,28 +67,6 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <None Include="FolderProfile.pubxml" />
-    <Content Include="agrimap\static\agrimap\ass.css" />
-    <Content Include="agrimap\static\agrimap\aaa.json" />
-    <Content Include="agrimap\static\agrimap\templates\agrimap\detail - Copy.html" />
-    <Content Include="agrimap\static\agrimap\templates\agrimap\detail.html" />
-    <Content Include="agrimap\static\agrimap\templates\agrimap\detail2.html" />
-    <Content Include="agrimap\templates\agrimap\detail2.html" />
-    <Content Include="agrimap\templates\agrimap\detail - Copy.html" />
-    <Content Include="agrimap\templates\agrimap\detail.html" />
-    <Content Include="agrimap\static\agrimap\hoge.js" />
-    <Content Include="app\migrations\__pycache__\0001_initial.cpython-36.pyc" />
-    <Content Include="app\migrations\__pycache__\__init__.cpython-36.pyc" />
-    <Content Include="app\templates\app\base.html" />
-    <Content Include="app\templates\app\post_detail_and_comment_create.html" />
-    <Content Include="app\templates\app\post_list_and_category_list.html" />
-    <Content Include="app\templates\app\post_list_and_post_create.html" />
-    <Content Include="app\__pycache__\admin.cpython-36.pyc" />
-    <Content Include="app\__pycache__\apps.cpython-36.pyc" />
-    <Content Include="app\__pycache__\forms.cpython-36.pyc" />
-    <Content Include="app\__pycache__\models.cpython-36.pyc" />
-    <Content Include="app\__pycache__\urls.cpython-36.pyc" />
-    <Content Include="app\__pycache__\views.cpython-36.pyc" />
-    <Content Include="app\__pycache__\__init__.cpython-36.pyc" />
     <Content Include="comment\templates\comment\base.html" />
     <Content Include="comment\templates\comment\comment_form.html" />
     <Content Include="comment\templates\comment\post_detail.html" />
@@ -174,20 +131,6 @@
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="agrimap\" />
-    <Folder Include="agrimap\migrations\" />
-    <Folder Include="agrimap\static\agrimap\" />
-    <Folder Include="agrimap\static\agrimap\templates\" />
-    <Folder Include="agrimap\static\agrimap\templates\agrimap\" />
-    <Folder Include="agrimap\templates\" />
-    <Folder Include="agrimap\templates\agrimap\" />
-    <Folder Include="agrimap\static\" />
-    <Folder Include="app\" />
-    <Folder Include="app\migrations\" />
-    <Folder Include="app\migrations\__pycache__\" />
-    <Folder Include="app\templates\" />
-    <Folder Include="app\templates\app\" />
-    <Folder Include="app\__pycache__\" />
     <Folder Include="comment\" />
     <Folder Include="comment\migrations\" />
     <Folder Include="comment\static\" />
