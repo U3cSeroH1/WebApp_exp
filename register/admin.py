@@ -6,6 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 
+
 # registerのUserモデルを使う場合だけ、登録する
 if settings.AUTH_USER_MODEL == 'register.User':
     from .models import User
@@ -46,3 +47,5 @@ if settings.AUTH_USER_MODEL == 'register.User':
         ordering = ('email',)
 
     admin.site.register(User, MyUserAdmin)
+
+

@@ -2,7 +2,7 @@
 from django.shortcuts import redirect, get_object_or_404
 from django.views import generic
 from .models import Post, Comment, Reply
- 
+from register.models import User
  
 class PostListView(generic.ListView):
     """/ でアクセス記事一覧."""
@@ -22,7 +22,7 @@ class CommentView(generic.CreateView):
  
     def form_valid(self, form):
         post_pk = self.kwargs['pk']
-        post = get_object_or_404(Post, pk=post_pk)
+        post = get_object_or_404(User, pk=post_pk)
  
         # 紐づく記事を設定する
         comment = form.save(commit=False)
@@ -30,7 +30,7 @@ class CommentView(generic.CreateView):
         comment.save()
  
         # 記事詳細にリダイレクト
-        return redirect('comment:post_detail', pk=post_pk)
+        return redirect('register:user_detail', pk=post_pk)
  
  
 class ReplyView(generic.CreateView):

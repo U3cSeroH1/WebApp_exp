@@ -25,11 +25,48 @@ from django.views.decorators.csrf import csrf_protect
 
 from django.http import HttpResponse
 
+from django.shortcuts import render
+
+import json
+import logging
+import re
+
+from django.conf import settings
+from django.contrib.auth import get_user_model
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.views import (
+    LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView,
+    PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
+)
+from django.contrib.sites.shortcuts import get_current_site
+from django.core.signing import BadSignature, SignatureExpired, loads, dumps
+from django.http import HttpResponseBadRequest
+from django.shortcuts import redirect, resolve_url
+from django.template.loader import get_template
+from django.urls import reverse_lazy
+from django.views import generic
+from .forms import (
+    LoginForm, UserCreateForm, UserUpdateForm, MyPasswordChangeForm,
+    MyPasswordResetForm, MySetPasswordForm
+)
+
+from django.core.mail import send_mail, EmailMessage
+from django.shortcuts import render
+
+
+from django.http.response import JsonResponse
+import os
+module_dir = os.path.dirname(__file__) # views.pyのあるディレクトリを取得
+json_path = os.path.join(module_dir, 'hoge.json')
+from django.http import HttpResponse,Http404
+
 import json
 import logging
 import re
 
 User = get_user_model()
+
+
 
 
 class Top(generic.TemplateView, LoginView):
@@ -187,46 +224,41 @@ class PasswordResetComplete(PasswordResetCompleteView):
 
 
 def save_latlng(request):    # AJAXに答える関数
-
-    model = User
+    print ("haro")
 
     if request.method == 'POST':
         txt = request.POST['lat'] # POSTデータを取得して
         txt2=request.POST['lng']
-     #   print('book1の情報：{}'.format(txt['lat']))
-     #  print('book1の情報：{}'.format(txt['lng']))
-     #   surprise_txt = format(txt['lat'])+ "!!!"  # 加工
-        print("こんにちは")
-        print (txt)
-        print (txt2)
-        print(type(txt))
-        surprise_txt = txt + "!!!" 
-  #      moji=txt.rsplit('}')[0]
-   #     moji = txt.split('{')[0]
-        mydict = {
+        txt3=request.POST['lng_s']
+        txt4=request.POST['geo']
+        print (request.get_full_path)
+        print (txt3)
+        txt3=txt3.strip("/")
+        txt3=txt3.strip("user_update/")
+
+        
+
+        my_dict = {
            'lat':txt,
            'lng':txt2,
+           'geo':txt4,
         }
-        mydict2=json.dumps({'aaa':mydict})
-     #   print(moji)
-        #response = txt # JSON形式に直して・・
-        #response = json.dumps({'your_surprise_txt':surprise_txt,})
-        
-       # f2 = open('/home/ec2-user/environment/english_test/app/static/app/json/hoge.json', 'w')
-       # json.dump(my_dict2, f2)
-       # f = open('/home/ec2-user/environment/english_test/app/static/app/json/hoge.json', 'r')
-   #     json_dict = json.load(f)
-#        txt3=f['lat']
-  #      print (json_dict)
+        my_dict2 = json.dumps({'aaa':my_dict})
+#        def test_func(self):
+#            user = self.request.user
+        #    return user.pk == self.kwargs['pk'] or user.is_superuser
 
-        print(type(User.pk))
-
-
-
-        U=User.objects.get(pk=1)
+#        return resolve_url('app:user_detail', pk=self.kwargs['pk'])
+        U=User.objects.get(pk=txt3)
         U.example3=txt+":"+txt2
+        U.lat=txt
+        U.lng=txt2
+        U.geo=txt4
         U.save()
-        return HttpResponse(mydict2,content_type='application/javascript')  # 返す。JSONはjavascript扱いなのか・・
+
+        
+
+        return HttpResponse(my_dict2,content_type='application/javascript')  # 返す。JSONはjavascript扱いなのか・・
 
     else:
         print("こんばんわ")
@@ -234,6 +266,78 @@ def save_latlng(request):    # AJAXに答える関数
 
 
 
+def pin(request):
+    return render(request,'register/pin.html')
+
+def pin_data(request):
+    #print ("hro")
+
+
+
+
+
+    #print(sorted(CHOICES2))
+
+
+                    #print(vegi + "あ")
+                    #print(U.pulldown + "あ")
+
+    if request.method == 'POST':
+
+
+
+        numbers=range(0,User.objects.count())
+        print(User.objects.count())
+        """
+        for number in numbers:
+            didict[number]={"lat":1,"lng":2,"num":number+10}
+            
+        dict2=json.dumps({'ccc':didict})  
+        while True:
+            i=i+1
+            try:
+                U=Userq.objects.get(pk=number)
+                if()
+                lat=U.lat
+                lng=U.lng
+                print(lat,lng)
+            except:
+                break
+        """        
+        didict={}
+        for number in numbers:
+            try:
+                U=User.objects.get(pk=number+1)
+                lat=U.lat
+                lng=U.lng
+                pulldown=U.pulldown
+
+
+                didict[number+1]={"lat":lat,"lng":lng,"num":User.objects.count(),"pulldown":pulldown}
+                print(lat,lng,pulldown)
+            except:
+                didict[number+1]={"lat":-1,"lng":-1,"num":User.objects.count()}
+                print(number+1)
+        
+        dict2=json.dumps({'ccc':didict})  
+
+        print("endgeiojgfeiojeoi")        
+        """
+        
+        U=Userq.objects.get(pk=1)            
+        lat=U.lat
+        lng=U.lng
+        print(lat,lng)       
+        """
+        
+        
+
+        
+        return HttpResponse(dict2,content_type='application/javascript')  # 返す。JSONはjavascript扱いなのか・・
+
+    else:
+        print("こんばんわ")
+        raise Http404  # GETリクエストを404扱いにしているが、実際は別にしなくてもいいかも  
 
 @ensure_csrf_cookie
 def view(request):

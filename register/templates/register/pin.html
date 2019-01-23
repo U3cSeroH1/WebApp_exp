@@ -1,0 +1,348 @@
+{% extends "register/base.html" %}
+{% block content %}
+
+
+
+
+
+  {% load static %}
+
+
+  <script src="{% static 'register/app1.js' %}"></script>
+  <script src="{% static 'register/hoge.json' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVoA&callback=initMap" async defer></script>
+<script>
+
+    var CHOICES = ['ほうれん草','白菜','トマト', 'たまねぎ', 
+               'ナス', 'ネギ', 'ジャガイモ', 'きのこ', 'にんじん', 'だいこん', 'かぼちゃ', 'きゅうり', 'ブロッコリー', 'ピーマン', 'キャベツ', '米', 'イチゴ', 'カボス', 'みかん', '梨', 'ぶどう', 'キウイ', 'その他', 
+
+    ]
+    var marker = new Array();
+
+    function initMap() {
+      // マップの初期化
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: {lat: 33.232647, lng: 131.651055}
+      });
+
+
+
+
+      
+   //   alert("grsg");
+      $.ajax({
+            'url':'{% url "register:pin_data" %}',
+            'type':'POST',
+
+            'dataType':'json',
+    
+          csrfmiddlewaretoken: '{{ csrf_token }}',
+            'success':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
+             //   alert(response.your_surprise_txt['lat']);  // レスポンスからデータを取り出してアラート
+             //   alert(response.ccc[1]['num']);
+              //  alert(response.ccc[1]['lat']);
+               // alert(response.ccc[1]['lng']);
+
+          for ( var i = 1; i <= response.ccc[1]['num']; i++ ) {
+
+          //alert(response.ccc[i]['lat']);
+
+          var myLatLng = {lat: Number(response.ccc[i]['lat']), lng: Number(response.ccc[i]['lng'])};
+
+          //alert(response.ccc[i]['pulldown']);
+
+               var icon = new Array();
+          
+
+
+          //地獄の野菜ifゾーン
+
+        var Size = new google.maps.Size(71, 71);
+        var Point = new google.maps.Point(0, 0);
+        var Point2 = new google.maps.Point(17, 34);
+        var Size2 = new google.maps.Size(25, 25);
+
+
+               if( response.ccc[i]['pulldown']=='ほうれん草'){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/1.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='白菜'){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/2.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='トマト' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/3.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='たまねぎ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/4.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ナス' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/5.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ネギ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/6.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ジャガイモ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/7.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='きのこ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/8.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='にんじん' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/9.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='だいこん' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/10.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='かぼちゃ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/11.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='きゅうり' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/12.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ブロッコリー' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/13.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ピーマン' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/14.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='キャベツ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/15.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='米' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/16.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='麦' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/17.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='イチゴ'){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/18.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='カボス' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/19.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='みかん' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/20.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']== '梨' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/21.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ぶどう'){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/22.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='キウイ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/23.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='その他' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/24.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               
+
+
+
+
+                marker[i] = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                icon: icon[i],
+
+                title: "aaaa"
+
+                });
+
+            hardlink = '<a href="http://127.0.0.1:8000/user_detail/' + 1 + '/">^q^\</a>'
+
+            //markerInfo(marker[i], hardlink);
+
+
+            google.maps.event.addListener(marker[i], 'click', clickEventFunc);
+    
+         google.maps.event.addListener(marker[i], 'click', function(event) {
+
+            map.setZoom(8);
+    	    var latlng = this.getPosition();
+            var id = marker.indexOf(this);
+            map.panTo(latlng);
+            //alert(id);
+
+    hardlink = 'http://127.0.0.1:8000/user_detail/' + id + '/';
+
+    //alert(hardlink);
+
+    location.href = hardlink;
+
+        });
+
+            }
+
+            },
+          'error':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
+                alert("st");  // レスポンスからデータを取り出してアラート
+              //  alert(response.your_surprise_txt)
+            //    alert(iti);
+            },
+
+        });
+
+
+
+
+    }
+
+
+        function clickEventFunc(event) {
+
+      //alert(event.latLng.toString());
+    }
+
+
+ 
+
+</script>
+
+{% endblock %}
