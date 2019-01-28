@@ -63,9 +63,23 @@
     <Compile Include="DjangoWebtutorial\settings.py" />
     <Compile Include="DjangoWebtutorial\urls.py" />
     <Compile Include="DjangoWebtutorial\wsgi.py" />
+    <Compile Include="scraping\admin.py" />
+    <Compile Include="scraping\apps.py" />
+    <Compile Include="scraping\migrations\__init__.py" />
+    <Compile Include="scraping\models.py" />
+    <Compile Include="scraping\sku.py" />
+    <Compile Include="scraping\tests.py" />
+    <Compile Include="scraping\urls.py" />
+    <Compile Include="scraping\views.py" />
+    <Compile Include="scraping\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="scraping\static\scraping\tinko.png" />
+    <Content Include="scraping\static\scraping\unti.png" />
+    <Content Include="scraping\templates\index.html" />
+    <Content Include="scraping\templates\scraping\date_page.html" />
+    <Content Include="scraping\templates\scraping\hour_page.html" />
     <None Include="FolderProfile.pubxml" />
     <Content Include="comment\templates\comment\base.html" />
     <Content Include="comment\templates\comment\comment_form.html" />
@@ -139,6 +153,12 @@
     <Folder Include="DjangoWebtutorial\" />
     <Folder Include="polls\migrations\" />
     <Folder Include="register\migrations\" />
+    <Folder Include="scraping\" />
+    <Folder Include="scraping\migrations\" />
+    <Folder Include="scraping\static\" />
+    <Folder Include="scraping\static\scraping\" />
+    <Folder Include="scraping\templates\" />
+    <Folder Include="scraping\templates\scraping\" />
     <Folder Include="staticfiles\" />
     <Folder Include="register\" />
     <Folder Include="register\static\" />

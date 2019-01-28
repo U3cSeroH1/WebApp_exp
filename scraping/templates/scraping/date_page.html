@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+<title>staticfile test</title>
+</head>
+<body>
+   {% ifequal tinko 'tinkoko' %}   <!--viewsからkeyのtinkoが送られてきたかどうか-->
+        {% load static %}
+        <img src="{% static "scraping/tinko.png" %}">
+        {{tinko}}
+   {% endifequal %}
+   {% if unti %}
+        {% load static %}
+        <img src="{% static "scraping/unti.png" %}">
+   {% endif %}
+
+   {% for hourkey in hourkey %}
+
+   <a href="{% url 'scraping:hour_page' datekey hourkey %}">{{hourkey}}時</a>
+   
+   {% endfor %}
+
+うんち！ｗ
+</body>
+</html>

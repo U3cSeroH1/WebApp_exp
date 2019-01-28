@@ -286,8 +286,11 @@ def pin_data(request):
 
 
 
-        numbers=range(0,User.objects.count())
-        print(User.objects.count())
+        numbers=range(0,User.objects.last().id)
+
+        
+
+        print(User.objects.last().id)
         """
         for number in numbers:
             didict[number]={"lat":1,"lng":2,"num":number+10}
@@ -312,11 +315,10 @@ def pin_data(request):
                 lng=U.lng
                 pulldown=U.pulldown
 
-
-                didict[number+1]={"lat":lat,"lng":lng,"num":User.objects.count(),"pulldown":pulldown}
+                didict[number+1]={"lat":lat,"lng":lng,"num":User.objects.last().id,"pulldown":pulldown}
                 print(lat,lng,pulldown)
             except:
-                didict[number+1]={"lat":-1,"lng":-1,"num":User.objects.count()}
+                didict[number+1]={"lat":-1,"lng":-1,"num":User.objects.last().id}
                 print(number+1)
         
         dict2=json.dumps({'ccc':didict})  
