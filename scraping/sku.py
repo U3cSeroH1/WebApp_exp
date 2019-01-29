@@ -6,10 +6,12 @@ import time
 from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
-from .models import WeatherDetail, Tomorrow, Date
+from .models import WeatherDetail, Tomorrow, Date, test
 
 from django.utils import timezone
 import datetime
+
+import random
 
 #from .models import Cdate
 
@@ -42,6 +44,9 @@ def soup(url):
     r = requests.get(url)
     html = r.text.encode(r.encoding)
     return BeautifulSoup(html, 'lxml')
+
+
+#main1
 
 def forecast3dict(soup):
     data={}
@@ -90,16 +95,20 @@ def forecast3dict(soup):
                     'day_length': a6,
                 },
             )
+            
 
 
             print(str(timezone.now()))
+
+    test(test=str(random.randint(0, 10000))).save()
 
     data["forecasts"].append(forecast)
 
     return data["forecasts"]
 
 
-#原稿
+#main2
+
 def forecastmirai(soup):
     data={}
     wea           = soup.select('img')
@@ -108,12 +117,14 @@ def forecastmirai(soup):
     temp_min      = soup.select('.temp .min') #なんか.いれないとエラー出る
     temp_max      = soup.select('.temp .max')
     data["forecasts"] = []
-    for itr in range(0, 2):
+    for itr in range(0, 8):
         forecast = {}
-        a1 = wea[itr]['alt']
-        forecast["weather"] = a1
-        a2 = info[itr].text.strip()
-        forecast["info"] = a2
+        for i in range(0, 4):
+            a1 = wea[itr+i]['alt']
+            forecast["weather"] = a1
+            a2 = info[itr+i].text.strip()
+            forecast["info"] = a2
+
         a3 = rain[itr+1].text.strip()
         forecast["rain"] = a3
         a4 = temp_min[itr].text.strip()
@@ -121,22 +132,22 @@ def forecastmirai(soup):
         a5 = temp_max[itr].text.strip()
         forecast["temp_max"] = a5
         data["forecasts"].append(forecast)
+        if itr == 6 or itr == 7:
 
-        Date.objects.update_or_create(pub_date = str(timezone.now().date()))
+            print(itr-6)
 
+            Date.objects.update_or_create(pub_date = str(timezone.now().date()+timezone.timedelta(days=1)))
+            Tomorrow.objects.update_or_create(
+                target = Date.objects.get(pub_date= str(timezone.now().date()+timezone.timedelta(days=1))),
 
-
-        Tomorrow.objects.update_or_create(
-            target = Date.objects.get(pub_date= str(timezone.now().date())),
-
-            defaults={
-                'weather': a1,
-                'info': a2,
-                'rain': a3,
-                'temp_min': a4,
-                'temp_max': a5,
-            },
-        )
+                defaults={
+                    'weather': a1,
+                    'info': a2,
+                    'rain': a3,
+                    'temp_min': a4,
+                    'temp_max': a5,
+                },
+            )
 
 
         print(str(timezone.now()))

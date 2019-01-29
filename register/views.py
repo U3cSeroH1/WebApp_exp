@@ -266,8 +266,16 @@ def save_latlng(request):    # AJAXに答える関数
 
 
 
-def pin(request):
-    return render(request,'register/pin.html')
+def pin(request, pk):
+
+    User.objects.get(pk=pk)
+
+    d={
+        'lat' : User.objects.get(pk=pk).lat,
+        'lng' : User.objects.get(pk=pk).lng,
+    }
+
+    return render(request,'register/pin.html', d)
 
 def pin_data(request):
     #print ("hro")

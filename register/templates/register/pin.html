@@ -19,11 +19,13 @@
     ]
     var marker = new Array();
 
+    var initLatLng = {lat: Number("{{lat}}"), lng: Number("{{lng}}")};
+
     function initMap() {
       // マップの初期化
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
-        center: {lat: 33.232647, lng: 131.651055}
+        center: initLatLng,
       });
 
 
@@ -52,7 +54,7 @@
 
           //alert(response.ccc[i]['pulldown']);
 
-               var icon = new Array();
+          var icon = new Array();
           
 
 
@@ -291,30 +293,20 @@
                 animation: google.maps.Animation.DROP,
                 icon: icon[i],
 
-                title: "aaaa"
+                title: response.ccc[i]['pulldown']
 
                 });
 
-            hardlink = '<a href="https://agriwellalpha.herokuapp.com/user_detail/' + 1 + '/">^q^\</a>'
-
-            //markerInfo(marker[i], hardlink);
-
-
-            google.maps.event.addListener(marker[i], 'click', clickEventFunc);
-    
+  
          google.maps.event.addListener(marker[i], 'click', function(event) {
 
             map.setZoom(8);
     	    var latlng = this.getPosition();
             var id = marker.indexOf(this);
             map.panTo(latlng);
-            //alert(id);
 
-    hardlink = 'https://agriwellalpha.herokuapp.com/user_detail/' + id + '/';
 
-    //alert(hardlink);
-
-    location.href = hardlink;
+    location.href = "{% url 'register:user_detail' 123456 %}".replace(/123456/,id);
 
         });
 
@@ -333,13 +325,6 @@
 
 
     }
-
-
-        function clickEventFunc(event) {
-
-      //alert(event.latLng.toString());
-    }
-
 
  
 

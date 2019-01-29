@@ -34,15 +34,26 @@ class WeatherDetail(models.Model):
         return  str(self.target)+ '/' + self.hour + '時'
 
 
+def get_or_create_date():
+    date, _ = Date.objects.get_or_create(pub_date=timezone.now().date())
+    return date
+
 class Tomorrow(models.Model):
 
-    weather  = models.CharField(max_length=16)
-    info     = models.CharField(max_length=64)
-    rain     = models.CharField(max_length=64)
+    weather = models.CharField(max_length=16)
+    info = models.CharField(max_length=64)
+    rain = models.CharField(max_length=64)
     temp_min = models.CharField(max_length=4)
     temp_max = models.CharField(max_length=4)
-
     target = models.ForeignKey(Date, on_delete=models.CASCADE, default = get_or_create_date)
 
     def __str__(self):
-        return self.weather
+        return str(self.target)
+
+
+class test(models.Model):
+
+    test = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.test
