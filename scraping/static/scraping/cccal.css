@@ -9,25 +9,25 @@
   font-size:20px;
 }
 #overlay {
-  /* viewpoint‚ð‘Š‘ÎˆÊ’u‚É‚µA‘S‰æ–Ê•\Ž¦‚É‚·‚é */
+  /* viewpointã‚’ç›¸å¯¾ä½ç½®ã«ã—ã€å…¨ç”»é¢è¡¨ç¤ºã«ã™ã‚‹ */
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);  /* ”wŒi‚ð”¼“§–¾‚É‚·‚é */
-  display: none;  /* HTML—v‘f‚ð”ñ•\Ž¦‚É‚·‚é */
-  z-index: 1  /* uƒƒCƒ“‚ÌHTML—v‘fv‚æ‚è‚àƒXƒ^ƒbƒNƒŒƒxƒ‹‚ð‚‚­‚·‚é */
+  background: rgba(0, 0, 0, 0.3);  /* èƒŒæ™¯ã‚’åŠé€æ˜Žã«ã™ã‚‹ */
+  display: none;  /* HTMLè¦ç´ ã‚’éžè¡¨ç¤ºã«ã™ã‚‹ */
+  z-index: 1  /* ã€Œãƒ¡ã‚¤ãƒ³ã®HTMLè¦ç´ ã€ã‚ˆã‚Šã‚‚ã‚¹ã‚¿ãƒƒã‚¯ãƒ¬ãƒ™ãƒ«ã‚’é«˜ãã™ã‚‹ */
  }
 
 #modalWindow {
   width: 100%;
   height: 90%;
-  position: fixed; /* viewpoint‚ð‘Š‘ÎˆÊ’u‚É‚·‚é */
+  position: fixed; /* viewpointã‚’ç›¸å¯¾ä½ç½®ã«ã™ã‚‹ */
   border: 2px solid #D04255;
   background-color: #FFF;
   display: none; 
-  z-index: 2  /* uƒI[ƒo[ƒŒ‚ÌHTML—v‘fv‚æ‚è‚àƒXƒ^ƒbƒNƒŒƒxƒ‹‚ð‚‚­‚·‚é */
+  z-index: 2  /* ã€Œã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã®HTMLè¦ç´ ã€ã‚ˆã‚Šã‚‚ã‚¹ã‚¿ãƒƒã‚¯ãƒ¬ãƒ™ãƒ«ã‚’é«˜ãã™ã‚‹ */
 }
 #itdate{
   font-size: 45px;
@@ -41,9 +41,9 @@
   font-size: 20px;
 }
 table {
-@background: #008080;
+ã€€background: #008080;
   margin-left: auto;
-@margin-right: auto
+ã€€margin-right: auto
 }
 tr.midasi{
 	background-color: #bde9ba;
