@@ -46,7 +46,6 @@
 
 
       
-   //   alert("grsg");
       $.ajax({
             'url':'{% url "register:pin_data" %}',
             'type':'POST',
@@ -60,13 +59,70 @@
               //  alert(response.ccc[1]['lat']);
                // alert(response.ccc[1]['lng']);
 
-          
+          for ( var i = 1; i <= response.ccc[1]['num']; i++ ) {
+
+          var myLatLng = {lat: Number(response.ccc[i]['lat']), lng: Number(response.ccc[i]['lng'])};
+
+          var icon = new Array();
+      
+
+        var Size = new google.maps.Size(71, 71);
+        var Point = new google.maps.Point(0, 0);
+        var Point2 = new google.maps.Point(17, 34);
+        var Size2 = new google.maps.Size(25, 25);
+
+        var image_num = 1;
+
+        for (var C_obj of CHOICES){
+                          
+
+               if(response.ccc[i]['pulldown']==C_obj){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/img/123456.png' %}".replace(/123456/,image_num),
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+
+                   break;
+               }            
+               image_num=1+image_num;
+        }
+ 
+               
+
+
+
+
+                marker[i] = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                icon: icon[i],
+
+                title: response.ccc[i]['pulldown']
+
+                });
+
+  
+         google.maps.event.addListener(marker[i], 'click', function(event) {
+
+            map.setZoom(8);
+    	    var latlng = this.getPosition();
+            var id = marker.indexOf(this);
+            map.panTo(latlng);
+
+
+
+        });
+
+            }
 
             },
           'error':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
                 alert("st");  // レスポンスからデータを取り出してアラート
-              //  alert(response.your_surprise_txt)
-            //    alert(iti);
+
             },
 
         });
