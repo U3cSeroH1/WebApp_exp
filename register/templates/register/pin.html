@@ -66,29 +66,7 @@
           var icon = new Array();
       
 
-        var Size = new google.maps.Size(71, 71);
-        var Point = new google.maps.Point(0, 0);
-        var Point2 = new google.maps.Point(17, 34);
-        var Size2 = new google.maps.Size(25, 25);
-
-        var image_num = 1;
-
-        for (var C_obj of CHOICES){
-                          
-
-               if(response.ccc[i]['pulldown']==C_obj){
-
-                   icon[i] = new google.maps.MarkerImage(
-                   "{% static 'register/img/123456.png' %}".replace(/123456/,image_num),
-                   Size,
-                   Point,
-                   Point2,
-                   Size2);
-
-                   break;
-               }            
-               image_num=1+image_num;
-        }
+ 
  
                
 
