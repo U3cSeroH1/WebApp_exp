@@ -38,4 +38,7 @@ def hourView(request, p_date):
         'WeatherDetail': WeatherDetail.objects.filter(target = Date.objects.get(pub_date= p_date)),
 
     }
+
+    print(WeatherDetail.objects.filter(target = Date.objects.get(pub_date= p_date)))
+
     return render(request, 'scraping/hour_page.html',d)

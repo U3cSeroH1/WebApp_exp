@@ -52,7 +52,7 @@ from .forms import (
 
 from django.core.mail import send_mail, EmailMessage
 from django.shortcuts import render
-
+from django.utils import timezone
 
 from django.http.response import JsonResponse
 import os
@@ -64,6 +64,8 @@ import json
 import logging
 import re
 
+from scraping.models import Tomorrow, Date
+
 User = get_user_model()
 
 
@@ -72,6 +74,15 @@ User = get_user_model()
 class Top(generic.TemplateView, LoginView):
     form_class = LoginForm
     template_name = 'register/top.html'
+
+    def get_context_data(self, **kwargs):
+        # 継承元のメソッド呼び出し
+        context = super().get_context_data(**kwargs)
+
+        context["today"] = Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date())))
+        
+        #context["tomorrow"] = Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date()+timezone.timedelta(days= 1 ))))
+        return context
 
 
 class Login(LoginView):

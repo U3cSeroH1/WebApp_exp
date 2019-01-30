@@ -40,7 +40,7 @@ class Tomorrow(models.Model):
     weather = models.CharField(max_length=16)
     info = models.CharField(max_length=64)
     rain = models.CharField(max_length=64)
-    temp_min = models.CharField(max_length=4)
+    temp_min = models.CharField(max_length=4, blank=True)
     temp_max = models.CharField(max_length=4)
     target = models.ForeignKey(Date, on_delete=models.CASCADE, default = get_or_create_date_forTomorrow)
 

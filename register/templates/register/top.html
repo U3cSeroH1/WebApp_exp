@@ -1,151 +1,151 @@
 {% extends "register/base.html" %}
 
+{% load static %}
 
-
-
-
-<!--
-    <div class="w-container">
-    <div>
-        <div data-collapse="medium" data-animation="default" data-duration="400" class="w-nav">
-            <div class="container-2 w-container">
-                <a href="#" class="w-nav-brand">
-                    <div class="w-nav-button">
-                        <div class="w-icon-nav-menu">
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="w-inline-block">
-                <img src="https://uploads-ssl.webflow.com/5bcd6b2f39ce887e5ba1a12d/5bcd6bd576071ddc2d130428_logo2.PNG" width="145" alt="" class="image-3"/>
-                    </a>
-            <a href="#" class="button-2 w-button">ログイン
-                </a>
-            <nav role="navigation" class="w-nav-menu">
-                <a href="#" class="w-nav-link">Home
-                    </a>
-                <a href="#" class="w-nav-link">About
-                    </a>
-                <a href="#" class="w-nav-link">Contact
-                    </a>
-                </nav>
-                </div>
-            </div>
-        </div>
-    <div class="w-row">
-        <div class="column w-col w-col-3 w-col-tiny-3">
-        <a href="#" class="w-inline-block">
-            <img src="https://uploads-ssl.webflow.com/5bcd6b2f39ce887e5ba1a12d/5bcd6bdb1fb2095de4c65cc5_mypage.PNG" alt=""/>
-            </a>
-            </div>
-        <div class="column-2 w-col w-col-3 w-col-tiny-3">
-        <a href="#" class="w-inline-block">
-            <img src="https://uploads-ssl.webflow.com/5bcd6b2f39ce887e5ba1a12d/5bcd6bdd39ce8874b9a1a20a_record.PNG" alt=""/>
-            </a>
-            </div>
-        <div class="column-3 w-col w-col-3 w-col-tiny-3">
-        <a href="#" class="w-inline-block">
-            <img src="https://uploads-ssl.webflow.com/5bcd6b2f39ce887e5ba1a12d/5bcd6bd879f044e5fec93bb3_map.PNG" alt=""/>
-            </a>
-            </div>
-        <div class="column-4 w-col w-col-3 w-col-tiny-3">
-        <a href="#" class="w-inline-block">
-            <img src="https://uploads-ssl.webflow.com/5bcd6b2f39ce887e5ba1a12d/5bcd6be09f4e0ef40f6d4f6b_service.PNG" alt=""/>
-            </a>
-            </div>
-        </div>
-        </div>
-    -->
 {% block content %}
 
 {% if user.is_authenticated %}
 
-<article>
+<body>
+<h1 align="center">今日の天気</h1>
+<table name="today1" width=100% style="font-size : 35px;">
+<tr align="center">
 
-<p>ようこそ　{{ user.username }}！</p>
+{% for today_w in today %}
 
-<p>仮のトップページです　　ここに天気とかマップとか表示させるはず？？？</p>
+{% if today_w.weather == '曇り時々雨' %}
+<td rowspan="2"><img src="{% static 'register/img/1.png' %}">{{today_w.weather}}</td>
+{% endif %}
 
-    <p class="w-container bg-success">登録ありがとうございます</p>
+{% endfor %}
 
-    <p class="w-container bg-success">ログインすると，副産物の投票アプリや，登録した自分の情報が見れます</p>
+{% for today_max in today %}
+<td >最高 {{today_max.temp_max}}℃</td>
+{% endfor %}
+</tr>
+<tr align="center">
+{% for today_min in today %}
+<td>最低 {{today_min.temp_min}}℃</td>
+{% endfor %}
+</tr>
+</table>
+<table name="today2" border width=100% cellspacing="0" style="font-size : 25px;">
+<tr align="center">
+<td>時間</td>
+<td>00-06</td>
+<td>06-12</td>
+<td>12-18</td>
+<td>18-24</td>
+</tr>
+<tr align="center">
+<td>降水確率</td>
+{% for today_r in today %}
+<td>{{today_r.rain|slice:"6:9"}}</td>
+<td>{{today_r.rain|slice:"17:21"}}</td>
+<td>{{today_r.rain|slice:"30:33"}}</td>
+<td>{{today_r.rain|slice:"42:45"}}</td>
+{% endfor %}
+</tr>
+<tr align="center">
+<td>風と波</td>
+{% for today_i in today %}
+<td colspan="4">{{today.info}}</td>
+{% endfor %}
+</tr>
 
-    <p class="w-container bg-success">テストを兼ねてるので，皆さんどうぞ登録お願いします</p>
 
-    <p class="w-container bg-success">登録した情報は11/20までに消去します</p>
+</table>
+<h1 align="center">明日の天気</h1>
+<table name="tomorrow1" width=100% style="font-size : 35px;">
+<tr align="center">
+<td rowspan="2"><img src=E:/工学実験Ⅵ/hare.png>晴れ</td>
+<td >最高 13℃</td>
+</tr>
+<tr align="center">
+<td>最低 3℃</td>
+</tr>
+</table>
+<table name="tomorrow2" border width=100% cellspacing="0" style="font-size : 25px;">
+<tr align="center">
+<td>時間</td>
+<td>00-06</td>
+<td>06-12</td>
+<td>12-18</td>
+<td>18-24</td>
+</tr>
+<tr align="center">
+<td>降水確率</td>
+<td>2-2</td>
+<td>2-3</td>
+<td>2-4</td>
+<td>2-5</td>
+</tr>
+<tr align="center">
+<td>風と波</td>
+<td colspan="4">南の風日中北西の風</td>
+</tr>
+</table>
+</body>
 
-</article>
+<link href="{% static 'register/forecast.css' %}" rel="stylesheet" type="text/css">
+<script src='{% static "scraping/fullcalendar/lib/jquery.min.js" %}'></script>
 
 
 {% else %}
 
-<!---->
 
-<article class="bg-light">
-    <div class="w-container row">
-        <p class="paragraph-2">
-        <br/>アカウントをお持ちでない方はこちら
-        </p>
-        <div class="section">
-            <a href="{% url 'register:user_create' %}" class="button-3 w-button bg-success">新規登録</a>
-        </div>
-    </div>
+	
+	<div data-animation="slide" data-duration="500" data-infinite="1" class="sslider w-slider">
+		<div class="mask1 w-slider-mask">
+			<div class="slide-7 w-slide" style="transform: translateX(0px); opacity: 1;">
+				<div class="text-block-8">新しい農業をはじめよう</div>
+				<img src="{% static 'register/img/sinme.jpg' %}" alt="" class="image-91">
+			</div>
+			<div class="slide-8 w-slide" style="transform: translateX(0px); opacity: 1;">
+				<div class="text-block-9">充実の天候情報</div>
+				<img src="{% static 'register/img/sunny.png' %}" alt="" class="image-92">
+			</div>
+			<div class="slide9 w-slide" style="transform: translateX(0px); opacity: 1;">
+				<div class="text-block-10">新しい繋がりを</div>
+				<img src="{% static 'register/img/nouka2.jpg' %}"  alt="" class="image93">
+			</div>
+		</div>
+		<div class="left-go w-slider-arrow-left">
+			<div class="icon-left w-icon-slider-left"></div>
+		</div>
+		<div class="right-go w-slider-arrow-right">
+			<div class="icon-right w-icon-slider-right"></div>
+		</div>
+		<div class="santen w-slider-nav w-round">
+			<div class="w-slider-dot w-active" data-wf-ignore=""></div>
+			<div class="w-slider-dot" data-wf-ignore=""></div>
+			<div class="w-slider-dot" data-wf-ignore=""></div>
+		</div>
+	</div>
+	<a href="#" class="button-11 w-button">今すぐ登録</a>
+	<a href="#" class="link-8">既に登録している方はこちら！</a>
+	<div class="text-block-11">スマートフォンでより便利な農業を始めませんか？</div>
+	<div class="div-block-10">
+		<img src="{% static 'register/img/prevtenki.PNG' %}" alt="" class="image-38">
+		<h3 class="heading-2">充実の天候情報</h3>
+		<p class="paragraph-2">自分の田畑の天気予報はもちろんのこと,過去の気温,降水量,日照時間などの天候情報も確認できる。これがあれば,天候と農作物のできの関係が勘やノウハウがなくてもわかるように!</p>
+	</div>
+	<div class="div-block-11">
+		<div class="tunagari">
+			<h2 class="heading-4">新しい繋がり</h2>
+			<p class="paragraph-5">マップ上に自分の農地を登録でき,作っている作物のアイコンが表示されるようになる。他のユーザにコメントをしたり,作っている作物で絞り込み同業者を探すこともできるため,農家同士の新たな繋がりができる!</p>
+		</div>
+		<img src="{% static 'register/img/yasaimap.png' %}" alt="" class="image-39">
+	</div>
 
-    <p>
-    <div class="row">
-        <!-- 左側、ログインエリア -->
-        <div>
-            <div>
-                <form action="{% url 'register:login' %}" method="POST" >
-                    {{ form.non_field_errors }}
-                    {% for field in form %}
-                        {{ field }}
-                        {{ field.errors }}
-                        <hr>
-                    {% endfor %}
-                    <button type="submit" class="submit-button w-button" >ログイン</button>
-                    <input type="hidden" name="next" value="{{ next }}" />
-                    {% csrf_token %}
-                </form>
-            </div>
-        </div><!-- 左側、ログインエリアおわり -->
-    </div>  
-    </p>
 
-    <p class="w-container bg-success">見れません<a href="#" class="bg-success">マップ</a>は操作することができませんクソが</p>
-
-    <p class="w-container bg-success">ログインすると，副産物の投票アプリや，登録した自分の情報が見れます</p>
-
-    <p class="w-container bg-success">テストを兼ねてるので，皆さんどうぞ登録お願いします</p>
-
-    <p class="w-container bg-success">登録した情報は11/20までに消去します</p>
-
-</article>
 
 {% endif %}
 
+
+
+
 {% endblock %}
-
-    <!--  
-    <div>
-        <div class="w-form">
-            <form id="wf-form-Email-Form" name="wf-form-Email-Form" data-name="Email Form">
-            <label for="name">メールアドレス</label>
-            <input type="text" id="name" name="name" data-name="Name" maxlength="256" class="w-input"/>
-            <label for="email">パスワード</label>
-            <input type="password" class="w-input" maxlength="256" name="email" data-name="Email" id="email" required=""/>
-            <input type="submit" value="ログイン" data-wait="Please wait..." class="submit-button w-button"/>
-            </form>
-            
-            <div class="w-form-done">
-                <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div class="w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
-            </div>
-
-        </div>
-    </div>
-    -->
 
 
 

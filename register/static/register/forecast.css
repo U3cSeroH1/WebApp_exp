@@ -1,0 +1,14 @@
+table {
+ background-color: #008080;
+ margin-top: 10px;
+}
+td{
+ text-align:center;
+}
+td.midashi{
+  background-color: #A8EFAF;
+}
+td:last-child {
+  width: 40px;
+  white-space: nowrap;
+}
