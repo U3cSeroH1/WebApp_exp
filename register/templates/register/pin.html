@@ -7,4 +7,47 @@
 
   {% load static %}
 
+
+  <script src="{% static 'register/app1.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVoA&callback=initMap" async defer></script>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height: 80%;
+      width: 100%;
+    }
+  </style>
+
+<div id="map"></div>
+
+<script>
+
+    var CHOICES = ['ほうれん草','白菜','トマト', 'たまねぎ', 
+               'ナス', 'ネギ', 'ジャガイモ', 'きのこ', 'にんじん', 'だいこん', 'かぼちゃ', 'きゅうり', 'ブロッコリー', 'ピーマン', 'キャベツ', '米', 'イチゴ', 'カボス', 'みかん', '梨', 'ぶどう', 'キウイ', 'その他', 
+
+    ]
+    var marker = new Array();
+
+    var initLatLng = {lat: Number("{{lat}}"), lng: Number("{{lng}}")};
+
+    function initMap() {
+      // マップの初期化
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: initLatLng,
+      });
+
+
+
+    }
+
+ 
+
+</script>
+
 {% endblock %}
