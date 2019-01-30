@@ -44,6 +44,37 @@
 
 
 
+
+      
+   //   alert("grsg");
+      $.ajax({
+            'url':'{% url "register:pin_data" %}',
+            'type':'POST',
+
+            'dataType':'json',
+    
+          csrfmiddlewaretoken: '{{ csrf_token }}',
+            'success':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
+             //   alert(response.your_surprise_txt['lat']);  // レスポンスからデータを取り出してアラート
+             //   alert(response.ccc[1]['num']);
+              //  alert(response.ccc[1]['lat']);
+               // alert(response.ccc[1]['lng']);
+
+
+            }
+
+            },
+          'error':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
+                alert("st");  // レスポンスからデータを取り出してアラート
+              //  alert(response.your_surprise_txt)
+            //    alert(iti);
+            },
+
+        });
+
+
+
+
     }
 
  
