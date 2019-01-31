@@ -31,25 +31,25 @@
     <tbody>
         <tr>
             <th>ユーザー名</th>
-            <td>{{ user.HN }}</td>
+            <td>{{ User_p.HN }}</td>
         </tr>
         <tr>
             <th>姓名</th>
-            <td>{{ user.last_name }} {{ user.first_name }}</td>
+            <td>{{ User_p.last_name }} {{ User_p.first_name }}</td>
         </tr>
         <tr>
             <th>野菜の種類</th>
-            <td>{{ user.pulldown }}</td>
+            <td>{{ User_p.pulldown }}</td>
         </tr>
         <tr>
             <th>住所</th>
-            <td>{{ user.geo }}</td>
+            <td>{{ User_p.geo }}</td>
         </tr>
     </tbody>
 </table>
 
 <h2>コメント一覧</h2>
-<a href="{% url 'comment:comment' user.pk %}">コメントする</a>
+<a href="{% url 'comment:comment' User_p.pk %}">コメントする</a>
 <hr>
 {% for comment in user.comment_set.all %}
     {% if comment.is_public %}
