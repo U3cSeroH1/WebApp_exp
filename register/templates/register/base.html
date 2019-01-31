@@ -37,7 +37,7 @@
 				<div class="text-block-7">{{user.HN}}</div>
 				<a href="{% url 'register:user_detail' user.pk %}" class="menulink w-inline-block">
 					<img src="{% static 'register/img/mypage2.PNG' %}" alt="" class="image-26">
-					<div class="text-block-6">メインページ</div>
+					<div class="text-block-6">ユーザ情報</div>
 				</a>
 				<a href="{% url 'register:pin' user.pk %}" class="menulink w-inline-block">
 					<img src="{% static 'register/img/map.png' %}" alt="" class="image-26">
@@ -47,9 +47,9 @@
 					<img src="{% static 'register/img/tenkiicon.png' %}" alt="" class="image-26">
 					<div class="text-block-6">天気記録</div>
 				</a>
-				<a href="#" class="menulink w-inline-block">
+				<a href=""{% url 'scraping:user_update' %}"" class="menulink w-inline-block">
 					<img src="{% static 'register/img/service2.PNG' %}" alt="" class="image-26">
-					<div class="text-block-6">システム</div>
+					<div class="text-block-6">ユーザ情報更新</div>
 				</a>
 
                 <hr />
