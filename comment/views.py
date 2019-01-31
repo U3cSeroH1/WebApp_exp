@@ -30,7 +30,7 @@ class CommentView(generic.CreateView):
         comment.save()
  
         # 記事詳細にリダイレクト
-        return redirect('register:user_detail', pk=post_pk)
+        return redirect('register:pin', pk=post_pk)
  
  
 class ReplyView(generic.CreateView):
@@ -49,4 +49,4 @@ class ReplyView(generic.CreateView):
         reply.save()
  
         # 記事詳細にリダイレクト
-        return redirect('register:user_detail', pk=comment.target.pk)
+        return redirect('register:pin', pk=comment.target.pk)
