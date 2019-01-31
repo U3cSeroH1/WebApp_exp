@@ -17,7 +17,7 @@ $(document).ajaxSend(function (event, xhr, settings) {
         }
         return cookieValue;
     }
-    //tttt
+ 
     function sameOrigin(url) {
         var host = document.location.host;
         var protocol = document.location.protocol;
