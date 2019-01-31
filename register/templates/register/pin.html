@@ -51,7 +51,7 @@
 <h2>コメント一覧</h2>
 <a href="{% url 'comment:comment' User_p.pk %}">コメントする</a>
 <hr>
-{% for comment in user.comment_set.all %}
+{% for comment in User_p.comment_set.all %}
     {% if comment.is_public %}
         名前:{{ comment.name }}<br>
         テキスト:{{ comment.text }}<br>
