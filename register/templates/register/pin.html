@@ -80,25 +80,242 @@
         var Point2 = new google.maps.Point(17, 34);
         var Size2 = new google.maps.Size(25, 25);
 
-        var image_num = 1;
+       
 
-        for (var C_obj of CHOICES){
-                          
-               alert(image_num);
+       
+                         
 
-               if(response.ccc[i]['pulldown']==C_obj){
+               if( response.ccc[i]['pulldown']=='ほうれん草'){
 
                    icon[i] = new google.maps.MarkerImage(
-                   "{% static 'register/img/12.png' %}".replace(/12345/, image_num),
+                   "{% static 'register/1.png' %}",
                    Size,
                    Point,
                    Point2,
                    Size2);
+               }
+               if( response.ccc[i]['pulldown']=='白菜'){
 
-                   break;
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/2.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='トマト' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/3.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='たまねぎ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/4.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ナス' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/5.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ネギ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/6.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ジャガイモ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/7.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='きのこ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/8.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='にんじん' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/9.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='だいこん' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/10.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='かぼちゃ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/11.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='きゅうり' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/12.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ブロッコリー' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/13.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ピーマン' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/14.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='キャベツ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/15.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='米' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/16.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='麦' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/17.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='イチゴ'){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/18.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='カボス' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/19.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='みかん' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/20.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']== '梨' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/21.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='ぶどう'){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/22.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='キウイ' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/23.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
+               }
+               if( response.ccc[i]['pulldown']=='その他' ){
+
+                   icon[i] = new google.maps.MarkerImage(
+                   "{% static 'register/24.png' %}",
+                   Size,
+                   Point,
+                   Point2,
+                   Size2);
                }            
-               image_num=1+image_num;
-        }
+               
+
+              
+
+                  
+                  
+                  
+                   
+                   
+                   
+
+                   
+                        
+               
+        
  
                
 
