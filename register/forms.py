@@ -25,7 +25,7 @@ class UserCreateForm(UserCreationForm):
     class Meta:
         model = User
         if User.USERNAME_FIELD == 'email':
-            fields = ('email', 'example1', )
+            fields = ('HN', 'email', 'first_name', 'last_name',)
         else:
             fields = ('username', 'email')
 
@@ -33,7 +33,7 @@ class UserCreateForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         for field in self.fields.values():
             field.widget.attrs['class'] = 'form-control'
-            field.widget.attrs['value'] = 'テキスト'
+            field.widget.attrs['placeholder'] = field.label
 
 
 class UserUpdateForm(forms.ModelForm):

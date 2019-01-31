@@ -93,7 +93,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     lng=models.CharField(_('lng'),max_length=150,blank=True)
     geo=models.CharField(_('geo'),max_length=150,blank=True)
 
-    HN = models.CharField(_('ユーザ名'),max_length=150,blank=True)
+    HN = models.CharField(_('ユーザ名'),max_length=150)
 
     is_staff = models.BooleanField(
         _('staff status'),
