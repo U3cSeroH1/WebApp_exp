@@ -16,7 +16,7 @@
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.3);  /* 背景を半透明にする */
-  display: none;  /* HTML要素を非表示にする */
+
   z-index: 1  /* 「メインのHTML要素」よりもスタックレベルを高くする */
  }
 
@@ -26,7 +26,7 @@
   position: fixed; /* viewpointを相対位置にする */
   border: 2px solid #D04255;
   background-color: #FFF;
-  display: none;
+
   margin-top:20px; 
   z-index: 2  /* 「オーバーレのHTML要素」よりもスタックレベルを高くする */
 }
