@@ -19,6 +19,14 @@
   
   </ul>
 <div id="map"></div>
+
+        <p>
+        <div id="floating-panel">
+            <input id="address" type="text" >
+            <input id="submit2" type="button" value="地名や場所で検索">
+        </div>
+        </p>
+
 <form action="" method="POST">
     {{ form.non_field_errors }}
     <table class="table">
@@ -151,7 +159,39 @@
       map.addListener('click', function(e) {
         getClickLatLng(e.latLng, map);
       });
-    }
+
+    var geocoder = new google.maps.Geocoder;
+        document.getElementById('submit2').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+
+        }
+
+      function geocodeAddress(geocoder, resultsMap) {
+
+        var marker;
+
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+
+              resultsMap.setZoom(17);
+
+                  marker = new google.maps.Marker({
+                  position: results[0].geometry.location,
+                  map: resultsMap,
+                  animation: google.maps.Animation.DROP
+
+              });
+
+            //タイムアウトがしたかった
+
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+
 </script>
 
 
