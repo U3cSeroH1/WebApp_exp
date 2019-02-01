@@ -19,14 +19,6 @@
   
   </ul>
 <div id="map"></div>
-
-        <p>
-        <div id="floating-panel">
-            <input id="address" type="text" >
-            <input id="submit2" type="button" value="地名や場所で検索">
-        </div>
-        </p>
-
 <form action="" method="POST">
     {{ form.non_field_errors }}
     <table class="table">
@@ -38,20 +30,18 @@
                     <td>{{ field  }} {{ field.errors }} </td>
                 </tr>
             {% endfor %}
-
-               <tr>
+                            <tr>
+                                <script>
+                                alert(response.your_surprise_txt);
+                                </script>
                     <th><li>所在地</li></th>
+
+
                     <td><span id="geo"></span></td>
-                   
+
                 </tr>
 
-
-               <tr>
-                    <th><li>所在地</li></th>
-                    <td><a href="{% url 'register:password_change' %}">パスワード変更はこちらから</a></td>  
-                   
-                </tr>
- 
+                    <td><a href="{% url 'register:password_change' %}">パスワード変更はこちらから</a></td>
         </tbody>
 
     </table>
@@ -62,41 +52,13 @@
 
   <script src="{% static 'register/app1.js' %}"></script>
 
-
-
-
-<script>
-    $(document).ready(function(){initMap();});
-
-    function initMap() {
-
-        // マップの初期化
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 16,
-            center: { lat: 33.232647, lng: 131.651055 }
-        });
-
-        // クリックイベントを追加
-        map.addListener('click', function (e) {
-            getClickLatLng(e.latLng, map);
-        });
-
-        var geocoder = new google.maps.Geocoder;
-        document.getElementById('submit2').addEventListener('click', function () {
-            geocodeAddress(geocoder, map);
-
-        });
-    }
-</script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVoA&callback=initMap" async defer></script>
 
 
 <script>
-    $(document).ready(function(){initMap();});
-
-
     function getClickLatLng(lat_lng, map) {
       event.preventDefault();
-
+//alert(JSON.stringify(obj));
       // 座標を表示
       document.getElementById('lat').textContent = lat_lng.lat();
       document.getElementById('lng').textContent = lat_lng.lng();
@@ -176,35 +138,21 @@
       });
 }
 </script>
-
 <script>
-        $(document).ready(function(){initMap();});
+    function initMap() {
 
-      function geocodeAddress(geocoder, resultsMap) {
+      // マップの初期化
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: {lat: 33.232647, lng: 131.651055}
+      });
 
-        var marker;
-
-        var address = document.getElementById('address').value;
-        geocoder.geocode({'address': address}, function(results, status) {
-          if (status === 'OK') {
-            resultsMap.setCenter(results[0].geometry.location);
-
-              resultsMap.setZoom(17);
-
-                  marker = new google.maps.Marker({
-                  position: results[0].geometry.location,
-                  map: resultsMap,
-                  animation: google.maps.Animation.DROP
-
-              });
-
-            //タイムアウトがしたかった
-
-          } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-          }
-        });
-      }
+      // クリックイベントを追加
+      map.addListener('click', function(e) {
+        getClickLatLng(e.latLng, map);
+      });
+    }
 </script>
+
 
 {% endblock %}
