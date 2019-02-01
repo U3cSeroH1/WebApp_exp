@@ -4,6 +4,10 @@
     <tbody>
         <tr>
             <th>ユーザー名</th>
+            <td>{{ user.HN }}</td>
+        </tr>
+        <tr>
+            <th>ユーザー名</th>
             <td>{{ user.username }}</td>
         </tr>
         {% if user.username != user.email %}
@@ -20,65 +24,22 @@
             <th>名</th>
             <td>{{ user.first_name }}</td>
         </tr>
-        <tr>
-            <th>ざひょーん</th>
-            <td>{{ user.example3 }}</td>
-        </tr>
-        <tr>
-            <th>2</th>
-            <td>{{ user.example2 }}</td>
-        </tr>
-        <tr>
-            <th>1</th>
-            <td>{{ user.example1 }}</td>
-        </tr>
+
+
         <tr>
             <th>野菜の種類</th>
             <td>{{ user.pulldown }}</td>
         </tr>
+
         <tr>
-            <th>4545</th>
-            <td>{{ user.lat }}</td>
-        </tr>
-        <tr>
-            <th>1515</th>
-            <td>{{ user.lng }}</td>
-        </tr>
-        <tr>
-            <th>住所</th>
+            <th>所在地</th>
             <td>{{ user.geo }}</td>
         </tr>
     </tbody>
 </table>
 
 
-<h2>コメント一覧</h2>
-<a href="{% url 'comment:comment' user.pk %}">コメントする</a>
-<hr>
-{% for comment in user.comment_set.all %}
-    {% if comment.is_public %}
-        名前:{{ comment.name }}<br>
-        テキスト:{{ comment.text }}<br>
-    {% endif %}
 
-
-    <a href="{% url 'comment:reply' comment.pk %}">返信する</a><br>
-    
-            {% for reply in comment.reply_set.all %}
-            <div style="margin-left:100px;">
-                {% if reply.is_public %}
-                    名前:{{ reply.name }}<br>
-                    テキスト:{{ reply.text }}<br>       
-                {% else %}
-                    <p>まだ承認されていません。(返信コメント)</p>
-                {% endif %}
-            </div>
-            {% endfor %}
-
-
- 
-<hr>
-{% endfor %}
 
 
 {% endblock %}
