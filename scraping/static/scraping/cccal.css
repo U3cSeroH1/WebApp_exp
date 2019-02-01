@@ -16,7 +16,8 @@
     /* viewpointを相対位置にする */
     position: relative;
     min-height: 100vh;
-
+    padding-bottom: 120px;
+    box-sizing: border-box;
 }
 
 #close{
