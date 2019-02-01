@@ -12,7 +12,7 @@
   /* viewpointを相対位置にし、全画面表示にする */
   width: 100%;
   height: 100%;
-  position: fixed;
+
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.3);  /* 背景を半透明にする */
@@ -22,7 +22,7 @@
 #modalWindow {
   width: 95%;
   height: 90%;
-  position: fixed; /* viewpointを相対位置にする */
+/* viewpointを相対位置にする */
   border: 2px solid #D04255;
   background-color: #FFF;
 
