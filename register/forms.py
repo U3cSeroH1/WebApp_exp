@@ -42,7 +42,7 @@ class UserUpdateForm(forms.ModelForm):
     class Meta:
         model = User
         if User.USERNAME_FIELD == 'email':
-            fields = ('email', 'first_name', 'last_name', 'example1', 'example2','pulldown',)
+            fields = ('HN', 'email', 'first_name', 'last_name','pulldown')
 
 
         else:
