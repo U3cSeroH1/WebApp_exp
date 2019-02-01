@@ -19,10 +19,18 @@
   
   </ul>
 <div id="map"></div>
+
+        <p>
+        <div id="floating-panel">
+            <input id="address" type="text" >
+            <input id="submit2" type="button" value="地名や場所で検索">
+        </div>
+        </p>
+
 <form action="" method="POST">
     {{ form.non_field_errors }}
     <table class="table">
-                <tbody>
+        <tbody>
             {% for field in form %}
 
                 <tr>
@@ -30,10 +38,8 @@
                     <td>{{ field  }} {{ field.errors }} </td>
                 </tr>
             {% endfor %}
-                            <tr>
-                                <script>
-                                alert(response.your_surprise_txt);
-                                </script>
+                <tr>
+
                     <th><li>所在地</li></th>
 
 
@@ -41,7 +47,14 @@
 
                 </tr>
 
+                <tr>
+                    <th><li>所在地</li></th>
+
+
                     <td><a href="{% url 'register:password_change' %}">パスワード変更はこちらから</a></td>
+
+                </tr>
+                    
         </tbody>
 
     </table>
@@ -51,8 +64,6 @@
   {% load static %}
 
   <script src="{% static 'register/app1.js' %}"></script>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGDQUmUwxTKDYbrOXlzLasHgeBfuPkVoA&callback=initMap" async defer></script>
 
 
 <script>
@@ -137,6 +148,9 @@
 }
 </script>
 <script>
+
+     $(document).ready(function(){initMap();});
+
     function initMap() {
 
       // マップの初期化
@@ -150,6 +164,26 @@
         getClickLatLng(e.latLng, map);
       });
     }
+
+        function geocodeAddress(geocoder, resultsMap) {
+
+
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+
+              resultsMap.setZoom(17);
+
+
+            //タイムアウトがしたかった
+
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+
 </script>
 
 
