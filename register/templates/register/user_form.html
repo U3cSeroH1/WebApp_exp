@@ -153,23 +153,23 @@
 <script>
     function initMap() {
 
-      // マップの初期化
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: {lat: 33.232647, lng: 131.651055}
-      });
+        // マップの初期化
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: { lat: 33.232647, lng: 131.651055 }
+        });
 
-      // クリックイベントを追加
-      map.addListener('click', function(e) {
-        getClickLatLng(e.latLng, map);
-      });
+        // クリックイベントを追加
+        map.addListener('click', function (e) {
+            getClickLatLng(e.latLng, map);
+        });
 
-    var geocoder = new google.maps.Geocoder;
+        var geocoder = new google.maps.Geocoder;
         document.getElementById('submit2').addEventListener('click', function () {
             geocodeAddress(geocoder, map);
 
         });
-
+    }
 </script>
 
 <script>
