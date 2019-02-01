@@ -38,18 +38,16 @@
                     <td>{{ field  }} {{ field.errors }} </td>
                 </tr>
             {% endfor %}
+
                             <tr>
-                                <script>
-                                alert(response.your_surprise_txt);
-                                </script>
                     <th><li>所在地</li></th>
 
 
                     <td><span id="geo"></span></td>
-
+                    <td><a href="{% url 'register:password_change' %}">パスワード変更はこちらから</a></td>
                 </tr>
 
-                    <td><a href="{% url 'register:password_change' %}">パスワード変更はこちらから</a></td>
+                    
         </tbody>
 
     </table>
@@ -161,10 +159,10 @@
       });
 
     var geocoder = new google.maps.Geocoder;
-        document.getElementById('submit2').addEventListener('click', function() {
-    geocodeAddress(geocoder, map);
+        document.getElementById('submit2').addEventListener('click', function () {
+            geocodeAddress(geocoder, map);
 
-        }
+        };
 
       function geocodeAddress(geocoder, resultsMap) {
 
