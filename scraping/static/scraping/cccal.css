@@ -20,14 +20,14 @@
  }
 
 #modalWindow {
-  width: 95%;
-  height: 90%;
-/* viewpointを相対位置にする */
-  border: 2px solid #D04255;
-  background-color: #FFF;
-
-  margin-top:20px; 
-
+    width: 100%;
+    height: 100%;
+    /* viewpointを相対位置にする */
+    border: 2px solid #D04255;
+    background-color: #FFF;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
 }
 #itdate{
   font-size: 20px;
