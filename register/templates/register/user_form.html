@@ -63,13 +63,40 @@
   <script src="{% static 'register/app1.js' %}"></script>
 
 
+
+
+<script>
+    $(document).ready(function(){initMap();});
+
+    function initMap() {
+
+        // マップの初期化
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: { lat: 33.232647, lng: 131.651055 }
+        });
+
+        // クリックイベントを追加
+        map.addListener('click', function (e) {
+            getClickLatLng(e.latLng, map);
+        });
+
+        var geocoder = new google.maps.Geocoder;
+        document.getElementById('submit2').addEventListener('click', function () {
+            geocodeAddress(geocoder, map);
+
+        });
+    }
+</script>
+
+
 <script>
 
-        $(document).ready(function(){initMap();});
+
 
     function getClickLatLng(lat_lng, map) {
       event.preventDefault();
-//alert(JSON.stringify(obj));
+
       // 座標を表示
       document.getElementById('lat').textContent = lat_lng.lat();
       document.getElementById('lng').textContent = lat_lng.lng();
@@ -148,28 +175,6 @@
 
       });
 }
-</script>
-
-<script>
-    function initMap() {
-
-        // マップの初期化
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 16,
-            center: { lat: 33.232647, lng: 131.651055 }
-        });
-
-        // クリックイベントを追加
-        map.addListener('click', function (e) {
-            getClickLatLng(e.latLng, map);
-        });
-
-        var geocoder = new google.maps.Geocoder;
-        document.getElementById('submit2').addEventListener('click', function () {
-            geocodeAddress(geocoder, map);
-
-        });
-    }
 </script>
 
 <script>
