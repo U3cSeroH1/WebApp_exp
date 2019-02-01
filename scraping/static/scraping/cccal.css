@@ -24,7 +24,7 @@
     height: 100%;
     /* viewpointを相対位置にする */
 
-    position : fixed;
+    position : relative;
 
     top: 0;
     left: 0;
