@@ -17,7 +17,6 @@
   left: 0;
   background: rgba(0, 0, 0, 0.3);  /* 背景を半透明にする */
 
-  z-index: 1  /* 「メインのHTML要素」よりもスタックレベルを高くする */
  }
 
 #modalWindow {
@@ -28,7 +27,7 @@
   background-color: #FFF;
 
   margin-top:20px; 
-  z-index: 2  /* 「オーバーレのHTML要素」よりもスタックレベルを高くする */
+
 }
 #itdate{
   font-size: 20px;
