@@ -8,16 +8,7 @@
   height:40px;
   font-size:15px;
 }
-#overlay {
-  /* viewpointを相対位置にし、全画面表示にする */
-  width: 100%;
-  height: 100%;
 
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);  /* 背景を半透明にする */
-
- }
 
 #modalWindow {
     width: 100%;
@@ -34,12 +25,8 @@
   color:red;
   text-align: center;
 }
-#close{
-  padding: 10px;
-  display:block;
-  margin: 0 auto;
-  font-size: 12px;
-}
+
+
 table {
 　background: #008080;
   margin-left: auto;
