@@ -1,4 +1,5 @@
-
+{% extends "register/base.html" %}
+{% block content %}
 {% load static %}
 
 <link href="{% static "scraping/cccal.css" %}" rel="stylesheet" type="text/css">
@@ -101,3 +102,7 @@ $(function () {
 <button href="#"  id="close" onclick="javascript:window.history.back(-1);return false;">Back</button>
 
 
+
+
+
+{% endblock %}
