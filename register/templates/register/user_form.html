@@ -60,8 +60,6 @@
       event.preventDefault();
 //alert(JSON.stringify(obj));
       // 座標を表示
-      document.getElementById('lat').textContent = lat_lng.lat();
-      document.getElementById('lng').textContent = lat_lng.lng();
       a="{% url 'register:user_update' user.pk %}";
      
       var obj={
