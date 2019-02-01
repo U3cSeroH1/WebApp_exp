@@ -39,15 +39,19 @@
                 </tr>
             {% endfor %}
 
-                            <tr>
+               <tr>
                     <th><li>所在地</li></th>
-
-
                     <td><span id="geo"></span></td>
-                    <td><a href="{% url 'register:password_change' %}">パスワード変更はこちらから</a></td>
+                   
                 </tr>
 
-                    
+
+               <tr>
+                    <th><li>所在地</li></th>
+                    <td><a href="{% url 'register:password_change' %}">パスワード変更はこちらから</a></td>  
+                   
+                </tr>
+ 
         </tbody>
 
     </table>
@@ -162,7 +166,7 @@
         document.getElementById('submit2').addEventListener('click', function () {
             geocodeAddress(geocoder, map);
 
-        };
+        });
 
       function geocodeAddress(geocoder, resultsMap) {
 
