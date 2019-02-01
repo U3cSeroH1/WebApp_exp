@@ -109,6 +109,7 @@
     <Content Include="register\static\register\img\tenkiicon.png" />
     <Content Include="register\static\register\img\yasaimap.png" />
     <Content Include="register\templates\register\base - Copy %283%29.html" />
+    <Content Include="scraping\static\scraping\footerFixed.js" />
     <Content Include="scraping\static\scraping\fullcalendar\fullcalendar.css" />
     <Content Include="register\static\register\headfoot.css" />
     <Content Include="scraping\static\scraping\tinko.png" />
