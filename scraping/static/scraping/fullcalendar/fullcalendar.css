@@ -207,7 +207,8 @@ hr.fc-divider {
   table-layout: fixed;
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 1em;
+  font-size: 20px;
+  background-color:white;
   /* normalize cross-browser */ }
 
 .fc th {
@@ -599,7 +600,7 @@ TODO: more distinction between this file and common.css
 .fc-unthemed .fc-popover,
 .fc-unthemed .fc-list-view,
 .fc-unthemed .fc-list-heading td {
-  border-color: #ddd; }
+  border-color: #999; }
 
 .fc-unthemed .fc-popover {
   background-color: #fff; }
@@ -675,7 +676,7 @@ NOTE: use percentage font sizes or else old IE chokes
   top: 3%; }
 
 .fc-icon-right-triangle:after {
-  content: "\25BA";
+  content: "2019　\25BA";
   font-size: 125%;
   top: 3%; }
 
@@ -793,7 +794,8 @@ NOTE: use percentage font sizes or else old IE chokes
 /* Toolbar
 --------------------------------------------------------------------------------------------------*/
 .fc-toolbar {
-  text-align: center; }
+  text-align: center;
+  }
 
 .fc-toolbar.fc-header-toolbar {
   margin-bottom: 1em; }
@@ -808,7 +810,8 @@ NOTE: use percentage font sizes or else old IE chokes
   float: right; }
 
 .fc-toolbar .fc-center {
-  display: inline-block; }
+  display: inline-block;
+  font-size: 30px; }
 
 /* the things within each left/right/center section */
 .fc .fc-toolbar > * > * {

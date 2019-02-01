@@ -96,7 +96,6 @@
     <Content Include="Calender\templates\Calender\week.html" />
     <Content Include="Calender\templates\Calender\week_with_schedule.html" />
     <Content Include="register\static\register\forecast.css" />
-    <Content Include="register\static\register\headfoot.css" />
     <Content Include="register\static\register\headfoot.js" />
     <Content Include="register\static\register\img\logo2.PNG" />
     <Content Include="register\static\register\img\logout.png" />
@@ -110,6 +109,8 @@
     <Content Include="register\static\register\img\tenkiicon.png" />
     <Content Include="register\static\register\img\yasaimap.png" />
     <Content Include="register\templates\register\base - Copy %283%29.html" />
+    <Content Include="scraping\static\scraping\fullcalendar\fullcalendar.css" />
+    <Content Include="register\static\register\headfoot.css" />
     <Content Include="scraping\static\scraping\tinko.png" />
     <Content Include="scraping\static\scraping\unti.png" />
     <Content Include="scraping\templates\index.html" />
@@ -135,7 +136,6 @@
     <Content Include="scraping\static\scraping\fullcalendar\demos\themes.html" />
     <Content Include="scraping\static\scraping\fullcalendar\demos\timezones.html" />
     <Content Include="scraping\static\scraping\fullcalendar\demos\week-numbers.html" />
-    <Content Include="scraping\static\scraping\fullcalendar\fullcalendar.css" />
     <Content Include="scraping\static\scraping\fullcalendar\fullcalendar.js" />
     <Content Include="scraping\static\scraping\fullcalendar\fullcalendar.min.css" />
     <Content Include="scraping\static\scraping\fullcalendar\fullcalendar.min.js" />

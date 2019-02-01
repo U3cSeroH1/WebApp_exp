@@ -3,6 +3,7 @@
 {% load static %}
 
 <link href="{% static "scraping/cccal.css" %}" rel="stylesheet" type="text/css">
+
 <link rel='stylesheet' href='{% static "scraping/fullcalendar/fullcalendar.css" %}' />
 <link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
 <script src='{% static "scraping/fullcalendar/lib/jquery.min.js" %}'></script>
@@ -13,12 +14,12 @@
 <div id="calendar"></div>
 <script>
 $(function () {
-	$('#calendar').fullCalendar({
-	height: window.innerHeight-300, /* ブラウザの縦サイズ-500 */
+    $('#calendar').fullCalendar({
+	contentHeight: window.innerHeight, 
 	header: {
-                    left: 'today',	/* 前の年 次の年 */
-                    center: 'title',		/* 年月 */
-                    right: ''		/* 前の月 次の月 */
+                    left: 'title',	/* 前の年 次の年 */
+                    center: '',		/* 年月 */
+                    right: 'today'		/* 前の月 次の月 */
                 },
 	
         dayClick: function (date) {
@@ -48,13 +49,13 @@ $(function () {
 </script>
 <style>
   body {
-    margin: 40px 10px;
+    margin: 20px 
     padding: 0;
     font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
     font-size: 20px;
   }
   #calendar {
-    max-width: 900px;
+    max-width: 95%;
     margin: 0 auto;
   }
 </style>
