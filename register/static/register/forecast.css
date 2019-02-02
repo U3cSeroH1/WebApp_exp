@@ -10,7 +10,7 @@ td.midashi{
 }
 td:last-child {
   width: 40px;
-
+  white-space: nowrap;
 }
 
 #w_img {
