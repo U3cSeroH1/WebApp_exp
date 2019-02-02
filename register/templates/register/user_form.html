@@ -78,10 +78,7 @@
           lng:lat_lng.lng(),
       };
 
-    var geocoder = new google.maps.Geocoder;
-    document.getElementById('submit2').addEventListener('click', function() {
-    geocodeAddress(geocoder, map);
-    });
+
 
     var geocoder = new google.maps.Geocoder;
 
@@ -168,6 +165,12 @@
       map.addListener('click', function(e) {
         getClickLatLng(e.latLng, map);
       });
+
+       var geocoder = new google.maps.Geocoder;
+    document.getElementById('submit2').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+    });
+
     }
 
 
