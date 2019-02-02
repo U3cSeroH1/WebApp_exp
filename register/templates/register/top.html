@@ -64,22 +64,22 @@
 
 {% for tomorrow_w in tomorrow %}
 
-{% if tomorrow_w.weather == '晴' %}
+{% if tomorrow_w.weather == '晴れ' %}
 <td rowspan="2"><img src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
-{% elif tomorrow_w.weather == '晴のち曇' %}
+{% elif tomorrow_w.weather == '晴れ後曇り' %}
 <td rowspan="2"><img src="{% static 'register/img_w/sunny.svg' %}"><img src="{% static 'register/img_w/cloud.svg' %}">{{tomorrow_w.weather}}</td>
 
-{% elif tomorrow_w.weather == '曇' %}
+{% elif tomorrow_w.weather == '曇り' %}
 <td rowspan="2"><img src="{% static 'register/img/1.png' %}">{{tomorrow_w.weather}}</td>
-{% elif tomorrow_w.weather == '曇のち晴' %}
+{% elif tomorrow_w.weather == '曇り後晴れ' %}
 <td rowspan="2"><img src="{% static 'register/img_w/cloud.svg' %}"><img src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
-{% elif tomorrow_w.weather == '曇時々晴' %}
-<td rowspan="2"><img src="{% static 'register/img/1.png' %}">{{tomorrow_w.weather}}</td>
+{% elif tomorrow_w.weather == '曇り時々晴れ' %}
+<td rowspan="2"><img src="{% static 'register/img_w/cloud.svg' %}"><img src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
 {% elif tomorrow_w.weather == '曇り時々雨' %}
 <td rowspan="2"><img src="{% static 'register/img/1.png' %}">{{tomorrow_w.weather}}</td>
-{% elif tomorrow_w.weather == '曇のち一時雨' %}
-<td rowspan="2"><img src="{% static 'register/img/1.png' %}">{{tomorrow_w.weather}}</td>
-{% elif tomorrow_w.weather == '曇一時雨' %}
+{% elif tomorrow_w.weather == '曇り後一時雨' %}
+<td rowspan="2"><img src="{% static 'register/img_w/cloud.svg' %}"><img src="{% static 'register/img_w/rain.svg' %}">{{tomorrow_w.weather}}</td>
+{% elif tomorrow_w.weather == '曇り一時雨' %}
 <td rowspan="2"><img src="{% static 'register/img/1.png' %}">{{tomorrow_w.weather}}</td>
 
 {% elif tomorrow_w.weather == '雨' %}
@@ -91,12 +91,12 @@
 {% endfor %}
 
 {% for tomorrow_max in tomorrow %}
-<td >最高 {{tomorrow_max.temp_max}}℃</td>
+<td >最高 {{tomorrow_max.temp_max}}</td>
 {% endfor %}
 </tr>
 <tr align="center">
 {% for tomorrow_min in tomorrow %}
-<td>最低 {{tomorrow_min.temp_min}}℃</td>
+<td>最低 {{tomorrow_min.temp_min}}</td>
 {% endfor %}
 </tr>
 </table>
