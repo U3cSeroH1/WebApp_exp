@@ -4,8 +4,8 @@
 
 <div class="row">
     <!-- 左側、ログインエリア -->
-    <div class="card col-md-6">
-        <div >
+    <div class="col-md-6">
+        <div class="card-body">
             <form action="{% url 'register:login' %}" method="POST">
                 {{ form.non_field_errors }}
                 {% for field in form %}
