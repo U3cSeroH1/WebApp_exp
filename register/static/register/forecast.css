@@ -19,6 +19,4 @@ td:last-child {
     vertical-align: middle; /* 中央を揃える */
     margin: 5px 0px;
     padding: 10px;
-    border: 2px solid green;
-    background-color: #ddffdd;
 }
