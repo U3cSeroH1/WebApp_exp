@@ -88,6 +88,11 @@
     <Content Include="register\static\register\img\sunny.png" />
     <Content Include="register\static\register\img\tenkiicon.png" />
     <Content Include="register\static\register\img\yasaimap.png" />
+    <Content Include="register\static\register\img\user.svg" />
+    <Content Include="register\static\register\img\add.svg" />
+    <Content Include="register\static\register\img\user_img.svg" />
+    <Content Include="register\static\register\img\longin.svg" />
+    <Content Include="register\static\register\img\update.svg" />
     <Content Include="register\static\register\img_w\rain.svg" />
     <Content Include="register\static\register\img_w\cloud.svg" />
     <Content Include="register\static\register\img_w\sunny.svg" />

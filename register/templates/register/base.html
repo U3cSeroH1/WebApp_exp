@@ -44,11 +44,11 @@
 
 			<nav role="navigation" class="nav-menu-5 w-nav-menu">
 				<a href="#" class="link-block-16 w-inline-block">
-					<img src="https://uploads-ssl.webflow.com/5bcaf1ee76071d72dd1178bd/5bcaf1ee76071d26d91178e8_avatar-1.png" alt="" class="image-25">
+					<img src="{% static 'register/img/user_img.svg' %}" alt="" class="image-25">
 				</a>
 				<div class="text-block-7">{{user.HN}}</div>
 				<a href="{% url 'register:user_detail' user.pk %}" class="menulink w-inline-block">
-					<img src="{% static 'register/img/mypage2.PNG' %}" alt="" class="image-26">
+					<img src="{% static 'register/img/user.svg' %}" alt="" class="image-26">
 					<div class="text-block-6">ユーザ情報</div>
 				</a>
 				<a href="{% url 'register:pin' user.pk %}" class="menulink w-inline-block">
@@ -60,7 +60,7 @@
 					<div class="text-block-6">天気記録</div>
 				</a>
 				<a href="{% url 'register:user_update' user.pk %}" class="menulink w-inline-block">
-					<img src="{% static 'register/img/service2.PNG' %}" alt="" class="image-26">
+					<img src="{% static 'register/img/update.svg' %}" alt="" class="image-26">
 					<div class="text-block-6">ユーザ情報更新</div>
 				</a>
 
@@ -81,11 +81,11 @@
 				</a>
 
 				<a href="{% url 'register:login' %}" class="menulink w-inline-block">
-					<img src="{% static 'register/img/logout.png' %}" alt="" class="image-26">
+					<img src="{% static 'register/img/login.svg' %}" alt="" class="image-26">
 					<div class="text-block-6">ログイン</div>
 				</a>
 				<a href="{% url 'register:user_create' %}" class="menulink w-inline-block">
-					<img src="{% static 'register/img/logout.png' %}" alt="" class="image-26">
+					<img src="{% static 'register/img/add.svg' %}" alt="" class="image-26">
 					<div class="text-block-6">登録</div>
 				</a>
 			</nav>
