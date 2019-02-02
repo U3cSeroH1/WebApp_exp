@@ -17,15 +17,17 @@
 <td rowspan="2"><img src="{% static 'register/img/1.png' %}">{{today_w.weather}}</td>
 {% endif %}
 
+<li class="icon-sun"></li>
+
 {% endfor %}
 
 {% for today_max in today %}
-<td >最高 {{today_max.temp_max}}℃</td>
+<td >最高 {{today_max.temp_max}}</td>
 {% endfor %}
 </tr>
 <tr align="center">
 {% for today_min in today %}
-<td>最低 {{today_min.temp_min}}℃</td>
+<td>最低 {{today_min.temp_min}}</td>
 {% endfor %}
 </tr>
 </table>
@@ -57,7 +59,7 @@
 
 
 {% if tomorrow %}
-<h1 align="center">今日の天気</h1>
+<h1 align="center">明日の天気</h1>
 <table name="today1" width=100% style="font-size : 35px;">
 <tr align="center">
 
@@ -66,6 +68,8 @@
 {% if tomorrow_w.weather == '曇り時々雨' %}
 <td rowspan="2"><img src="{% static 'register/img/1.png' %}">{{tomorrow_w.weather}}</td>
 {% endif %}
+
+
 
 {% endfor %}
 
