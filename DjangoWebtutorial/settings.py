@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'register.apps.RegisterConfig',
     'comment.apps.commentConfig',
     'scraping.apps.scrapingConfig',
-    'Calender.apps.CalenderConfig',
 
 
 ]

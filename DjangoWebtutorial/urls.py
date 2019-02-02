@@ -15,6 +15,5 @@ urlpatterns = [
     path('', include('register.urls')),
     path('comment/', include('comment.urls')),
     path('scraping/', include('scraping.urls')),
-    path('Calender/', include('Calender.urls')),
 
 ]
