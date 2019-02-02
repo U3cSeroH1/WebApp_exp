@@ -41,12 +41,13 @@
         </div>
 
 
+    <hr>
 
         <div style="text-align:left;" class="form-group">
             <label>野菜の種類</label>
             <p>{{ user.pulldown }}</p>
         </div>
-
+            <hr>
         <div style="text-align:left;" class="form-group">
             <label>所在地</label>
             <p>{{ user.geo }}</p>
@@ -63,7 +64,7 @@
         テキスト:{{ comment.text }}<br>
     {% endif %}
 
-
+    <hr>
     <a href="{% url 'comment:reply' comment.pk %}">返信する</a><br>
     
             {% for reply in comment.reply_set.all %}
@@ -74,6 +75,7 @@
                 {% else %}
                     <p>まだ承認されていません。(返信コメント)</p>
                 {% endif %}
+                    <hr>
             </div>
             {% endfor %}
 
