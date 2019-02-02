@@ -22,8 +22,11 @@
     margin: 0 auto;
   }
 </style>
+{% for weather in WeatherDetail %}
 
+{% if weather.temperature %}
 
+{% endfor %}
 <div id="Detail">
 
 <table border="1" width="95%" height="90%" cellspacing="0" cellpadding="4" align="center" style="font-size : 14px;">
@@ -68,6 +71,11 @@
 </div>
 
 
+{% else %}
+
+<p>この日のデータは未取得です，申し訳ございません</p>
+
+{% endif %}
 
 
 {% endblock %}
