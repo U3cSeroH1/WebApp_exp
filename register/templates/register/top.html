@@ -13,7 +13,7 @@
 
 
 
-{% for today_w in tomorrow %}
+{% for today_w in today %}
 {{today_w.target}}
 {% if today_w.weather == '晴れ' %}
 <td rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{today_w.weather}}</td>
