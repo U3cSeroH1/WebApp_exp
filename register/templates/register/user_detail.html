@@ -2,41 +2,41 @@
 {% block content %}
 <table class="table">
     <tbody>
-        <div style="text-align:left;" class="form-group">
+        <div style="text-align:left; margin-left: 20px; margin-right: 20px;" class="form-group">
             <label>ユーザー名</label>
             <p>{{ user.HN }}</p>
         </div>
             <hr>
-        <div style="text-align:left;" class="form-group">
-            <label>ユーザー名</label>
+        <div style="text-align:left; margin-left: 20px; margin-right: 20px;"  class="form-group">
+            <label>メールアドレス</label>
             <p>{{ user.username }}</p>
         </div>
             <hr>
         {% if user.username != user.email %}
-        <div style="text-align:left;" class="form-group">
+        <div style="text-align:left; margin-left: 20px; margin-right: 20px;" class="form-group">
             <label>mail-address</label>
             <p>{{ user.email }}</p>
         </div>
             <hr>
         {% endif %}
-        <div style="text-align:left;" class="form-group">
+        <div style="text-align:left; margin-left: 20px; margin-right: 20px;" class="form-group">
             <label>姓</label>
             <p>{{ user.last_name }}</p>
         </div>
             <hr>
-        <div style="text-align:left;" class="form-group">
+        <div style="text-align:left; margin-left: 20px; margin-right: 20px;" class="form-group">
             <label>名</label>
             <p>{{ user.first_name }}</p>
         </div>
             <hr>
 
-        <div style="text-align:left;" class="form-group">
+        <div style="text-align:left; margin-left: 20px; margin-right: 20px;" class="form-group">
             <label>野菜の種類</label>
             <p>{{ user.pulldown }}</p>
         </div>
             <hr>
-
-        <div style="text-align:left;" class="form-group">
+         
+        <div style="text-align:left; margin-left: 20px; margin-right: 20px;" class="form-group">
             <label>所在地</label>
             <p>{{ user.geo }}</p>
         </div>
