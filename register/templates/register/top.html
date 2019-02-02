@@ -27,7 +27,7 @@
 {% elif tomorrow_w.weather == '曇り時々晴れ' %}
 <td rowspan="2"><img src="{% static 'register/img_w/cloud.svg' %}"><img src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
 {% elif tomorrow_w.weather == '曇り時々雨' or '曇り後雨' or '曇り後一時雨' or '曇り一時雨' %}
-<td rowspan="2"><img src="{% static 'register/img_w/cloud.svg' %}"><img src="{% static 'register/img_w/rain.svg' %}">{{tomorrow_w.weather}}</td>
+<td rowspan="2"><div id="w_img"><img src="{% static 'register/img_w/cloud.svg' %}"><img src="{% static 'register/img_w/rain.svg' %}">{{tomorrow_w.weather}}</div></td>
 
 {% elif tomorrow_w.weather == '雨' %}
 <td rowspan="2"><img src="{% static 'register/img/1.png' %}">{{tomorrow_w.weather}}</td>
