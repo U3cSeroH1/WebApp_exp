@@ -52,20 +52,34 @@
 <td colspan="4">{{today.info}}</td>
 {% endfor %}
 </tr>
+</table>
 
 
-</table>
-<h1 align="center">明日の天気</h1>
-<table name="tomorrow1" width=100% style="font-size : 35px;">
+
+{% if tomorrow %}
+<h1 align="center">今日の天気</h1>
+<table name="today1" width=100% style="font-size : 35px;">
 <tr align="center">
-<td rowspan="2"><img src=E:/工学実験Ⅵ/hare.png>晴れ</td>
-<td >最高 13℃</td>
+
+{% for tomorrow_w in tomorrow %}
+
+{% if tomorrow_w.weather == '曇り時々雨' %}
+<td rowspan="2"><img src="{% static 'register/img/1.png' %}">{{tomorrow_w.weather}}</td>
+{% endif %}
+
+{% endfor %}
+
+{% for tomorrow_max in tomorrow %}
+<td >最高 {{tomorrow_max.temp_max}}℃</td>
+{% endfor %}
 </tr>
 <tr align="center">
-<td>最低 3℃</td>
+{% for tomorrow_min in tomorrow %}
+<td>最低 {{tomorrow_min.temp_min}}℃</td>
+{% endfor %}
 </tr>
 </table>
-<table name="tomorrow2" border width=100% cellspacing="0" style="font-size : 25px;">
+<table name="today2" border width=100% cellspacing="0" style="font-size : 25px;">
 <tr align="center">
 <td>時間</td>
 <td>00-06</td>
@@ -75,16 +89,24 @@
 </tr>
 <tr align="center">
 <td>降水確率</td>
-<td>2-2</td>
-<td>2-3</td>
-<td>2-4</td>
-<td>2-5</td>
+{% for tomorrow_r in tomorrow %}
+<td>{{tomorrow_r.rain|slice:"6:9"}}</td>
+<td>{{tomorrow_r.rain|slice:"17:21"}}</td>
+<td>{{tomorrow_r.rain|slice:"30:33"}}</td>
+<td>{{tomorrow_r.rain|slice:"42:45"}}</td>
+{% endfor %}
 </tr>
 <tr align="center">
 <td>風と波</td>
-<td colspan="4">南の風日中北西の風</td>
+{% for tomorrow_i in tomorrow %}
+<td colspan="4">{{tomorrow.info}}</td>
+{% endfor %}
 </tr>
 </table>
+{% endif %}
+
+
+
 </body>
 
 <link href="{% static 'register/forecast.css' %}" rel="stylesheet" type="text/css">
