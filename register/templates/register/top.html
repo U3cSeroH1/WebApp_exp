@@ -69,12 +69,18 @@
 
 </table>
 
+
+
+<table name="today3" width=100% cellspacing="0" style="font-size : 25px;">
 <tr align="center">
 <td>風と波</td>
 {% for today_i in today %}
 <td colspan="4">{{today_i.info}}</td>
 {% endfor %}
 </tr>
+</table>
+
+
 
 {% if tomorrow %}
 <h1 align="center">明日の天気</h1>
@@ -139,6 +145,17 @@
 </tr>
 
 </table>
+
+<table name="today3" border width=100% cellspacing="0" style="font-size : 25px;">
+<tr align="center">
+<td>風と波</td>
+{% for tomorrow_i in tomorrow %}
+<td colspan="4">{{tomorrow_i.info}}</td>
+{% endfor %}
+</tr>
+
+</table>
+
 
 <tr align="center">
 <td>風と波</td>
