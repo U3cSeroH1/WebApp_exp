@@ -13,24 +13,24 @@
 
 
 
-{% for tomorrow_w in tomorrow %}
-{{tomorrow_w.target}}
-{% if tomorrow_w.weather == '晴れ' %}
-<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
-{% elif tomorrow_w.weather == '晴れ後曇り' %}
-<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}"><img src="{% static 'register/img_w/cloud.svg' %}">{{tomorrow_w.weather}}</td>
+{% for today_w in tomorrow %}
+{{today_w.target}}
+{% if today_w.weather == '晴れ' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{today_w.weather}}</td>
+{% elif today_w.weather == '晴れ後曇り' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}"><img src="{% static 'register/img_w/cloud.svg' %}">{{today_w.weather}}</td>
 
-{% elif tomorrow_w.weather == '曇り' %}
+{% elif today_w.weather == '曇り' %}
 <td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}">{{tomorrow_w.weather}}</td>
-{% elif tomorrow_w.weather == '曇り後晴れ' %}
-<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
-{% elif tomorrow_w.weather == '曇り時々晴れ' %}
-<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
-{% elif tomorrow_w.weather == '曇り時々雨' or '曇り後雨' or '曇り後一時雨' or '曇り一時雨' %}
-<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/rain.svg' %}">{{tomorrow_w.weather}}</td>
+{% elif today_w.weather == '曇り後晴れ' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{today_w.weather}}</td>
+{% elif today_w.weather == '曇り時々晴れ' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{today_w.weather}}</td>
+{% elif today_w.weather == '曇り時々雨' or '曇り後雨' or '曇り後一時雨' or '曇り一時雨' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/rain.svg' %}">{{today_w.weather}}</td>
 
-{% elif tomorrow_w.weather == '雨' %}
-<td rowspan="2"><img id="w_img" src="{% static 'register/img/1.png' %}">{{tomorrow_w.weather}}</td>
+{% elif today_w.weather == '雨' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img/1.png' %}">{{today_w.weather}}</td>
 
 
 {% endif %}
