@@ -52,11 +52,11 @@
 					<div class="text-block-6">ユーザ情報</div>
 				</a>
 				<a href="{% url 'register:pin' user.pk %}" class="menulink w-inline-block">
-					<img src="{% static 'register/img/map.png' %}" alt="" class="image-26">
+					<img src="{% static 'register/img/map.svg' %}" alt="" class="image-26">
 					<div class="text-block-6">マップ</div>
 				</a>
 				<a href="{% url 'scraping:date_page' %}" class="menulink w-inline-block">
-					<img src="{% static 'register/img/tenkiicon.png' %}" alt="" class="image-26">
+					<img src="{% static 'register/img/weather.svg' %}" alt="" class="image-26">
 					<div class="text-block-6">天気記録</div>
 				</a>
 				<a href="{% url 'register:user_update' user.pk %}" class="menulink w-inline-block">
@@ -67,7 +67,7 @@
                 <hr />
 
 				<a href="{% url 'register:logout' %}" class="menulink w-inline-block">
-					<img src="{% static 'register/img/logout.png' %}" alt="" class="image-26">
+					<img src="{% static 'register/img/logout.svg' %}" alt="" class="image-26">
 					<div class="text-block-6">ログアウト</div>
 				</a>
 			</nav>
