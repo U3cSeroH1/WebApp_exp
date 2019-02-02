@@ -4,36 +4,36 @@
     <tbody>
         <div style="text-align:left;" class="form-group">
             <label>ユーザー名</label>
-            {{ user.HN }}
+            <p>{{ user.HN }}</p>
         </div>
         <div style="text-align:left;" class="form-group">
             <label>ユーザー名</label>
-            {{ user.username }}
+            <p>{{ user.username }}</p>
         </div>
         {% if user.username != user.email %}
         <div style="text-align:left;" class="form-group">
             <label>mail-address</label>
-            {{ user.email }}
+            <p>{{ user.email }}</p>
         </div>
         {% endif %}
         <div style="text-align:left;" class="form-group">
             <label>姓</label>
-            {{ user.last_name }}
+            <p>{{ user.last_name }}</p>
         </div>
         <div style="text-align:left;" class="form-group">
             <label>名</label>
-            {{ user.first_name }}
+            <p>{{ user.first_name }}</p>
         </div>
 
 
         <div style="text-align:left;" class="form-group">
             <label>野菜の種類</label>
-            {{ user.pulldown }}
+            <p>{{ user.pulldown }}</p>
         </div>
 
         <div style="text-align:left;" class="form-group">
             <label>所在地</label>
-            {{ user.geo }}
+            <p>{{ user.geo }}</p>
         </div>
     </tbody>
 </table>
