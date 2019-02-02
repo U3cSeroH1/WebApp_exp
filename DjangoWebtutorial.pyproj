@@ -88,6 +88,9 @@
     <Content Include="register\static\register\img\sunny.png" />
     <Content Include="register\static\register\img\tenkiicon.png" />
     <Content Include="register\static\register\img\yasaimap.png" />
+    <Content Include="register\static\register\img_w\rain.svg" />
+    <Content Include="register\static\register\img_w\cloud.svg" />
+    <Content Include="register\static\register\img_w\sunny.svg" />
     <Content Include="register\templates\register\base - Copy %283%29.html" />
     <Content Include="scraping\static\scraping\footerFixed.js" />
     <Content Include="scraping\static\scraping\fullcalendar\fullcalendar.css" />
@@ -275,6 +278,7 @@
     <Folder Include="polls\migrations\" />
     <Folder Include="register\migrations\" />
     <Folder Include="register\static\register\img\" />
+    <Folder Include="register\static\register\img_w\" />
     <Folder Include="scraping\" />
     <Folder Include="scraping\migrations\" />
     <Folder Include="scraping\static\" />
