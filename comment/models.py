@@ -2,7 +2,7 @@ from django.db import models
 
 from register.models import User
  
-class Post(models.Model):
+class Post(models.Model):#現在は使わない
     """記事."""
     title = models.CharField(max_length=255)
     text = models.TextField()
@@ -15,7 +15,7 @@ class Post(models.Model):
  
 class Comment(models.Model):
     """コメント."""
-    name = models.CharField(max_length=255, blank=True)
+    name = models.CharField(max_length=255, blank=True)#
     text = models.TextField()
     target = models.ForeignKey(User, on_delete=models.CASCADE, default = None)
     is_public = models.BooleanField(default=True)

@@ -88,10 +88,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     example1=models.CharField(_('example1'),max_length=150,blank=True)
     example2=models.CharField(_('example2'),max_length=150,blank=True)
     example3=models.CharField(_('example3'),max_length=150,blank=True)
-    pulldown = models.CharField(_('pulldown'), choices=CHOICES,max_length=150,blank=True)
+    pulldown = models.CharField(_('野菜の種類'), choices=CHOICES,max_length=150,blank=True)
     lat=models.CharField(_('lat'),max_length=150,blank=True)
     lng=models.CharField(_('lng'),max_length=150,blank=True)
-    geo=models.CharField(_('geo'),max_length=150,blank=True)
+    geo=models.CharField(_('所在地'),max_length=150,blank=True)
 
     HN = models.CharField(_('ユーザ名'),max_length=150)
 

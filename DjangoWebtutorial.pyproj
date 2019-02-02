@@ -30,17 +30,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Calender\admin.py" />
-    <Compile Include="Calender\apps.py" />
-    <Compile Include="Calender\forms.py" />
-    <Compile Include="Calender\migrations\0001_initial.py" />
-    <Compile Include="Calender\migrations\__init__.py" />
-    <Compile Include="Calender\mixins.py" />
-    <Compile Include="Calender\models.py" />
-    <Compile Include="Calender\tests.py" />
-    <Compile Include="Calender\urls.py" />
-    <Compile Include="Calender\views.py" />
-    <Compile Include="Calender\__init__.py" />
     <Compile Include="comment\admin.py" />
     <Compile Include="comment\apps.py" />
     <Compile Include="comment\migrations\__init__.py" />
@@ -86,15 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="Calender\templates\Calender\base.html" />
-    <Content Include="Calender\templates\Calender\includes\month.html" />
-    <Content Include="Calender\templates\Calender\includes\week.html" />
-    <Content Include="Calender\templates\Calender\month.html" />
-    <Content Include="Calender\templates\Calender\month_with_forms.html" />
-    <Content Include="Calender\templates\Calender\month_with_schedule.html" />
-    <Content Include="Calender\templates\Calender\mycalendar.html" />
-    <Content Include="Calender\templates\Calender\week.html" />
-    <Content Include="Calender\templates\Calender\week_with_schedule.html" />
     <Content Include="register\static\register\forecast.css" />
     <Content Include="register\static\register\headfoot.js" />
     <Content Include="register\static\register\img\logo2.PNG" />
@@ -286,11 +266,6 @@
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Calender\" />
-    <Folder Include="Calender\migrations\" />
-    <Folder Include="Calender\templates\" />
-    <Folder Include="Calender\templates\Calender\" />
-    <Folder Include="Calender\templates\Calender\includes\" />
     <Folder Include="comment\" />
     <Folder Include="comment\migrations\" />
     <Folder Include="comment\static\" />
