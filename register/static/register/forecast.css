@@ -13,10 +13,3 @@ td:last-child {
   white-space: nowrap;
 }
 
-@font-face {
-    font-family: "iconvault";
-    src: url("iconvault_forecastfont.eot");
-    src: url("iconvault_forecastfont.eot?#iefix") format("embedded-opentype"), url("iconvault_forecastfont.woff") format("woff"), url("iconvault_forecastfont.ttf") format("truetype"), url("iconvault_forecastfont.svg") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
