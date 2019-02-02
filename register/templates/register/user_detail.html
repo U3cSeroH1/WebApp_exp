@@ -2,39 +2,39 @@
 {% block content %}
 <table class="table">
     <tbody>
-        <tr>
-            <th>ユーザー名</th>
-            <td>{{ user.HN }}</td>
-        </tr>
-        <tr>
-            <th>ユーザー名</th>
-            <td>{{ user.username }}</td>
-        </tr>
+        <div style="text-align:left;" class="form-group">
+            <label>ユーザー名</label>
+            {{ user.HN }}
+        </div>
+        <div style="text-align:left;" class="form-group">
+            <label>ユーザー名</label>
+            {{ user.username }}
+        </div>
         {% if user.username != user.email %}
-        <tr>
-            <th>mail-address</th>
-            <td>{{ user.email }}</td>
-        </tr>
+        <div style="text-align:left;" class="form-group">
+            <label>mail-address</label>
+            {{ user.email }}
+        </div>
         {% endif %}
-        <tr>
-            <th>姓</th>
-            <td>{{ user.last_name }}</td>
-        </tr>
-        <tr>
-            <th>名</th>
-            <td>{{ user.first_name }}</td>
-        </tr>
+        <div style="text-align:left;" class="form-group">
+            <label>姓</label>
+            {{ user.last_name }}
+        </div>
+        <div style="text-align:left;" class="form-group">
+            <label>名</label>
+            {{ user.first_name }}
+        </div>
 
 
-        <tr>
-            <th>野菜の種類</th>
-            <td>{{ user.pulldown }}</td>
-        </tr>
+        <div style="text-align:left;" class="form-group">
+            <label>野菜の種類</label>
+            {{ user.pulldown }}
+        </div>
 
-        <tr>
-            <th>所在地</th>
-            <td>{{ user.geo }}</td>
-        </tr>
+        <div style="text-align:left;" class="form-group">
+            <label>所在地</label>
+            {{ user.geo }}
+        </div>
     </tbody>
 </table>
 
