@@ -79,6 +79,11 @@
       };
 
     var geocoder = new google.maps.Geocoder;
+    document.getElementById('submit2').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+    });
+
+    var geocoder = new google.maps.Geocoder;
 
     geocoder.geocode({'location': lat_lng}, function(results, status) {
           if (status === 'OK') {
@@ -165,7 +170,8 @@
       });
     }
 
-        function geocodeAddress(geocoder, resultsMap) {
+
+    function geocodeAddress(geocoder, resultsMap) {
 
 
         var address = document.getElementById('address').value;
@@ -182,7 +188,7 @@
             alert('Geocode was not successful for the following reason: ' + status);
           }
         });
-      }
+    }
 
 </script>
 
