@@ -35,22 +35,22 @@
 
 <table class="table">
     <tbody>
-        <tr>
-            <th>ユーザー名</th>
-            <td>{{ User_p.HN }}</td>
-        </tr>
-        <tr>
-            <th>姓名</th>
-            <td>{{ User_p.last_name }} {{ User_p.first_name }}</td>
-        </tr>
-        <tr>
-            <th>野菜の種類</th>
-            <td>{{ User_p.pulldown }}</td>
-        </tr>
-        <tr>
-            <th>住所</th>
-            <td>{{ User_p.geo }}</td>
-        </tr>
+        <div style="text-align:left;" class="form-group">
+            <label>ユーザー名</label>
+            {{ user.HN }}
+        </div>
+
+
+
+        <div style="text-align:left;" class="form-group">
+            <label>野菜の種類</label>
+            {{ user.pulldown }}
+        </div>
+
+        <div style="text-align:left;" class="form-group">
+            <label>所在地</label>
+            {{ user.geo }}
+        </div>
     </tbody>
 </table>
 
