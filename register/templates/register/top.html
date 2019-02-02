@@ -41,9 +41,9 @@
 <td>降水確率</td>
 {% for today_r in today %}
 <td>{{today_r.rain|slice:"6:9"}}</td>
-<td>{{today_r.rain|slice:"17:21"}}</td>
-<td>{{today_r.rain|slice:"30:33"}}</td>
-<td>{{today_r.rain|slice:"42:45"}}</td>
+<td>{{today_r.rain|slice:"17:22"}}</td>
+<td>{{today_r.rain|slice:"30:34"}}</td>
+<td>{{today_r.rain|slice:"42:46"}}</td>
 {% endfor %}
 </tr>
 <tr align="center">
@@ -91,9 +91,9 @@
 <td>降水確率</td>
 {% for tomorrow_r in tomorrow %}
 <td>{{tomorrow_r.rain|slice:"6:9"}}</td>
-<td>{{tomorrow_r.rain|slice:"17:21"}}</td>
-<td>{{tomorrow_r.rain|slice:"30:33"}}</td>
-<td>{{tomorrow_r.rain|slice:"42:45"}}</td>
+<td>{{tomorrow_r.rain|slice:"17:22"}}</td>
+<td>{{tomorrow_r.rain|slice:"30:34"}}</td>
+<td>{{tomorrow_r.rain|slice:"42:46"}}</td>
 {% endfor %}
 </tr>
 <tr align="center">
