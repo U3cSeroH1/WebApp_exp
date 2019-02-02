@@ -14,7 +14,7 @@
 
 
 {% for tomorrow_w in tomorrow %}
-
+{{tomorrow_w.target}}
 {% if tomorrow_w.weather == '晴れ' %}
 <td rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
 {% elif tomorrow_w.weather == '晴れ後曇り' %}
@@ -84,7 +84,7 @@
 
 
 {% for tomorrow_w in tomorrow %}
-
+{{tomorrow_w.target}}
 {% if tomorrow_w.weather == '晴れ' %}
 <td rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
 {% elif tomorrow_w.weather == '晴れ後曇り' %}
