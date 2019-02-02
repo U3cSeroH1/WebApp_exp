@@ -31,7 +31,7 @@ def dateView(request):
 
 def hourView(request, p_date):
     #a={'tinko':'tinkoko','unti':'untiti'}
-
+    Date.objects.update_or_create(pub_date = str(p_date))
 
     d ={
         'datekey': p_date,
