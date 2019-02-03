@@ -8,7 +8,8 @@
 
 {% if not user.geo %}
 <h1 align="center">まずは農地の登録をしてみましょう！</h1>
-<a href="{% url 'register:user_update' user.pk %}"><div class="text-block-6">ユーザ情報更新</div></a>
+<a href="{% url 'register:user_update' user.pk %}"><button type="submit" class="btn btn-success btn-lg btn-block" >農地登録</button></a>
+
 {% endif %}
 
 <body>
