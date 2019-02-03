@@ -6,6 +6,11 @@
 
 {% if user.is_authenticated %}
 
+{% if not user.geo %}
+<h1 align="center">まずは農地の登録をしてみましょう！</h1>
+<a href="{% url 'register:user_update' user.pk %}"><div class="text-block-6">ユーザ情報更新</div></a>
+{% endif %}
+
 <body>
 <h1 align="center">今日の天気</h1>
 <table name="today1" width=100% style="font-size : 35px;">
