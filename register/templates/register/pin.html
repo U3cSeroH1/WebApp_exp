@@ -69,7 +69,7 @@
     <div id="txt_left">
     {% if comment.is_public %}
         {{ comment.name }}<br>
-        テキスト:{{ comment.text }}<br>
+        :{{ comment.text }}<br>
     </div>
     {% endif %}
 
@@ -78,7 +78,7 @@
     <hr>
 
             {% for reply in comment.reply_set.all %}
-            <div id="txt_left">
+            <div id="txt_left" style="margin-left: 50px;">
                 {% if reply.is_public %}
                     {{ reply.name }}<br>
                     :{{ reply.text }}<br>       
