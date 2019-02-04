@@ -45,7 +45,8 @@
 
 
                     <td><span id="geo"></span></td>
-
+                    <td><span style="display: none;" id="lat"></span></td>
+                    <td><span style="display: none;" id="lng"></span></td>
                 </tr>
 
                 <tr>
@@ -60,7 +61,7 @@
 
     </table>
     {% csrf_token %}
-    <button type="submit" class="btn btn-success btn-lg" >送信</button>
+    <button type="submit" class="btn btn-success btn-lg" onclick="OnButtonClick();">送信</button>
 </form>
   {% load static %}
 
@@ -70,6 +71,7 @@
 <script>
     function getClickLatLng(lat_lng, map) {
       event.preventDefault();
+
 //alert(JSON.stringify(obj));
       // 座標を表示
       a="{% url 'register:user_update' user.pk %}";
@@ -91,31 +93,10 @@
               
 			  window.alert(results[0].formatted_address + 'mother fucker');
           document.getElementById('geo').textContent = results[0].formatted_address;
+          document.getElementById('lat').textContent = lat_lng.lat();
+          document.getElementById('lng').textContent = lat_lng.lng();
 
-    $.ajax({
-            'url':'{% url "register:save_latlng" %}',
-            'type':'POST',
-            'data':{
-                'lat':lat_lng.lat(),
-                'lng':lat_lng.lng(),
-                'geo': results[0].formatted_address,
-                'lng_w':'afeeg',
-                'lng_s':a,
-                
-            },
-            'dataType':'json',
-            
-          csrfmiddlewaretoken: '{{ csrf_token }}',
-            'success':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
-                //alert(response.aaa['lat']);  // レスポンスからデータを取り出してアラート
-                //alert(iti);
-            },
-          'error':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
-                alert("st");  // レスポンスからデータを取り出してアラート
-                alert(response.your_surprise_txt)
-                alert(iti);
-            },
-        });
+    
 
             } else {
               window.alert('No results found');
@@ -126,7 +107,7 @@
         });
 
 
-      alert(lat_lng);
+      //alert(lat_lng);
 
 
                 var marker = new google.maps.Marker({
@@ -134,8 +115,7 @@
                 map: map,
                 animation: google.maps.Animation.DROP,
                 //icon: icon
-                draggable: true,
-                title: "Drag me!"
+
 
             });
   
@@ -196,6 +176,33 @@
           }
         });
     }
+
+   function OnButtonClick() {
+     $.ajax({
+            'url':'{% url "register:save_latlng" %}',
+            'type':'POST',
+            'data':{
+                'lat':document.getElementById('lat').textContent,
+                'lng':document.getElementById('lng').textContent,
+                'geo': document.getElementById('geo').textContent,
+                'lng_w':'afeeg',
+                'lng_s':a,
+                
+            },
+            'dataType':'json',
+            
+          csrfmiddlewaretoken: '{{ csrf_token }}',
+            'success':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
+                //alert(response.aaa['lat']);  // レスポンスからデータを取り出してアラート
+                //alert(iti);
+            },
+          'error':function(response){  // 通信が成功したら動く処理で、引数には返ってきたレスポンスが入る
+                alert("st");  // レスポンスからデータを取り出してアラート
+                alert(response.your_surprise_txt)
+                alert(iti);
+            },
+        });
+   }
 
 </script>
 
