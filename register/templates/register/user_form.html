@@ -91,7 +91,7 @@
               map.setZoom(16);
 			  map.panTo(lat_lng);
               
-			  window.alert(results[0].formatted_address + 'mother fucker');
+			  window.alert(results[0].formatted_address);
           document.getElementById('geo').textContent = results[0].formatted_address;
           document.getElementById('lat').textContent = lat_lng.lat();
           document.getElementById('lng').textContent = lat_lng.lng();
@@ -186,7 +186,7 @@
                 'lng':document.getElementById('lng').textContent,
                 'geo': document.getElementById('geo').textContent,
                 'lng_w':'afeeg',
-                'lng_s':a,
+                'lng_s':'a',
                 
             },
             'dataType':'json',
