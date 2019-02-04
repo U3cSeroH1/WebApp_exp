@@ -178,6 +178,8 @@
     }
 
    function OnButtonClick() {
+    a="{% url 'register:user_update' user.pk %}";
+
      $.ajax({
             'url':'{% url "register:save_latlng" %}',
             'type':'POST',
