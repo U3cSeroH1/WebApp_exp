@@ -162,17 +162,20 @@
         center: {lat: 33.232647, lng: 131.651055}
       });
 
+      document.getElementById('geo').textContent = "{{geo}}";
+
       // クリックイベントを追加
       map.addListener('click', function(e) {
         getClickLatLng(e.latLng, map);
       });
 
        var geocoder = new google.maps.Geocoder;
-    document.getElementById('submit2').addEventListener('click', function() {
-    geocodeAddress(geocoder, map);
-    });
+        document.getElementById('submit2').addEventListener('click', function() {
+        geocodeAddress(geocoder, map);
+        });
 
     }
+
 
 
     function geocodeAddress(geocoder, resultsMap) {

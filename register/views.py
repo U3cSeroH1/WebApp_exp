@@ -197,6 +197,16 @@ class UserUpdate(OnlyYouMixin, generic.UpdateView):
     def get_success_url(self):
         return resolve_url('register:user_detail', pk=self.kwargs['pk'])
 
+    def get_context_data(self, **kwargs):
+        # 継承元のメソッド呼び出し
+        
+        context = super().get_context_data(**kwargs)
+
+        context["geo"] = User.objects.get(pk=self.kwargs['pk']).geo
+
+
+        return context
+
 
 class PasswordChange(PasswordChangeView):
     """パスワード変更ビュー"""
