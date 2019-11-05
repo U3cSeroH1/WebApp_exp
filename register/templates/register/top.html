@@ -4,6 +4,213 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
+{% if not user.geo %}
+<h1 align="center">まずは農地の登録をしてみましょう！</h1>
+<a href="{% url 'register:user_update' user.pk %}"><button type="submit" class="btn btn-success btn-lg btn-block" >農地登録</button></a>
+
+{% endif %}
+
+<body>
+<h1 align="center">今日の天気</h1>
+<table name="today1" width=100% style="font-size : 35px;">
+<tr align="center">
+
+
+
+{% for today_w in today %}
+{{today_w.target}}
+{% if today_w.weather == '晴れ' %}
+<td  rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{today_w.weather}}</td>
+{% elif today_w.weather == '晴れ後曇り' %}
+<td  rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}">{{today_w.weather}}</td>
+
+{% elif today_w.weather == '曇り' %}
+<td  rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}">{{tomorrow_w.weather}}</td>
+{% elif today_w.weather == '曇り後晴れ' %}
+<td  rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{today_w.weather}}</td>
+{% elif today_w.weather == '曇り時々晴れ' %}
+<td  rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{today_w.weather}}</td>
+{% elif today_w.weather == '曇り時々雨' or '曇り後雨' or '曇り後一時雨' or '曇り一時雨' %}
+<td  rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/rain.svg' %}">{{today_w.weather}}</td>
+
+{% elif today_w.weather == '雨' %}
+<td  rowspan="2"><img id="w_img" src="{% static 'register/img/1.png' %}">{{today_w.weather}}</td>
+
+
+{% endif %}
+
+{% endfor %}
+
+
+
+{% for today_max in today %}
+<td >最高 {{today_max.temp_max}}</td>
+{% endfor %}
+</tr>
+<tr align="center">
+{% for today_min in today %}
+<td>最低 {{today_min.temp_min}}</td>
+{% endfor %}
+</tr>
+</table>
+<table name="today2" border width=100% cellspacing="0" style="font-size : 25px;">
+<tr align="center">
+<td>時間</td>
+<td>00-06</td>
+<td>06-12</td>
+<td>12-18</td>
+<td>18-24</td>
+</tr>
+<tr align="center">
+<td>降水確率</td>
+{% for today_r in today %}
+<td>{{today_r.rain|slice:"6:9"}}</td>
+<td>{{today_r.rain|slice:"17:22"}}</td>
+<td>{{today_r.rain|slice:"30:34"}}</td>
+<td>{{today_r.rain|slice:"42:46"}}</td>
+{% endfor %}
+</tr>
+<tr align="center">
+<td>風と波</td>
+{% for today_i in today %}
+<td  style="white-space: normal; font-size : 18px;" colspan="4">{{today_i.info}}</td>
+{% endfor %}
+</tr>
+</table>
+
+<br>
+
+{% if tomorrow %}
+<h1 align="center">明日の天気</h1>
+<table name="today1" width=100% style="font-size : 35px;">
+<tr align="center">
+
+
+
+{% for tomorrow_w in tomorrow %}
+{{tomorrow_w.target}}
+{% if tomorrow_w.weather == '晴れ' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
+{% elif tomorrow_w.weather == '晴れ後曇り' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}">{{tomorrow_w.weather}}</td>
+
+{% elif tomorrow_w.weather == '曇り' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}">{{tomorrow_w.weather}}</td>
+{% elif tomorrow_w.weather == '曇り後晴れ' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
+{% elif tomorrow_w.weather == '曇り時々晴れ' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/sunny.svg' %}">{{tomorrow_w.weather}}</td>
+{% elif tomorrow_w.weather == '曇り時々雨' or '曇り後雨' or '曇り後一時雨' or '曇り一時雨' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img_w/cloud.svg' %}"><img id="w_img" src="{% static 'register/img_w/rain.svg' %}">{{tomorrow_w.weather}}</td>
+
+{% elif tomorrow_w.weather == '雨' %}
+<td rowspan="2"><img id="w_img" src="{% static 'register/img/1.png' %}">{{tomorrow_w.weather}}</td>
+
+
+{% endif %}
+
+{% endfor %}
+
+
+
+{% for tomorrow_max in tomorrow %}
+<td >最高 {{tomorrow_max.temp_max}}</td>
+{% endfor %}
+</tr>
+<tr align="center">
+{% for tomorrow_min in tomorrow %}
+<td>最低 {{tomorrow_min.temp_min}}</td>
+{% endfor %}
+</tr>
+</table>
+
+<table name="today2" border width=100% cellspacing="0" style="font-size : 25px;">
+<tr align="center">
+<td>時間</td>
+<td>00-06</td>
+<td>06-12</td>
+<td>12-18</td>
+<td>18-24</td>
+</tr>
+<tr align="center">
+<td>降水確率</td>
+{% for tomorrow_r in tomorrow %}
+<td>{{tomorrow_r.rain|slice:"6:9"}}</td>
+<td>{{tomorrow_r.rain|slice:"17:22"}}</td>
+<td>{{tomorrow_r.rain|slice:"30:34"}}</td>
+<td>{{tomorrow_r.rain|slice:"42:46"}}</td>
+{% endfor %}
+</tr>
+<tr align="center">
+<td>風と波</td>
+{% for tomorrow_i in tomorrow %}
+<td style="white-space: normal; font-size : 18px;" colspan="4" >{{tomorrow_i.info}}</td>
+{% endfor %}
+</tr>
+</table>
+{% endif %}
+
+
+
+</body>
+
+<link href="{% static 'register/forecast.css' %}" rel="stylesheet" type="text/css">
+<script src='{% static "scraping/fullcalendar/lib/jquery.min.js" %}'></script>
+
+
+{% else %}
+
+
+	
+	<div data-animation="slide" data-duration="500" data-infinite="1" class="sslider w-slider">
+		<div class="mask1 w-slider-mask">
+			<div class="slide-7 w-slide" style="transform: translateX(0px); opacity: 1;">
+				<div class="text-block-8">新しい農業をはじめよう</div>
+				<img src="{% static 'register/img/sinme.jpg' %}" alt="" class="image-91">
+			</div>
+			<div class="slide-8 w-slide" style="transform: translateX(0px); opacity: 1;">
+				<div class="text-block-9">充実の天候情報</div>
+				<img src="{% static 'register/img/sunny.png' %}" alt="" class="image-92">
+			</div>
+			<div class="slide9 w-slide" style="transform: translateX(0px); opacity: 1;">
+				<div class="text-block-10">新しい繋がりを</div>
+				<img src="{% static 'register/img/nouka2.jpg' %}"  alt="" class="image93">
+			</div>
+		</div>
+		<div class="left-go w-slider-arrow-left">
+			<div class="icon-left w-icon-slider-left"></div>
+		</div>
+		<div class="right-go w-slider-arrow-right">
+			<div class="icon-right w-icon-slider-right"></div>
+		</div>
+		<div class="santen w-slider-nav w-round">
+			<div class="w-slider-dot w-active" data-wf-ignore=""></div>
+			<div class="w-slider-dot" data-wf-ignore=""></div>
+			<div class="w-slider-dot" data-wf-ignore=""></div>
+		</div>
+	</div>
+	<a href="{% url 'register:user_create' %}" class="button-11 w-button">今すぐ登録</a>
+	<a href="{% url 'register:login' %}" class="link-8">既に登録している方はこちら！</a>
+	<div class="text-block-11">スマートフォンでより便利な農業を始めませんか？</div>
+	<div class="div-block-10">
+		<img src="{% static 'register/img/prevtenki.PNG' %}" alt="" class="image-38">
+		<h3 class="heading-2">充実の天候情報</h3>
+		<p class="paragraph-2">自分の田畑の天気予報はもちろんのこと,過去の気温,降水量,日照時間などの天候情報も確認できる。これがあれば,天候と農作物のできの関係が勘やノウハウがなくてもわかるように!</p>
+	</div>
+	<div class="div-block-11">
+		<div class="tunagari">
+			<h2 class="heading-4">新しい繋がり</h2>
+			<p class="paragraph-5">マップ上に自分の農地を登録でき,作っている作物のアイコンが表示されるようになる。他のユーザにコメントをしたり,作っている作物で絞り込み同業者を探すこともできるため,農家同士の新たな繋がりができる!</p>
+		</div>
+		<img src="{% static 'register/img/yasaimap.png' %}" alt="" class="image-39">
+	</div>
+
+
+
+{% endif %}
+
 
 
 
