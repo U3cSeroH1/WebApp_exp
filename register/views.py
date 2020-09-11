@@ -75,17 +75,18 @@ class Top(generic.TemplateView, LoginView):
     form_class = LoginForm
     template_name = 'register/top.html'
 
-    #def get_context_data(self, **kwargs):
+    def get_context_data(self, **kwargs):
         # 継承元のメソッド呼び出し
-        #context = super().get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
 
-        #context["today"] = Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date())))
+        context["today"] = Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date())))
         
-        #if not Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date()+timezone.timedelta(days= 1 )))):
-            #Date.objects.update_or_create(pub_date = str(timezone.now().date()-timezone.timedelta(days= 1 )))
+        if not Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date()+timezone.timedelta(days= 1 )))):
+            Date.objects.update_or_create(pub_date = str(timezone.now().date()-timezone.timedelta(days= 1 )))
 
-        #context["tomorrow"] = Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date()+timezone.timedelta(days= 1 ))))
-        #return context
+        context["tomorrow"] = Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date()+timezone.timedelta(days= 1 ))))
+
+        return context
 
 
 class Login(LoginView):
