@@ -2,78 +2,7 @@
 {% block content %}
 {% load static %}
 
-<link href="{% static "scraping/cccal.css" %}" rel="stylesheet" type="text/css">
-<link rel='stylesheet' href='{% static "scraping/fullcalendar/fullcalendar.css" %}' />
-<link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
-<script src='{% static "scraping/fullcalendar/lib/jquery.min.js" %}'></script>
-<script src='{% static "scraping/fullcalendar/lib/moment.min.js" %}'></script>
-<script src='{% static "scraping/fullcalendar/fullcalendar.min.js" %}'></script>
-<script src='{% static "scraping/fullcalendar/locale/ja.js" %}'></script>
 
-
-<style>
-  body {
-    padding: 0;
-    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-    font-size: 20px;
-  }
-  #calendar {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-</style>
-
-{% if WeatherDetail %}
-
-<div id="Detail">
-
-<table border="1" width="95%" height="90%" cellspacing="0" cellpadding="4" align="center" style="font-size : 14px;">
-<tr align="center" class="midasi">
-<td>日時</td>
-<td>気温(℃)</td>
-<td>降水量(mm)</td>
-<td>風向き(16方位)</td>
-<td>風速(m/s)</td>
-<td>日照時間(分)</td>
-</tr>
-
-
-
-
-{% for weather in WeatherDetail %}
-
-<tr align="center">
-<td>{{weather.hour}}</td>
-<td>{{weather.temperature}}</td>
-<td>{{weather.precipitation}}</td>
-<td>{{weather.wind_blow}}</td>
-<td>{{weather.wind_speed}}</td>
-<td>{{weather.day_length}}</td>
-</tr>
-
-{% endfor %}
-
-
-<tr align="center" class="midasi">
-<td>日時</td>
-<td>気温(℃)</td>
-<td>降水量(mm)</td>
-<td>風向き(16方位)</td>
-<td>風速(m/s)</td>
-<td>日照時間(分)</td>
-</tr>
-</table>
-
-<button href="#"  id="close" onclick="javascript:window.history.back(-1);return false;">Back</button>
-
-</div>
-
-
-{% else %}
-
-<p>この日のデータは未取得です，申し訳ございません</p>
-
-{% endif %}
 
 
 {% endblock %}
