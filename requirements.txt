@@ -18,7 +18,7 @@ gunicorn==19.9.0
 idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.10
-lxml==4.2.5
+lxml==4.6.3
 MarkupSafe==1.1.0
 pip==18.1
 postgis==1.0.4
