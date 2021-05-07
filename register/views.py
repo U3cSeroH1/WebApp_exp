@@ -79,7 +79,7 @@ class Top(generic.TemplateView, LoginView):
         # 継承元のメソッド呼び出し
         context = super().get_context_data(**kwargs)
 
-        context["today"] = Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date())))
+        context["today"] = Tomorrow.objects.filter()
         
         if not Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date()+timezone.timedelta(days= 1 )))):
             Date.objects.update_or_create(pub_date = str(timezone.now().date()-timezone.timedelta(days= 1 )))
