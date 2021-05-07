@@ -3,7 +3,7 @@ bs4==0.0.1
 certifi==2018.11.29
 chardet==3.0.4
 Click==7.0
-Django==2.1.4
+Django==2.2.20
 django-appconf==1.0.2
 django-classy-tags==0.8.0
 django-heroku==0.3.1
