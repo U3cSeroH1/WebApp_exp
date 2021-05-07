@@ -81,10 +81,10 @@ class Top(generic.TemplateView, LoginView):
 
         context["today"] = Tomorrow.objects.filter()
         
-        if not Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date()+timezone.timedelta(days= 1 )))):
-            Date.objects.update_or_create(pub_date = str(timezone.now().date()-timezone.timedelta(days= 1 )))
+        #if not Tomorrow.objects.filter():
+        #    Date.objects.update_or_create(pub_date = str(timezone.now().date()-timezone.timedelta(days= 1 )))
 
-        context["tomorrow"] = Tomorrow.objects.filter(target = Date.objects.get(pub_date= str(timezone.now().date()+timezone.timedelta(days= 1 ))))
+        context["tomorrow"] = Tomorrow.objects.filter()
 
         return context
 
